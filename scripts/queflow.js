@@ -1,4 +1,4 @@
-/*! QueFlowJS | (c) 2024 Dayson9 | MIT License | http://github.com/Dayson9/QueFlowJS */
+/*! QueFlowJS | (c) 2024 Dayson9 | MIT License | https://github.com/Dayson9/QueFlowJS */
 
 var QueFlow = {
     dataQF: [],
