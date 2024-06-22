@@ -3,12 +3,13 @@
 var QueFlow = {
     dataQF: [],
     counterQF: 0,
+    components: {},
     select: (qfid) => {
         return document.querySelector("[data-qfid="+qfid+"]");
     },
 
     tempLen: (temp) => {
-        if(!temp){
+        if (!temp){
         temp = "";
         }
 
@@ -31,7 +32,7 @@ var QueFlow = {
     needsUpdate: (temp, key, len) => {
         let objName, decision = false;
 
-        if(!temp){
+        if (!temp){
         temp = "";
         }
 
@@ -44,7 +45,7 @@ var QueFlow = {
     QueFlow.Ln(true);
     QueFlow.dataQF = QueFlow.dataQF.filter((data) =>{
     let el = QueFlow.select(data.qfid);
-    if(el){
+    if (el){
     return data;
     }
     });
@@ -60,20 +61,20 @@ var QueFlow = {
 
         if (pieces.qfid != "") {
         el = QueFlow.select(pieces.qfid);
-        if(el){
+        if (el){
         v = QueFlow.needsUpdate(pieces.template, key, len);
         if (v[0]) {
         if (QueFlow.notEvent(pieces.key)) {
         if (pieces.key === "class") {
         el[pieces.key+"Name"] = v[1];
-        }else{
+        } else {
         el[pieces.key] = v[1];
              }
-        }else{
+        } else {
         el.addEventListener(pieces.key.slice(2), v[1]);
              }
            }
-        }else{
+        } else {
            console.error("An error occurred while updating the DOM");
            }
          }
@@ -153,7 +154,7 @@ var QueFlow = {
 
         len = QueFlow.tempLen(ref);
         arg.forEach((arr) =>{
-        if(arr.value.includes("{{") && arr.value.includes("}}")){
+        if (arr.value.includes("{{") && arr.value.includes("}}")){
         component.push({template: arr.value, key: arr.attribute, qfid: id});
         }
         });
@@ -172,13 +173,13 @@ var QueFlow = {
         try{
         children = div.querySelectorAll("*");
         children.forEach((c) =>{
-        if(!QueFlow.parentType(c)[0]){
+        if (!QueFlow.parentType(c)[0]){
         let attr = QueFlow.attr(c);
         attr.push({attribute: "innerText", value: c.innerText});
 
         for(attribute of attr){
         let val = attribute.value;
-        if(val.includes("{{") && val.includes("}}")){
+        if (val.includes("{{") && val.includes("}}")){
         c.dataset.qfid = "qf"+QueFlow.counterQF;
         QueFlow.counterQF++;
         break;
@@ -197,35 +198,53 @@ var QueFlow = {
     },
 
     Ln: (arg) => {
-        if(arg){
+        if (arg){
         QueFlow = {...QueFlow};
-        }else{
+        } else {
         Object.freeze(QueFlow);
         }
     },
 
-    Render: (jsx, selector) => {
+    Render: (jsx, selector, position = "append") => {
         let app = document.querySelector(selector);
-        if(app){
-        QueFlow.Ln(true);
-        app.innerHTML = QueFlow.jsxToHTML(jsx);
-        QueFlow.Ln(false);
-        }else{
+        if (app){
+          let prep = QueFlow.jsxToHTML(jsx);
+          QueFlow.Ln(true);
+          if (position == "append"){
+            app.innerHTML += prep;
+          } else if (position == "prepend"){
+            let html = app.innerHTML;
+            app.innerHTML = prep+html;
+          } else {
+            console.error("Position ", "'"+position+"'", "is invalid")
+          }
+          QueFlow.Ln(false);
+        } else {
         console.error("An element with the provided selector: ", selector, "does not exist");
         }
     }, 
 
     iRender: (selector) => {
         let app = document.querySelector(selector);
-        if(app){
-        if(QueFlow.parentType(app)[0]){
+        if (app){
+        if (QueFlow.parentType(app)[0]){
         QueFlow.Ln(true);
         app.innerHTML = QueFlow.jsxToHTML(app.innerHTML);
         QueFlow.Ln(false);
         }
-        }else{
+        } else {
         console.error("An element with the provided selector: ", selector, "does not exist");
         }
+        },
+        
+        Component : function(name, jsx) {
+        QueFlow.components[name] = {jsx: jsx};
+        },
+        
+        renderComponent: function(name, props, selector, position) {
+        let jsx = QueFlow.components[name].jsx;
+        let rendered = mustache.render(jsx, props);
+        QueFlow.Render(rendered, selector, position);
         }
 };
 
