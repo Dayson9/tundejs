@@ -1,0 +1,9 @@
+@media (min-width: 768px){
+  body {
+  background-size: 100vw 100vh;
+  }
+  
+  #intro {
+      justify-content: start;
+  }
+}

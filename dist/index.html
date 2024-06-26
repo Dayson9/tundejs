@@ -4,15 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="./images/icon.png"/>
+  <link rel="icon" href="./images/logo.png"/>
   <link rel="stylesheet" href="./styles/style.css"/>
+ <link rel="stylesheet" href=".styles/desktop.css">
     <script src="./scripts/mustache.min.js"></script>
     <script src="./scripts/queflow.js"></script>
   <title></title>
 </head>
 
 <body>
-  <div class="nav"></div>
+  <div class="nav">
+    <img src="./images/logo.png" alt="Sodiq Tunde Logo">
+  </div>
 
   <div id="intro"></div>
 
@@ -20,6 +23,34 @@
 
   <div class="container" id="projects"></div>
 
+  <div class="container" id="skills"></div>
+  
+  <div class="container" id="in-touch">
+    <h1 class="heading grad1 grad-text">Wanna say something to me?</h1>
+    <p class="note">Here are my contact infos</p>
+    <div class="grid" style="margin-bottom: 60px;">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <p class="note">Or simply send a message >></p>
+    <div class="message">
+      <input type="text" placeholder="John Doe"/>
+      <input type="email" placeholder="name@example.com"/>
+      <textarea placeholder="Enter message:"></textarea>
+      <button>Send message</button>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <b>Built with <span class="grad1">(ax² + bx + c)</span> by <a href="#">Tunde</a></b>
+  </footer>
+  
   <div id="loader"></div>
   
   
