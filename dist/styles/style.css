@@ -264,6 +264,7 @@ small {
 .project h3 {
   color: white;
   font-family: "Legion";
+  margin-bottom: -5px;
 }
 
 .project p {
