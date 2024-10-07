@@ -55,13 +55,11 @@ body {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #000;
-  z-index: 1;
-  transition: .7s;
+  z-index: 2;
 }
 .wave {
   width: 2.5px;
