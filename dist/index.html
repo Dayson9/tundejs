@@ -8,17 +8,12 @@
   <link rel="stylesheet" href="./styles/style.css"/>
  <link rel="stylesheet" href=".styles/desktop.css">
  <script src="https://cdn.jsdelivr.net/gh/Dayson9/QueFlowJS@main/QueFlow.min.js"></script>
+ <script src="./scripts/lib/queflow.js"></script>
   <title>Sodiq Tunde - Portfolio</title>
 </head>
 
 <body>
-  <div class="nav">
-    <img src="./images/logo.png" alt="Sodiq Tunde Logo">
-  </div>
-
-  <div id="intro"></div>
-
-  <div class="container" id="about"></div>
+  <div id="app"></div>
 
   <div class="container" id="projects"></div>
 
@@ -50,11 +45,9 @@
     <b>Built with <span class="grad1">(ax² + bx + c)</span> by <a href="#">Tunde</a></b>
   </footer>
   
-  <div id="loader"></div>
-  
   
   <script src="./scripts/variables.js"></script>
-  <script src="./scripts/main.js"></script>
+  <script src="./scripts/main.js" type="module"></script>
 </body>
 
 </html>

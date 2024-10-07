@@ -1,6 +1,31 @@
-const { Render , Template } = QueFlow;
+import { Loader } from './components/Loader.js';
+import { TopBar } from './components/TopBar.js';
+import { Hero } from './components/Hero.js';
+import { AboutMe } from './components/AboutMe.js';
 
-const Project = new Template("#projects", `
+const { Render , Template, QComponent } = QueFlow;
+
+//make components global
+globalThis.Loader = Loader;
+globalThis.TopBar = TopBar;
+globalThis.Hero = Hero;
+globalThis.AboutMe = AboutMe;
+
+const MyPortfolio = new QComponent("#app", {
+  stylesheet: {},
+  template: () => {
+    return `
+      <Loader/>
+      <TopBar/>
+      <Hero/>
+      <AboutMe/>
+       `
+  }
+});
+
+MyPortfolio.render();
+
+const Project = new Template("#projects", {}, `
     <div class="project">
       <img src="{{src}}" alt="Sodiq Tunde's projects">
       <h3>{{project_name}}</h3>
@@ -13,7 +38,7 @@ const Project = new Template("#projects", `
 
 
 function renderUI() {
-  for (ui of UI_Items){
+  for (const ui of UI_Items){
     if (ui.element != "#projects") {
       Render(ui.content, ui.element, "append");
     } else {
@@ -23,6 +48,7 @@ function renderUI() {
 }
 
 renderUI();
+
 
 // Render projects UI
 Project.renderWith({
@@ -41,6 +67,5 @@ Project.renderWith({
 
 
 setTimeout(() => {
-  loader.style.display = "none";
-  nav.style.zIndex = 1;
-}, 2000);
+  Loader.data.y = 100;
+}, 4000);
