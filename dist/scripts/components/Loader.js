@@ -8,7 +8,10 @@ const Loader = new subComponent({
   stylesheet: {
     h2 : `
       position: absolute;
-      top: 32vh`,
+      top: 32vh;
+      -webkit-text-fill-color: transparent; 
+      -webkit-background-clip: text;
+      `,
       
     "#loader" : `
       width: 100vw;
@@ -23,7 +26,7 @@ const Loader = new subComponent({
   template: () => {
     return `
       <div id='loader' top='{{ this.data.offsetY+"%" }}' transition='{{ this.data.transition }}s'>
-        <h2 color='white' class='grad-text grad' animation-duration='0.7s'>&lt;/&gt;</h2>
+        <h2 color='white' class='grad1' animation-duration='0.7s'>&lt;/&gt;</h2>
         <div class="wave"></div>
         <div class="wave"></div>
         <div class="wave"></div>
