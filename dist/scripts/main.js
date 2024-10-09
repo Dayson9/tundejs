@@ -3,6 +3,8 @@ import { TopBar } from './components/TopBar.js';
 import { Hero } from './components/Hero.js';
 import { AboutMe } from './components/AboutMe.js';
 import { MyProjects } from './components/MyProjects.js';
+import { MySkills } from './components/MySkills.js';
+import { ContactMe } from './components/ContactMe.js';
 
 const { Render, Template, QComponent } = QueFlow;
 
@@ -12,9 +14,17 @@ globalThis.TopBar = TopBar;
 globalThis.Hero = Hero;
 globalThis.AboutMe = AboutMe;
 globalThis.MyProjects = MyProjects;
+globalThis.MySkills = MySkills;
+globalThis.ContactMe = ContactMe;
 
 const MyPortfolio = new QComponent("#app", {
-  stylesheet: {},
+  stylesheet: {
+    "h1 > span": 
+      `
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+            `
+  },
   template: () => {
     return `
       <Loader/>
@@ -22,6 +32,8 @@ const MyPortfolio = new QComponent("#app", {
       <Hero/>
       <AboutMe/>
       <MyProjects/>
+      <MySkills/>
+      <ContactMe/>
        `
   },
   run: () => {
@@ -34,15 +46,4 @@ const MyPortfolio = new QComponent("#app", {
 
 MyPortfolio.render();
 
-
-function renderUI() {
-  for (const ui of UI_Items) {
-    if (ui.element != "#projects") {
-      Render(ui.content, ui.element, "append");
-    } else {
-      Render(ui.content, ui.element, "prepend");
-    }
-  }
-}
-
-renderUI();
+console.log(document.head.querySelectorAll("style")[1].innerHTML)

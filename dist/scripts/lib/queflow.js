@@ -418,7 +418,7 @@ const QueFlow = ((exports) => {
       }
 
       if (hasTemplate) {
-        ((child.style[attribute] || child.style[attribute] === "" && !isSVGElement) && attribute.toLowerCase() !== "src") ? arr.push({ template: value, key: "style." + attribute, qfid: id }) : arr.push({ template: value, key: attribute, qfid: id });
+        ((child.style[attribute] || child.style[attribute] === "" && !isSVGElement) && attribute.toLowerCase() !== "src") ? arr.push({ template: value, key: "style." + attribute, qfid: id }): arr.push({ template: value, key: attribute, qfid: id });
       }
     }
     // Returns arr 
@@ -511,7 +511,7 @@ const QueFlow = ((exports) => {
 
 
   function update(child, key, evaluated) {
-      const isSVGElement = child instanceof SVGElement;
+    const isSVGElement = child instanceof SVGElement;
     if (key.indexOf("style.") > -1) {
       let sliced = key.slice(6);
       if (evaluated !== child.style[sliced]) {
@@ -588,16 +588,17 @@ const QueFlow = ((exports) => {
 
     if (nuggetRegex.test(markup)) {
       markup = markup.replace(nuggetRegex, (match) => {
-      
+
         const whiteSpaceIndex = match.indexOf(" "),
           name = match.slice(1, whiteSpaceIndex),
           data = match.slice(whiteSpaceIndex, -2).trim();
-   
+
         let func;
         try {
+
           func = Function(`return ${name}.renderToHTML(${data})`)();
         } catch (e) {
-          console.error("QueFlow Error:\nAn error occured while rendering Nugget '" + name + "' "+ e);
+          console.error("QueFlow Error:\nAn error occured while rendering Nugget '" + name + "' " + e);
         }
         return func;
       });
@@ -827,7 +828,7 @@ const QueFlow = ((exports) => {
       counterQF++;
       // Stores template 
       this.template = options.template;
-   
+
       // Initaite stylesheet for instance 
       initiateStyleSheet("." + this.className, this);
     }
@@ -835,10 +836,10 @@ const QueFlow = ((exports) => {
     renderToHTML(data) {
       // Create a variable that holds the template 
       const template = this.template instanceof Function ? this.template(data) : this.template;
-      
-      
+
+
       const html = `<div class='${this.className}'>${template}</div>`;
-      
+
       // Return rendered template with respect to data
       return renderTemplate(html, data);
     }
