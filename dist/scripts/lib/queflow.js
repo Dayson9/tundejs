@@ -418,7 +418,7 @@ const QueFlow = ((exports) => {
       }
 
       if (hasTemplate) {
-        ((child.style[attribute] || child.style[attribute] === "" && !isSVGElement) && attribute.toLowerCase() !== "src") ? arr.push({ template: value, key: "style." + attribute, qfid: id }): arr.push({ template: value, key: attribute, qfid: id });
+        ((child.style[attribute] || child.style[attribute] === "" && !isSVGElement) && attribute.toLowerCase() !== "src") ? arr.push({ template: value, key: "style." + attribute, qfid: id }) : arr.push({ template: value, key: attribute, qfid: id });
       }
     }
     // Returns arr 
@@ -511,7 +511,7 @@ const QueFlow = ((exports) => {
 
 
   function update(child, key, evaluated) {
-    const isSVGElement = child instanceof SVGElement;
+      const isSVGElement = child instanceof SVGElement;
     if (key.indexOf("style.") > -1) {
       let sliced = key.slice(6);
       if (evaluated !== child.style[sliced]) {
@@ -570,7 +570,7 @@ const QueFlow = ((exports) => {
 
   function initiateSubComponents(markup) {
     const subRegex = new RegExp("<[A-Z]\\w+\/[>]", "g"),
-      nuggetRegex = new RegExp("<([A-Z]\\w+)\\s*\\{([^\\}]*)}\/[>]", "g");
+      nuggetRegex = new RegExp("<([A-Z]\\w+)\\s*\\{([^\\}]*)}\\s*\/[>]", "g");
 
     if (subRegex.test(markup)) {
       markup = markup.replace(subRegex, (match) => {
@@ -588,17 +588,15 @@ const QueFlow = ((exports) => {
 
     if (nuggetRegex.test(markup)) {
       markup = markup.replace(nuggetRegex, (match) => {
-
         const whiteSpaceIndex = match.indexOf(" "),
           name = match.slice(1, whiteSpaceIndex),
           data = match.slice(whiteSpaceIndex, -2).trim();
 
         let func;
         try {
-
           func = Function(`return ${name}.renderToHTML(${data})`)();
         } catch (e) {
-          console.error("QueFlow Error:\nAn error occured while rendering Nugget '" + name + "' " + e);
+          console.error("QueFlow Error:\nAn error occured while rendering Nugget '" + name + "'");
         }
         return func;
       });
@@ -713,7 +711,7 @@ const QueFlow = ((exports) => {
 
       this.element = {};
 
-      // Creates a reactive signal for the component's data.
+      // Creates a reactive signal for the subcomponent's data.
       this.data = createSignal(options.data, { forComponent: true, host: this });
 
       // Asigns the value of this.data' to _data
@@ -725,18 +723,20 @@ const QueFlow = ((exports) => {
       // Stores the current 'freeze status' of the subcomponent
       this.isFrozen = false;
 
-      // Stores the id of the component's mainelement 
+      // Stores the id of the subcomponent's mainelement 
       this.elemId = "";
+      
+      this.created = options.created;
 
-      // Stores the component's stylesheet 
+      // Stores the subcomponent's stylesheet 
       this.stylesheet = options.stylesheet;
 
-      // Stores the component's reactive elements data
+      // Stores the subcomponent's reactive elements data
       this.dataQF = [];
 
       this.renderEvent = qfEvent("qf:render");
 
-      // Defines properties for the component instance.
+      // Defines properties for the subcomponent instance.
       Object.defineProperties(this, {
         data: {
           // Getters and setters for 'data' property 
@@ -756,6 +756,8 @@ const QueFlow = ((exports) => {
           mutable: false
         }
       });
+      
+      if (this.created) this.created();
     }
 
 
@@ -828,7 +830,6 @@ const QueFlow = ((exports) => {
       counterQF++;
       // Stores template 
       this.template = options.template;
-
       // Initaite stylesheet for instance 
       initiateStyleSheet("." + this.className, this);
     }
@@ -836,12 +837,10 @@ const QueFlow = ((exports) => {
     renderToHTML(data) {
       // Create a variable that holds the template 
       const template = this.template instanceof Function ? this.template(data) : this.template;
-
-
       const html = `<div class='${this.className}'>${template}</div>`;
-
+      const out = renderTemplate(html, data);
       // Return rendered template with respect to data
-      return renderTemplate(html, data);
+      return initiateSubComponents(out);
     }
   }
 

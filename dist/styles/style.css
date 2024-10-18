@@ -343,25 +343,3 @@ input:focus, textarea:focus {
 .message button:hover {
   outline: 3px solid #C7C7C7A3;
 }
-
-.footer {
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 35px;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.footer span {
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.footer b {
-  color: white;
-}
-
-.footer a {
-  color: dodgerblue;
-}

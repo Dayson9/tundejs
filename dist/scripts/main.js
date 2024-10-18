@@ -5,8 +5,9 @@ import { AboutMe } from './components/AboutMe.js';
 import { MyProjects } from './components/MyProjects.js';
 import { MySkills } from './components/MySkills.js';
 import { ContactMe } from './components/ContactMe.js';
+import { Footer } from './components/Footer.js';
 
-const { Render, Template, QComponent } = QueFlow;
+const { QComponent } = QueFlow;
 
 //make components global
 globalThis.Loader = Loader;
@@ -16,6 +17,7 @@ globalThis.AboutMe = AboutMe;
 globalThis.MyProjects = MyProjects;
 globalThis.MySkills = MySkills;
 globalThis.ContactMe = ContactMe;
+globalThis.Footer = Footer;
 
 const MyPortfolio = new QComponent("#app", {
   stylesheet: {
@@ -34,6 +36,7 @@ const MyPortfolio = new QComponent("#app", {
       <MyProjects/>
       <MySkills/>
       <ContactMe/>
+      <Footer/>
        `
   },
   run: () => {
@@ -45,5 +48,3 @@ const MyPortfolio = new QComponent("#app", {
 });
 
 MyPortfolio.render();
-
-console.log(document.head.querySelectorAll("style")[1].innerHTML)
