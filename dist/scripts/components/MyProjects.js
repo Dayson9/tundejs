@@ -1,4 +1,4 @@
-const { Nugget, subComponent } = QueFlow;
+import { Nugget, subComponent } from "queflow";
 
 const ProjectCard = new Nugget({
   stylesheet: {},

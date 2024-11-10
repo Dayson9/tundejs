@@ -1,4 +1,4 @@
-const { subComponent } = QueFlow;
+import { subComponent } from "queflow";
 
 const TopBar = new subComponent({
   stylesheet: {

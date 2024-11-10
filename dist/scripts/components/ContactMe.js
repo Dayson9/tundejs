@@ -1,4 +1,4 @@
-const { Nugget, subComponent } = QueFlow;
+import { subComponent } from "queflow";
 
 const ContactMe = new subComponent({
   stylesheet: {},

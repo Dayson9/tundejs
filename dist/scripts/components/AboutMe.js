@@ -1,4 +1,4 @@
-const { subComponent } = QueFlow;
+import { subComponent } from "queflow";
 
 const AboutMe = new subComponent({
   stylesheet: {

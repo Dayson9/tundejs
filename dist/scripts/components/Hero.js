@@ -1,5 +1,5 @@
 
-const { subComponent } = QueFlow;
+import { subComponent } from "queflow";
 
 const Hero = new subComponent({
   stylesheet: {

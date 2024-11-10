@@ -7,7 +7,7 @@ import { MySkills } from './components/MySkills.js';
 import { ContactMe } from './components/ContactMe.js';
 import { Footer } from './components/Footer.js';
 
-const { QComponent } = QueFlow;
+import { QComponent } from "queflow";
 
 //make components global
 globalThis.Loader = Loader;
