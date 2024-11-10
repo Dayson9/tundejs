@@ -9,15 +9,6 @@ import { Footer } from './components/Footer.js';
 
 import { QComponent } from "queflow";
 
-//make components global
-globalThis.Loader = Loader;
-globalThis.TopBar = TopBar;
-globalThis.Hero = Hero;
-globalThis.AboutMe = AboutMe;
-globalThis.MyProjects = MyProjects;
-globalThis.MySkills = MySkills;
-globalThis.ContactMe = ContactMe;
-globalThis.Footer = Footer;
 
 const MyPortfolio = new QComponent("#app", {
   stylesheet: {
