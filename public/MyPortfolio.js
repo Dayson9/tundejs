@@ -32,5 +32,4 @@ const MyPortfolio = new QComponent("#app", {
 });
 
 MyPortfolio.render();
-
-const path = document.querySelector("svg path");
+runLoaderAnimation()

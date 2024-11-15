@@ -3,35 +3,38 @@ import { subComponent } from 'queflow';
 const Loader = new subComponent("Loader", {
   data: {
     x: 0,
-    d: "M50,50 L120,150"
+    waveData: ""
   },
   template: () => {
     return `
       <div id='container'>
-        <svg width='80%' height='20%'>
-          <rect x={{ this.data.x }} y="0" width="80" height="30" fill="dodgerblue">
-          </rect>
-          <path d={{ this.data.d }} stroke-width="8" stroke="dodgerblue" stroke-linecap="round">
+        <svg height="40%" width="65%">
+          <path stroke-width="4" fill="none" d={{ this.data.waveData }} pathLength='400' stroke='rgb(12,44, 59)'/>
+          <path stroke-width="4" fill="none" d={{ this.data.waveData }} id='first' pathLength='400' stroke='gold'/>
         </svg>
-      <div>
+      </div>
     `
   },
-  
+
   stylesheet: {
-    "#container" : `
-      width: 100%;
+    "#container": `
+      width: 100vw;
       height: 100vh;
       background: rgb(5,11,17);
     `,
-    "svg" : `
-      position: fixed;
-      top: 40%;
-      left: 10%;
-      background: royal;
+    "svg": `
+      position: absolute;
+      top: 22%;
+      left: 20%;
+      background: transparent;
+      border: 2px solid grey;
     `,
-    "svg > rect" : `
-      transition: 2s;
-    `
+    "svg *": `
+      transition: 6s;
+      fill: transparent;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      `
   }
 });
 
