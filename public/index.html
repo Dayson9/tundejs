@@ -3,22 +3,34 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
 
   <!-- Search Engine meta tags !-->
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
   <meta name="bingbot" content="index, follow">
-  
+
   <meta name="apple-mobile-web-app-title" content="Sodiq   
  Tunde | Front-End Developer Portfolio (Lagos, Nigeria)">
-  <meta property="og:title" content="Sodiq Tunde | Front-End Developer Portfolio (Lagos, Nigeria)">
-  <meta property="og:description" content="Tunde, a self-taught frontend developer with over 3 years of experience, offering effective web solutions. I specialize in building seamless and highly scalable web applications.">
+
+  <meta property="title" content="Sodiq Tunde | Front-End Developer Portfolio (Lagos, Nigeria)">
+
+  <meta property="description" content="Tunde, a self-taught frontend developer with over 3 years of experience, offering effective web solutions. Specialized in building seamless and highly scalable web applications.">
+
+  <meta name="keywords" content="Sodiq Tunde, software engineer, frontend" />
+  
+  <meta property="title" content="Sodiq Tunde | Front-End Developer Portfolio (Lagos, Nigeria)">
+
+  <meta property="og:description" content="Tunde, a self-taught frontend developer with over 3 years of experience, offering effective web solutions. Specialized in building seamless and highly scalable web applications.">
+
   <meta property="og:image" content="https:">
   <meta property="og:url" content="https://dayson9.github.io/portfolio">
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sodiq Tunde | Front-End Developer Portfolio (Lagos, Nigeria)">
+
   <meta name="twitter:description" content="Tunde, a self-taught frontend developer with over 3 years of experience, offering effective web solutions. I specialize in building seamless and highly scalable web applications.">
+
   <meta name="twitter:image" content="https://your-website.com/portfolio-image.jpg">
 
 
@@ -29,18 +41,25 @@
 
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Sodiq Tunde - Portfolio</title>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body>
   <script type="importmap">
     {
       "imports": {
-        "queflow": "./scripts/lib/queflow.esm-browser.js"
+        "queflow": "./lib/queflow.esm-browser.js"
           }
     }
   </script>
   <div id="app"></div>
-
+  <script src="functions.js"></script>
   <script src="MyPortfolio.js" type="module"></script>
 </body>
 
