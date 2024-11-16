@@ -2,17 +2,18 @@ import { subComponent } from 'queflow';
 
 const Loader = new subComponent("Loader", {
   data: {
-    x: 0,
-    waveData: ""
+    loadingBarWidth: 0
   },
   template: () => {
     return `
       <div id='container'>
-        <svg height="40%" width="65%">
-          <path stroke-width="4" fill="none" d={{ this.data.waveData }} pathLength='400' stroke='rgb(12,44, 59)'/>
-          <path stroke-width="4" fill="none" d={{ this.data.waveData }} id='first' pathLength='400' stroke='gold'/>
-        </svg>
+      <div class='center'>
+        <span color="white">Loading...</span>
+        <div id='loader'>
+          <div width={{ this.data.loadingBarWidth+"%" }}></div>
+        </div>
       </div>
+     </div>
     `
   },
 
@@ -21,20 +22,30 @@ const Loader = new subComponent("Loader", {
       width: 100vw;
       height: 100vh;
       background: rgb(5,11,17);
+      display: flex;
     `,
-    "svg": `
-      position: absolute;
-      top: 22%;
-      left: 20%;
-      background: transparent;
-      border: 2px solid grey;
+    ".center" : `
+      width: 80%;
+      height: 20%;
+      border: 1px solid white;
+      margin: 50% auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
     `,
-    "svg *": `
-      transition: 6s;
-      fill: transparent;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      `
+    "#loader": `
+      width: 60%;
+      height: 5px;
+      margin: 0 auto;
+      background: rgba(50, 101, 170, .5);
+      display: flex;
+      justify-content: flex-start;
+    `,
+    "#loader > div" : `
+      height: 100%;
+      background: rgb(50, 120, 180);
+    `
   }
 });
 

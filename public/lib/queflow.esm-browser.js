@@ -304,7 +304,7 @@
     // Initialize the style string
     let style = "";
 
-    // Check if the alt value is a keyframe or font-face rule
+    // Check if the alt value is not a keyframe or font-face rule
     const compare = alt.indexOf("@keyframes") === -1 && alt.indexOf("@font-face") === -1;
 
     // Iterate over each property in the object
