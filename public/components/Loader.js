@@ -4,7 +4,8 @@ import PillButton from '../Nuggets/PillButton.js';
 const Loader = new subComponent("Loader", {
   data: {
     loadingBarWidth: 0,
-    stroke: [0, 0, 0],
+    containerY: 0,
+    btnDisplay: 'none',
     intro: {
       text: "",
       opacity: 0,
@@ -22,20 +23,20 @@ const Loader = new subComponent("Loader", {
   },
   template: () => {
     return `
-      <div id='container'>
-        <div class='center' opacity={{ this.data.center.opacity }} transform={{ "translateY("+this.data.center.y+"px) scale("+this.data.center.scale+")" }}>
+      <div id='container' transform={{ 'translateY('+this.data.containerY+')' }}>
+        <div class='center' opacity={{ this.data.center.opacity }} transform={{ 'translateY('+this.data.center.y+'px) scale('+this.data.center.scale+)' }}>
           <span color="white">Loading...</span>
           <div id='loader'>
-            <div width={{ this.data.loadingBarWidth+"%" }}></div>
+            <div width={{ this.data.loadingBarWidth+'%' }}></div>
           </div>
         </div>
-        <div class='intro' opacity={{ this.data.intro.opacity }} transform={{ "translateY("+this.data.intro.y+"px) scale("+this.data.intro.scale+")" }}>
+        <div class='intro' opacity={{ this.data.intro.opacity }} transform={{ 'translateY('+this.data.intro.y+'px) scale('+this.data.intro.scale+')' }}>
           <h2>
             <span>{{ this.data.intro.text }}</span>
             <span class='cursor' color={{ this.data.intro.cursorColor }}>_</span>
           </h2>
-          <h2 transform={{ "translateY("+this.data.intro.handY+"px)" }} transition=".25s" opacity={{ this.data.intro.handOpacity }}>👇</h2>
-          <PillButton { delay0: 21.5, delay1: 23.5, delay2: 24, stroke0: "{{ this.data.stroke[0] }}", stroke1: "{{ this.data.stroke[1] }}", stroke2: "{{ this.data.stroke[2] }}", click: 'closeLoader()'} />
+          <h2 transform={{ 'translateY('+this.data.intro.handY+'px)' }} transition=".25s" opacity={{ this.data.intro.handOpacity }}>👇</h2>
+          <PillButton { delay0: 21.5, delay1: 23.5, delay2: 24, click: 'closeLoader()', display: '{{ this.data.btnDisplay }}' } />
         </div>
      </div>
     `
@@ -48,6 +49,8 @@ const Loader = new subComponent("Loader", {
       background: rgb(5,11,17);
       display: flex;
       flex-direction: column;
+      transition: .9s;
+      z-index: 3;
     `,
     "#container > div": "transition: 1s;",
     ".center": `
@@ -78,7 +81,7 @@ const Loader = new subComponent("Loader", {
     `,
     ".intro": `
       width: 90%;
-      height: 200px;
+      height: 210px;
       margin-left: 5%;
       display: flex;
       flex-direction: column;

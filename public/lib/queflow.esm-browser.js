@@ -521,8 +521,8 @@
 
     if (attributeRegex.test(html)) {
       const out = html.replace(attributeRegex, (match) => {
-        const rpl = match.replace("{{", "'{{");
-        return rpl.replace(/}}$/, "}}'");
+        const rpl = match.replace("{{", '"{{');
+        return rpl.replace(/}}$/, '}}"');
       });
       return out;
     } else {
@@ -530,6 +530,18 @@
     }
   }
 
+  const removeEvents = (nodeList) => {
+    nodeList.forEach((child) => {
+      const attributes = getAttributes(child);
+
+      for (var { attribute, value } of attributes) {
+        if (attribute.slice(0, 2) === "on") {
+          const fn = child[attribute];
+          child.removeEventListener(attribute, fn);
+        }
+      }
+    });
+  }
 
   class QComponent {
     constructor(selector = "", options = {}) {
@@ -632,7 +644,13 @@
       // Unfreezes component
       this.isFrozen = false;
     }
+    // removes the component's element from the DOM
+    destroy() {
+      const parent = [this.element, ...this.element.querySelectorAll('*')];
+      removeEvents(parent);
 
+      this.element.remove();
+    }
   }
 
 
@@ -641,6 +659,8 @@
       if (name) {
         globalThis[name] = this;
       }
+
+      this.name = name;
       this.template = options?.template;
 
       if (!this.template) throw new Error("QueFlow Error:\nTemplate not provided for Subcomponent");
@@ -704,6 +724,7 @@
 
     render(name) {
       let template = "<div>" + (this.template instanceof Function ? this.template() : this.template) + "</div>";
+  
       template = initiateSubComponents(template);
 
       const [el, newTemplate] = getFirstElement(template);
@@ -714,9 +735,26 @@
 
       el.innerHTML = rendered[0];
       this.dataQF = rendered[1];
-      this.element = el.id;
+      this.element = el;
 
       return rendered[0];
+    }
+
+    freeze() {
+      // Freezes component
+      this.isFrozen = true;
+    }
+
+    unfreeze() {
+      // Unfreezes component
+      this.isFrozen = false;
+    }
+    // removes the component's element from the DOM
+    destroy() {
+      const parent = [this.element, ...this.element.querySelectorAll('*')];
+      removeEvents(parent);
+
+      this.element.remove();
     }
   }
 
@@ -809,5 +847,5 @@
     QComponent,
     subComponent,
     Nugget,
-    Template,
+    Template
   };

@@ -28,9 +28,9 @@
       if (index === introText[i].length) {
         Loader.data.intro.cursorColor = Loader.data.intro.cursorColor === "silver" ? "transparent" : "silver";
       } else {
-        Loader.data.intro.cursorColor = "silver"; 
+        Loader.data.intro.cursorColor = "silver";
       }
-      
+
     }, 300);
 
   }
@@ -45,6 +45,7 @@
         } else {
           clearInterval(anim);
           Loader.data.intro.handOpacity = 1;
+          Loader.data.btnDisplay = 'block';
           handAnim = setInterval(() => {
             Loader.data.intro.handY = Loader.data.intro.handY === -7 ? 0 : -7;
           }, 250);
@@ -68,7 +69,7 @@
         Loader.data.center.opacity = 0;
         Loader.data.center.scale = .6;
 
-        Loader.data.intro.y = -70;
+        Loader.data.intro.y = -100;
         Loader.data.intro.opacity = 1;
         Loader.data.intro.scale = 1;
         writeLoaderText();
@@ -77,9 +78,13 @@
   }
 
   const closeLoader = () => {
-    Loader.data.stroke[1] = 100;
     clearInterval(handAnim);
     clearInterval(cursorAnim);
+
+    Loader.data.containerY = 100;
     
-    
+    setTimeout(() => {
+      Loader.destroy();
+      Loader = null;
+    }, 1000);
   }
