@@ -13,23 +13,27 @@ import { QComponent } from "queflow";
 
 
 const MyPortfolio = new QComponent("#app", {
-  stylesheet: {
-    "h1 > span": `
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-            `
-  },
   template: () => {
     return `
-        <Loader/>
+       <div id='container'>
+         <Loader/>
+       </div>
        `
   },
   run: () => {
-    setTimeout(() => {
-      Loader.data.x = 100;
-    }, 200);
+    runLoaderAnimation();
+  },
+
+  stylesheet: {
+    "#container" : `
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: 
+    `
   }
 });
 
 MyPortfolio.render();
-runLoaderAnimation()

@@ -1,18 +1,42 @@
 import { subComponent } from 'queflow';
+import PillButton from '../Nuggets/PillButton.js';
 
 const Loader = new subComponent("Loader", {
   data: {
-    loadingBarWidth: 0
+    loadingBarWidth: 0,
+    stroke: [0, 0, 0],
+    intro: {
+      text: "",
+      opacity: 0,
+      y: 0,
+      scale: .7,
+      cursorColor: "silver",
+      handY: 0,
+      handOpacity: 0
+    },
+    center: {
+      opacity: 1,
+      y: 0,
+      scale: 1
+    }
   },
   template: () => {
     return `
       <div id='container'>
-      <div class='center'>
-        <span color="white">Loading...</span>
-        <div id='loader'>
-          <div width={{ this.data.loadingBarWidth+"%" }}></div>
+        <div class='center' opacity={{ this.data.center.opacity }} transform={{ "translateY("+this.data.center.y+"px) scale("+this.data.center.scale+")" }}>
+          <span color="white">Loading...</span>
+          <div id='loader'>
+            <div width={{ this.data.loadingBarWidth+"%" }}></div>
+          </div>
         </div>
-      </div>
+        <div class='intro' opacity={{ this.data.intro.opacity }} transform={{ "translateY("+this.data.intro.y+"px) scale("+this.data.intro.scale+")" }}>
+          <h2>
+            <span>{{ this.data.intro.text }}</span>
+            <span class='cursor' color={{ this.data.intro.cursorColor }}>_</span>
+          </h2>
+          <h2 transform={{ "translateY("+this.data.intro.handY+"px)" }} transition=".25s" opacity={{ this.data.intro.handOpacity }}>👇</h2>
+          <PillButton { delay0: 21.5, delay1: 23.5, delay2: 24, stroke0: "{{ this.data.stroke[0] }}", stroke1: "{{ this.data.stroke[1] }}", stroke2: "{{ this.data.stroke[2] }}", click: 'closeLoader()'} />
+        </div>
      </div>
     `
   },
@@ -23,12 +47,14 @@ const Loader = new subComponent("Loader", {
       height: 100vh;
       background: rgb(5,11,17);
       display: flex;
+      flex-direction: column;
     `,
-    ".center" : `
+    "#container > div": "transition: 1s;",
+    ".center": `
       width: 80%;
       height: 20%;
-      border: 1px solid white;
-      margin: 50% auto;
+      margin-left: 10%;
+      margin-top: 40%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -41,10 +67,29 @@ const Loader = new subComponent("Loader", {
       background: rgba(50, 101, 170, .5);
       display: flex;
       justify-content: flex-start;
+      margin-top: -35px;
     `,
-    "#loader > div" : `
+    "#loader > div": `
       height: 100%;
       background: rgb(50, 120, 180);
+    `,
+    ".center > span": `
+      font-size: 12px;
+    `,
+    ".intro": `
+      width: 90%;
+      height: 200px;
+      margin-left: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      color: white;
+      text-align: center;
+    `,
+    ".cursor": `
+      font-size: 40px;
+      font-weight: 900;
     `
   }
 });

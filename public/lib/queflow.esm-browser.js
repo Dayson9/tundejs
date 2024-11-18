@@ -397,16 +397,15 @@
 
 
   function update(child, key, evaluated) {
-    const isSVGElement = child instanceof SVGElement;
     if (key.indexOf("style.") > -1) {
       let sliced = key.slice(6);
       child.style[sliced] = evaluated;
     } else {
       if (!key.startsWith("on")) {
-        if (isSVGElement) {
-          child.setAttribute(key, evaluated);
-        } else {
+        if (child[key] || child[key] === "") {
           child[key] = evaluated;
+        } else {
+          child.setAttribute(key, evaluated);
         }
       } else {
         child.addEventListener(key.slice(2), evaluated);
@@ -433,6 +432,7 @@
       for (let d of dataQF) {
         let { template, key, qfid } = d;
         let child = selectElement(qfid);
+
         if (needsUpdate(template, ckey)) {
           let len = countPlaceholders(template);
           let evaluated = evaluateTemplate(len, template, obj);
