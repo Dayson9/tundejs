@@ -9,7 +9,7 @@ const PillButton = new Nugget("PillButton", {
                      from="100"
                      to="0"
                      dur="2s"
-                     begin="{{ delay0 }}s"
+                     begin={{ delay0 }}s
                      fill="freeze"/>
         </path>
         <path d="M30,33 L55,33" fill='rgb(5,11,17)' stroke='rgb(50, 120, 180)' stroke-width='3.5' pathLength='50' stroke-dasharray="50" stroke-dashoffset="50">
@@ -17,7 +17,7 @@ const PillButton = new Nugget("PillButton", {
                      from="50"
                      to="0"
                      dur=".5s"
-                     begin="{{ delay1 }}s"
+                     begin={{ delay1 }}s
                      fill="freeze"/>
         </path>
         <path d="M50,24 L60,33 L50,41 Z" fill='rgb(5,11,17)' stroke='rgb(50, 120, 180)' stroke-width='3.5' pathLength='50' stroke-dasharray="50" stroke-dashoffset="50">
@@ -25,7 +25,7 @@ const PillButton = new Nugget("PillButton", {
                      from="50"
                      to="0"
                      dur=".5s"
-                     begin="{{ delay2 }}s"
+                     begin={{ delay2 }}s
                      fill="freeze"/>
         </path>
       </svg>

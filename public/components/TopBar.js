@@ -4,8 +4,8 @@ import SlidingText from '../Nuggets/SlidingText.js';
 const TopBar = new subComponent("TopBar", {
   data: {
     darkMode: true,
-    menuX: 0,
-    sliders: [0, 0, 0]
+    menuX: 110,
+    sliders: [30, 30, 30]
   },
   template: () => {
     return `
@@ -13,15 +13,19 @@ const TopBar = new subComponent("TopBar", {
         <h2 color='rgb(50, 120, 180)'>Sodiq Tunde</h2>
         <div class='right' background={{ this.data.darkMode ? 'rgba(50, 101, 170, .5)' : 'rgb(50, 120, 180, .2)'; }}>
           <div class='round' background={{ this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,17)'; }} onclick={{ switchMode(); }}>
-            <i class={{ this.data.darkMode ? 'bx bxs-sun' : 'bx bxs-moon' }}></i>
+            <span class={{ this.data.darkMode ? 'bx bxs-sun' : 'bx bxs-moon' }}></span>
           </div>
           <div class='round' background={{ !this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,17)'; }} onclick={{ openMenu(); }}>
-            <i class='bx bx-menu-alt-right'></i>
+            <span class={{ this.data.menuX === 0 ? 'bx' : 'bx bx-menu-alt-right' }}>{{ this.data.menuX === 0 ? '×' : '' }}</span>
           </div>          
         </div>
         
-        <div class='menu' transform={{ 'translateX('+ this.data.menuX +'%)' }}>
-          <SlidingText { text: "About", x: "{{ 'translateX('+this.data.sliders[0]+'%)' }}", click: 'alert()' } />
+        <div class='menu' transform={{ 'translateX('+ this.data.menuX +'%)' }} onclick={{ openMenu(); }}>
+          <SlidingText { text: "About", x: "{{ 'translateX('+this.data.sliders[0]+'px)' }}", click: 'alert()' } />
+          
+          <SlidingText { text: "Stack", x: "{{ 'translateX('+this.data.sliders[1]+'px)' }}", click: 'alert()' } />
+          
+          <SlidingText { text: "Works", x: "{{ 'translateX('+this.data.sliders[2]+'px)' }}", click: 'alert()' } />
         </div>
       </header>
     `
@@ -70,10 +74,11 @@ const TopBar = new subComponent("TopBar", {
       align-items: inherit;
     `,
     
-    ".round i": `
+    ".round span": `
       display: block;
       font-size: 26px;
       color: white;
+      transform: translate(0,0);
     `,
     
     ".menu" : `

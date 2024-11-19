@@ -94,3 +94,19 @@
     AppContent.data.darkMode = !AppContent.data.darkMode;
     Hero.data.darkMode = !Hero.data.darkMode;
   }
+
+  const openMenu = () => {
+    TopBar.data.menuX = TopBar.data.menuX === 0 ? 110 : 0;
+
+    setTimeout(() => {
+      if (TopBar.data.menuX === 0) {
+        TopBar.data.sliders[0] = 0;
+        setTimeout(() => TopBar.data.sliders[1] = 0, 70);
+        setTimeout(() => TopBar.data.sliders[2] = 0, 140);
+      } else {
+        TopBar.data.sliders[0] = 30;
+        setTimeout(() => TopBar.data.sliders[1] = 30, 70);
+        setTimeout(() => TopBar.data.sliders[2] = 30, 140);
+      }
+    }, 100);
+  }
