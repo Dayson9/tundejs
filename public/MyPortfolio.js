@@ -1,7 +1,6 @@
 import { QComponent } from "queflow";
 import Loader from './components/Loader.js';
-import TopBar  from './components/TopBar.js';
-
+import AppContent from './components/AppContent.js';
 /*
 import { Hero } from './components/Hero.js';
 import { AboutMe } from './components/AboutMe.js';
@@ -12,12 +11,13 @@ import { Footer } from './components/Footer.js'; */
 
 
 const MyPortfolio = new QComponent("#app", {
+  data: {
+    msg: "Just testing..."
+  },
   template: () => {
     return `
-       <div id='container'>
          <Loader/>
-         <TopBar/>
-       </div>
+         <AppContent/>
        `
   },
   run: () => {
@@ -25,15 +25,6 @@ const MyPortfolio = new QComponent("#app", {
   },
 
   stylesheet: {
-    "#container" : `
-      width: 100vw;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: rgb(5,11,17);
-    `,
-    
   "*" : `
     font-family: "DM Mono";
   `
@@ -41,3 +32,5 @@ const MyPortfolio = new QComponent("#app", {
 });
 
 MyPortfolio.render();
+
+MyPortfolio.data.msg = 'Tunde Here';

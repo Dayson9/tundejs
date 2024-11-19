@@ -4,7 +4,7 @@ import PillButton from '../Nuggets/PillButton.js';
 const Loader = new subComponent("Loader", {
   data: {
     loadingBarWidth: 0,
-    containerY: 0,
+    containerY: 100,
     btnDisplay: 'none',
     intro: {
       text: "",
@@ -23,18 +23,18 @@ const Loader = new subComponent("Loader", {
   },
   template: () => {
     return `
-      <div id='container' transform={{ 'translateY('+this.data.containerY+')' }}>
-        <div class='center' opacity={{ this.data.center.opacity }} transform={{ 'translateY('+this.data.center.y+'px) scale('+this.data.center.scale+)' }}>
+      <div id='container' transform={{ 'translateY('+this.data.containerY+'%)' }}>
+        <div class='center' opacity={{ this.data.center.opacity }} transform={{ 'translateY('+this.data.center.y+'px) scale('+this.data.center.scale+')' }}>
           <span color="white">Loading...</span>
           <div id='loader'>
             <div width={{ this.data.loadingBarWidth+'%' }}></div>
           </div>
         </div>
         <div class='intro' opacity={{ this.data.intro.opacity }} transform={{ 'translateY('+this.data.intro.y+'px) scale('+this.data.intro.scale+')' }}>
-          <h2>
+          <h3>
             <span>{{ this.data.intro.text }}</span>
             <span class='cursor' color={{ this.data.intro.cursorColor }}>_</span>
-          </h2>
+          </h3>
           <h2 transform={{ 'translateY('+this.data.intro.handY+'px)' }} transition=".25s" opacity={{ this.data.intro.handOpacity }}>👇</h2>
           <PillButton { delay0: 21.5, delay1: 23.5, delay2: 24, click: 'closeLoader()', display: '{{ this.data.btnDisplay }}' } />
         </div>
@@ -81,7 +81,7 @@ const Loader = new subComponent("Loader", {
     `,
     ".intro": `
       width: 90%;
-      height: 210px;
+      height: 57%;
       margin-left: 5%;
       display: flex;
       flex-direction: column;

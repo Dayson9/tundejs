@@ -146,7 +146,9 @@
         // Parse extracted string
         parsed = parse();
         // Replace placeholder expression with evaluated value
-        out = out.replace("{{" + extracted + "}}", sanitizeString(parsed));
+        if (parsed != undefined) {
+          out = out.replace("{{" + extracted + "}}", sanitizeString(parsed));
+        }
       }
     } catch (error) {
       // Prevents unnecessary errors 
@@ -215,6 +217,8 @@
         } else {
           data.push(...generateComponentData(c, true, instance));
         }
+        // Remove duplicate innerText attribute
+        c.removeAttribute("innertext");
       }
     } catch (error) {
       console.error("QueFlow Error:\nAn error occurred while processing JSX/HTML:\n" + error);
@@ -724,7 +728,7 @@
 
     render(name) {
       let template = "<div>" + (this.template instanceof Function ? this.template() : this.template) + "</div>";
-  
+
       template = initiateSubComponents(template);
 
       const [el, newTemplate] = getFirstElement(template);

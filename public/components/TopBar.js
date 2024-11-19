@@ -2,20 +2,17 @@ import { subComponent } from 'queflow';
 
 const TopBar = new subComponent("TopBar", {
   data: {
-    darkMode: true,
-    right: {
-      bg: ""
-    }
+   darkMode: true
   },
   template: () => {
     return `
       <header>
         <h2 color='rgb(50, 120, 180)'>Sodiq Tunde</h2>
-        <div class='right' background={{ this.data.darkMode ? 'rgba(50, 101, 170, .5)' : 'rgb(5,11,17)'; }}>
-          <div class='round'>
+        <div class='right' background={{ this.data.darkMode ? 'rgba(50, 101, 170, .5)' : 'rgb(50, 120, 180, .2)'; }}>
+          <div class='round' background={{ !this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,17)'; }} onclick={{ this.data.darkMode = !this.data.darkMode; AppContent.data.darkMode = !AppContent.data.darkMode; }}>
             <i class='bx bx-sun'></i>
           </div>
-          <div class='round'>
+          <div class='round' background={{ !this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,17)'; }}>
             <i class='bx bx-menu-alt-right'></i>
           </div>          
         </div>
@@ -27,7 +24,7 @@ const TopBar = new subComponent("TopBar", {
       width: 90%;
       height: 70px;
       margin: 0 auto;
-      position: absolute;
+      position: fixed;
       top: 5vh;
       left: 5%;
       background: transparent;
@@ -38,6 +35,9 @@ const TopBar = new subComponent("TopBar", {
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
+    `,
+    "header *" : `
+      transition: .5s;
     `,
     'h2' : `
       font-family: "Pacifico";

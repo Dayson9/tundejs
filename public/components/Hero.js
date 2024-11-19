@@ -1,13 +1,26 @@
 import { subComponent } from 'queflow';
 
-const C = new subComponent("C", {
+const Hero = new subComponent("Hero", {
   data: {
 
   },
-  template: () => ``,
+  template: () => {
+    return `
+      <div id='container'>
+      
+      </div>
+    `
+  },
   stylesheet: {
-
+    "#container" : `
+      width: 100%;
+      height: 90vh;
+      box-sizing: border-box;
+      background: silver;
+      margin-top: 20vh;
+      position: static;
+    `
   }
 });
 
-export default C;
+export default Hero;
