@@ -24,6 +24,10 @@ const AppContent = new subComponent("AppContent", {
       left: 0;
       transition: .5s;
       overflow-y: scroll;
+    `,
+    
+    "*" : `
+      transition: .5s;
     `
   }
 });

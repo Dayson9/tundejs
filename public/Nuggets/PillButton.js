@@ -3,7 +3,7 @@ import { Nugget } from 'queflow';
 const PillButton = new Nugget("PillButton", {
   template: () => {
     return `
-      <svg width="100" height="100" onclick='{{ click }}' display='{{ display }}'>
+      <svg width="100" height="100" onclick={{ click }} opacity={{ opacity }}>
         <path d="M10,15 L85,15 C 85 15 95 35 85 50 L10,50 C 10 50 0 35 10 15 Z" fill='rgb(5,11,17)' stroke='rgb(50, 120, 180)' stroke-width='3.5' pathLength='100' stroke-dasharray="100" stroke-dashoffset="100">
             <animate attributeName="stroke-dashoffset"
                      from="100"

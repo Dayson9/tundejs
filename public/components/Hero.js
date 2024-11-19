@@ -2,13 +2,13 @@ import { subComponent } from 'queflow';
 
 const Hero = new subComponent("Hero", {
   data: {
-
+    darkMode: true
   },
   template: () => {
     return `
       <div id='container'>
         <div id='hero'>
-          <h1 color='white'>Building end-to-end products, Fullstack Developer</h1>
+          <h1 color={{ this.data.darkMode ? 'white' : '' }}>Building end-to-end products, Fullstack Developer</h1>
         </div>
       </div>
     `

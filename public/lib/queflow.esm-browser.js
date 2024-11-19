@@ -492,7 +492,7 @@
       });
     }
 
-    return lintPlaceholders(markup);
+    return lintPlaceholders(markup, isNugget);
   }
 
 
@@ -510,18 +510,17 @@
     return body.innerHTML;
   }
 
-  const lintPlaceholders = (html) => {
+  const lintPlaceholders = (html, isNugget) => {
     const attributeRegex = new RegExp("\\s\\w+\\s*[=]\\s*\\{\\{[^\\}\\}]+\\}\\}", "g"),
       eventRegex = new RegExp("\\s(on)\\w+\\s*[=]\\s*\\{\\{[^\\}\\}]+\\}\\}", "g");
 
-    if (eventRegex.test(html)) {
+    if (eventRegex.test(html) && !isNugget) {
       html = html.replace(eventRegex, (match) => {
         match = match.replaceAll("'", "\`");
         const rpl = match.replace("{{", "\'");
         return rpl.replace(/}}$/, "\'");
       });
     }
-
 
     if (attributeRegex.test(html)) {
       const out = html.replace(attributeRegex, (match) => {

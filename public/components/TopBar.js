@@ -1,20 +1,27 @@
 import { subComponent } from 'queflow';
+import SlidingText from '../Nuggets/SlidingText.js';
 
 const TopBar = new subComponent("TopBar", {
   data: {
-    darkMode: true
+    darkMode: true,
+    menuX: 0,
+    sliders: [0, 0, 0]
   },
   template: () => {
     return `
       <header>
         <h2 color='rgb(50, 120, 180)'>Sodiq Tunde</h2>
         <div class='right' background={{ this.data.darkMode ? 'rgba(50, 101, 170, .5)' : 'rgb(50, 120, 180, .2)'; }}>
-          <div class='round' background={{ this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,17)'; }} onclick={{ this.data.darkMode = !this.data.darkMode; AppContent.data.darkMode = !AppContent.data.darkMode; }}>
+          <div class='round' background={{ this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,17)'; }} onclick={{ switchMode(); }}>
             <i class={{ this.data.darkMode ? 'bx bxs-sun' : 'bx bxs-moon' }}></i>
           </div>
-          <div class='round' background={{ !this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,17)'; }}>
+          <div class='round' background={{ !this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,17)'; }} onclick={{ openMenu(); }}>
             <i class='bx bx-menu-alt-right'></i>
           </div>          
+        </div>
+        
+        <div class='menu' transform={{ 'translateX('+ this.data.menuX +'%)' }}>
+          <SlidingText { text: "About", x: "{{ 'translateX('+this.data.sliders[0]+'%)' }}", click: 'alert()' } />
         </div>
       </header>
     `
@@ -67,6 +74,20 @@ const TopBar = new subComponent("TopBar", {
       display: block;
       font-size: 26px;
       color: white;
+    `,
+    
+    ".menu" : `
+      width: 100px;
+      height: 30vh;
+      background: rgba(50, 101, 170);
+      border-radius: 10px;
+      position: absolute;
+      right: 0;
+      top: 85%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
     `
   }
 });

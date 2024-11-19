@@ -45,7 +45,7 @@
         } else {
           clearInterval(anim);
           Loader.data.intro.handOpacity = 1;
-          Loader.data.btnDisplay = 'block';
+          Loader.data.btnOpacity = 1;
           handAnim = setInterval(() => {
             Loader.data.intro.handY = Loader.data.intro.handY === -7 ? 0 : -7;
           }, 250);
@@ -65,11 +65,11 @@
       Loader.data.loadingBarWidth = 100;
 
       setTimeout(() => {
-        Loader.data.center.y = -70;
+        Loader.data.center.y = -90;
         Loader.data.center.opacity = 0;
         Loader.data.center.scale = .6;
 
-        Loader.data.intro.y = -100;
+        Loader.data.intro.y = -115;
         Loader.data.intro.opacity = 1;
         Loader.data.intro.scale = 1;
         writeLoaderText();
@@ -82,9 +82,15 @@
     clearInterval(cursorAnim);
 
     Loader.data.containerY = 100;
-    
+
     setTimeout(() => {
       Loader.destroy();
       Loader = null;
     }, 1000);
+  }
+
+  const switchMode = () => {
+    TopBar.data.darkMode = !TopBar.data.darkMode;
+    AppContent.data.darkMode = !AppContent.data.darkMode;
+    Hero.data.darkMode = !Hero.data.darkMode;
   }

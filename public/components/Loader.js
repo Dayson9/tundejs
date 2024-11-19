@@ -5,7 +5,7 @@ const Loader = new subComponent("Loader", {
   data: {
     loadingBarWidth: 0,
     containerY: 0,
-    btnDisplay: 'none',
+    btnOpacity: 0,
     intro: {
       text: "",
       opacity: 0,
@@ -36,7 +36,7 @@ const Loader = new subComponent("Loader", {
             <span class='cursor' color={{ this.data.intro.cursorColor }}>_</span>
           </h3>
           <h2 transform={{ 'translateY('+this.data.intro.handY+'px)' }} transition=".25s" opacity={{ this.data.intro.handOpacity }}>👇</h2>
-          <PillButton { delay0: 21.5, delay1: 23.5, delay2: 24, click: 'closeLoader()', display: '{{ this.data.btnDisplay }}' } />
+          <PillButton { delay0: 21.5, delay1: 23.5, delay2: 24, click: 'closeLoader()', opacity: '{{ this.data.btnOpacity }}' } />
         </div>
      </div>
     `
