@@ -12,7 +12,7 @@ import { Footer } from './components/Footer.js'; */
 
 const MyPortfolio = new QComponent("#app", {
   data: {
-    msg: "Just testing..."
+    
   },
   template: () => {
     return `
@@ -21,16 +21,14 @@ const MyPortfolio = new QComponent("#app", {
        `
   },
   run: () => {
-    //runLoaderAnimation();
+    runLoaderAnimation();
   },
 
   stylesheet: {
   "*" : `
-    font-family: "DM Mono";
+    font-family: 'Nova Square';
   `
   }
 });
 
 MyPortfolio.render();
-
-MyPortfolio.data.msg = 'Tunde Here';

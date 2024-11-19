@@ -146,7 +146,7 @@
         // Parse extracted string
         parsed = parse();
         // Replace placeholder expression with evaluated value
-        if (parsed != undefined) {
+        if (parsed != "undefined") {
           out = out.replace("{{" + extracted + "}}", sanitizeString(parsed));
         }
       }
@@ -626,6 +626,7 @@
       let template = this.template instanceof Function ? this.template() : this.template;
       // Initiate sub-components if they are available 
       template = initiateSubComponents(template);
+   
       // Convert template to html 
       let rendered = jsxToHTML(template, this);
 

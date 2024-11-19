@@ -4,7 +4,7 @@ import PillButton from '../Nuggets/PillButton.js';
 const Loader = new subComponent("Loader", {
   data: {
     loadingBarWidth: 0,
-    containerY: 100,
+    containerY: 0,
     btnDisplay: 'none',
     intro: {
       text: "",
@@ -46,11 +46,14 @@ const Loader = new subComponent("Loader", {
     "#container": `
       width: 100vw;
       height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
       background: rgb(5,11,17);
       display: flex;
       flex-direction: column;
       transition: .9s;
-      z-index: 3;
+      z-index: 4;
     `,
     "#container > div": "transition: 1s;",
     ".center": `

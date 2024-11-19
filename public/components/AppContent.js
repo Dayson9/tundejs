@@ -12,7 +12,6 @@ const AppContent = new subComponent("AppContent", {
       <div class='container' background={{ this.data.darkMode ? 'rgb(5,11,17)' : 'white' }}>
         <TopBar/>
         <Hero/>
-        <h2 color='white'>{{ this.data.msg }}</h2>
       </div>
     `
   },
