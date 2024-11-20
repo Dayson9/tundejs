@@ -90,9 +90,10 @@
   }
 
   const switchMode = () => {
-    TopBar.data.darkMode = !TopBar.data.darkMode;
+   TopBar.data.darkMode = !TopBar.data.darkMode;
     AppContent.data.darkMode = !AppContent.data.darkMode;
     Hero.data.darkMode = !Hero.data.darkMode;
+    
   }
 
   const openMenu = () => {

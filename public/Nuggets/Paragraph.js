@@ -1,15 +1,9 @@
 import { Nugget } from 'queflow';
 
 const Paragraph = new Nugget("Paragraph", {
-  template: () => {
+  template: (data) => {
     return `
-      <p font-family={{ font }} text-align= {{ align }} color={{ color }} font-size={{ size }}px>{{ text }}</p>
-    `
-  },
-  
-  stylesheet: {
-    'p' : `
-      color: white;
+      <p font-family={{ font }} text-align= {{ align }} ${ data.color ? 'color={{ color }}' : '' } font-size={{ size }}px>{{ text }}</p>
     `
   }
 });

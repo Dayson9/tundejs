@@ -39,7 +39,7 @@ const TopBar = new subComponent("TopBar", {
       top: 5vh;
       left: 5%;
       background: transparent;
-      backdrop-filter: blur(3px);
+      backdrop-filter: blur(8px);
       border: 1px solid #A1A1AA;
       border-radius: 20px;
       display: flex;
@@ -48,7 +48,7 @@ const TopBar = new subComponent("TopBar", {
       justify-content: space-evenly;
     `,
     "header *" : `
-      transition: .5s;
+      transition: .3s;
     `,
     'h2' : `
       font-family: "Pacifico";
