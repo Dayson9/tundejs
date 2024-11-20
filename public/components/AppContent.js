@@ -13,9 +13,9 @@ const AppContent = new subComponent("AppContent", {
         <TopBar/>
         <Hero/>
         
-        <div id='about' color={{ this.data.darkMode ? 'white' : 'black' }}>
+        <div id='about' color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>
           <h3>Who am I?</h3>
-          <Paragraph { text: 'My name is Sodiq Tunde, a web developer who brings digital experiences to life by each line of code', font: "'DM Mono'", align: 'center', size: 11 } />
+          <Paragraph { text: 'My name is Sodiq Tunde, a web developer dedicated to crafting innovative and user-centric digital experiences. With a focus on clean, efficient code, I transform ideas into reality.', font: "'DM Mono'", align: 'center', size: 11 } />
         </div>
       </div>
     `
@@ -40,6 +40,8 @@ const AppContent = new subComponent("AppContent", {
       height: 300px;
       text-align: center;
       margin-top: 15vh;
+      padding-inline: 0.7em;
+      box-sizing: border-box;
     `
   }
 });

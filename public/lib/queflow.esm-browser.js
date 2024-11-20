@@ -817,7 +817,6 @@
         initiateStyleSheet(`.${"nugget"+counter}`, this, true);
         this.stylesheetInitiated = true;
       }
-
       // Return processed html
       return html;
     }

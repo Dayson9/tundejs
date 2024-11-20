@@ -46,6 +46,7 @@ const TopBar = new subComponent("TopBar", {
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
+      box-sizing: border-box;
     `,
     "header *" : `
       transition: .3s;
@@ -60,8 +61,8 @@ const TopBar = new subComponent("TopBar", {
       border: none;
       display: inherit;
       flex-direction: inherit;
-      justify-content: inherit;
-      align-items: inherit;
+      justify-content: space-evenly;
+      align-items: center;
       border-radius: inherit;
     `,
     '.right > .round' : `
@@ -93,7 +94,21 @@ const TopBar = new subComponent("TopBar", {
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-    `
+    `,
+    
+    "@media (min-width: 768px)" : {
+      'header' : `
+        height: 100px;
+        justify-content: space-between;
+        padding-inline: 5%;
+    `,
+      '.right' : `
+        width: 25%;
+      `,
+      '.menu' : `
+        height: 15vh;
+      `
+    }
   }
 });
 
