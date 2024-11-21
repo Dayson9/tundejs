@@ -4,7 +4,7 @@ import PillButton from '../Nuggets/PillButton.js';
 const Loader = new subComponent("Loader", {
   data: {
     loadingBarWidth: 0,
-    containerY: 0,
+    containerY: 100,
     btnOpacity: 0,
     intro: {
       text: "",

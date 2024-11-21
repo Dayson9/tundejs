@@ -117,10 +117,10 @@
         const ext = b(match),
           parse = () => Function('return ' + ext).call(instance),
           parsed = parse();
-        
+
         const falsy = ["undefined", "NaN", "null"];
         let rendered = "";
-        
+
         if (falsy.includes(parsed) && parsed != "0") {
           rendered = match;
         } else {
