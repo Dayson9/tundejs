@@ -1,7 +1,4 @@
 import { subComponent } from 'queflow';
-import Paragraph from '../Nuggets/Paragraph.js';
-import GradientText from '../Nuggets/GradientText.js';
-import Button from '../Nuggets/Button.js';
 
 const Hero = new subComponent("Hero", {
   data: {

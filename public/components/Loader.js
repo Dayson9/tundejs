@@ -1,5 +1,4 @@
 import { subComponent } from 'queflow';
-import PillButton from '../Nuggets/PillButton.js';
 
 const Loader = new subComponent("Loader", {
   data: {

@@ -3,7 +3,15 @@ import { Nugget } from 'queflow';
 const Paragraph = new Nugget("Paragraph", {
   template: (data) => {
     return `
-      <p font-family={{ font }} text-align="${ data.align.includes('dynamic') ? window.innerWidth < 768 ? 'left' : 'center' : data.align }" ${ data.color ? 'color={{ color }}' : '' } font-size={{ size }}px>{{ text }}</p>
+      <p font-family='"DM Mono"' text-align="${ data.align.includes('dynamic') ? window.innerWidth < 768 ? 'left' : 'center' : data.align }" ${ data.color ? 'color={{ color }}' : '' } ${ data.size ? 'font-size={{ size }}px' : '' }>{{ text }}</p>
+    `
+  },
+  
+  stylesheet: {
+    'p' : `
+      text-align: center;
+      color: white;
+      font-size: 13px;
     `
   }
 });

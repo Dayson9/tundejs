@@ -1,5 +1,4 @@
 import { subComponent } from 'queflow';
-import SlidingText from '../Nuggets/SlidingText.js';
 
 const TopBar = new subComponent("TopBar", {
   data: {

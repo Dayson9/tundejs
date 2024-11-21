@@ -1,7 +1,7 @@
 import { subComponent } from 'queflow';
 import TopBar from './TopBar.js';
 import Hero from './Hero.js';
-import Heading from '../Nuggets/Heading.js';
+import Stack from './Stack.js';
 
 const AppContent = new subComponent("AppContent", {
   data: {
@@ -13,10 +13,12 @@ const AppContent = new subComponent("AppContent", {
         <TopBar/>
         <Hero/>
         
-        <div id='about' class='section' color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>
+        <div id='about' class='section' margin-top='15vh' color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>
           <Heading { text: 'Who am I?', colored: 'am I' } />
-          <Paragraph { text: 'My name is Sodiq Tunde, a web developer dedicated to crafting innovative and user-centric digital experiences. With a focus on clean, efficient code, I transform ideas into reality.', font: "'DM Mono'", align: 'center', size: 12 } />
+          <Paragraph { text: 'My name is Sodiq Tunde, a web developer dedicated to crafting innovative and user-centric digital experiences. With a focus on clean, efficient code, I transform ideas into reality.', align: 'center' } />
         </div>
+        
+        <Stack/>
       </div>
     `
   },

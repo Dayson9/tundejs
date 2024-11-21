@@ -1,13 +1,15 @@
 import { QComponent } from "queflow";
 import Loader from './components/Loader.js';
 import AppContent from './components/AppContent.js';
-/*
-import { Hero } from './components/Hero.js';
-import { AboutMe } from './components/AboutMe.js';
-import { MyProjects } from './components/MyProjects.js';
-import { MySkills } from './components/MySkills.js';
-import { ContactMe } from './components/ContactMe.js';
-import { Footer } from './components/Footer.js'; */
+
+// Imoort Nuggets 
+import Heading from '../Nuggets/Heading.js';
+import Paragraph from '../Nuggets/Paragraph.js';
+import GradientText from '../Nuggets/GradientText.js';
+import Button from '../Nuggets/Button.js';
+import PillButton from '../Nuggets/PillButton.js';
+import SlidingText from '../Nuggets/SlidingText.js';
+
 
 const MyPortfolio = new QComponent("#app", {
   data: {
@@ -31,11 +33,10 @@ const MyPortfolio = new QComponent("#app", {
       width: 100%;
       height: auto;
       text-align: center;
-      margin-top: 15vh;
+      margin-top: 5vh;
       padding-inline: 0.7em;
       padding-block: 20px;
       box-sizing: border-box;
-      border: 1px solid silver;
     `,
 
   }

@@ -8,6 +8,7 @@ const Heading = new Nugget("Heading", {
   stylesheet: {
     'h2': `
       font-size: 25px;
+      color: white;
     `,
     
     'h2 span' : `
