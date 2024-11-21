@@ -21,7 +21,7 @@ const MyPortfolio = new QComponent("#app", {
        `
   },
   run: () => {
-    //runLoaderAnimation();
+    runLoaderAnimation();
   },
 
   stylesheet: {
