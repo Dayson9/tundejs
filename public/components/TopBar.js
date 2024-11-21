@@ -4,7 +4,7 @@ import SlidingText from '../Nuggets/SlidingText.js';
 const TopBar = new subComponent("TopBar", {
   data: {
     darkMode: true,
-    menuX: 110,
+    menuX: window.innerWidth > 768 ? 130: 110,
     sliders: [30, 30, 30]
   },
   template: () => {

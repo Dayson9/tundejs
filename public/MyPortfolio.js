@@ -9,10 +9,9 @@ import { MySkills } from './components/MySkills.js';
 import { ContactMe } from './components/ContactMe.js';
 import { Footer } from './components/Footer.js'; */
 
-
 const MyPortfolio = new QComponent("#app", {
   data: {
-    
+
   },
   template: () => {
     return `
@@ -25,9 +24,20 @@ const MyPortfolio = new QComponent("#app", {
   },
 
   stylesheet: {
-  "*" : `
-    font-family: 'Nova Square';
-  `
+    "*": `
+      font-family: 'Nova Square';
+  `,
+    ".section": `
+      width: 100%;
+      height: auto;
+      text-align: center;
+      margin-top: 15vh;
+      padding-inline: 0.7em;
+      padding-block: 20px;
+      box-sizing: border-box;
+      border: 1px solid silver;
+    `,
+
   }
 });
 

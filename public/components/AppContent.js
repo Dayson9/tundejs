@@ -13,7 +13,7 @@ const AppContent = new subComponent("AppContent", {
         <TopBar/>
         <Hero/>
         
-        <div id='about' color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>
+        <div id='about' class='section' color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>
           <Heading { text: 'Who am I?', colored: 'am I' } />
           <Paragraph { text: 'My name is Sodiq Tunde, a web developer dedicated to crafting innovative and user-centric digital experiences. With a focus on clean, efficient code, I transform ideas into reality.', font: "'DM Mono'", align: 'center', size: 12 } />
         </div>
@@ -34,16 +34,7 @@ const AppContent = new subComponent("AppContent", {
     "*" : `
       transition: .3s;
     `,
-    
-    "#about" : `
-      width: 100%;
-      height: 300px;
-      text-align: center;
-      margin-top: 15vh;
-      padding-inline: 0.7em;
-      box-sizing: border-box;
-    `,
-    
+ 
     "@media (min-width: 768px)": {
       '#about' : `
         padding-inline: 1.2em;
