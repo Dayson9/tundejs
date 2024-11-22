@@ -18,7 +18,7 @@ const AppContent = new subComponent("AppContent", {
           <Paragraph { text: 'My name is Sodiq Tunde, a web developer dedicated to crafting innovative and user-centric digital experiences. With a focus on clean, efficient code, I transform ideas into reality.', align: 'center' } />
         </div>
         
-        <Stack/>
+       <Stack/>
       </div>
     `
   },
@@ -33,7 +33,7 @@ const AppContent = new subComponent("AppContent", {
       overflow-y: scroll;
     `,
     
-    "*" : `
+    ".container > *" : `
       transition: .3s;
     `,
  

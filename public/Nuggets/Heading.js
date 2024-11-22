@@ -2,13 +2,12 @@ import { Nugget } from 'queflow';
 
 const Heading = new Nugget("Heading", {
   template: (data) => {
-    return `<h2>${ data.colored ? data.text.replace(data.colored, '<span>'+data.colored+'</span>') : '{{ text }}' }</h2>`
+    return `<h2${ data.color ? ' color={{ color }}' : ''}>${ data.colored ? data.text.replace(data.colored, '<span>'+data.colored+'</span>') : '{{ text }}' }</h2>`
   },
 
   stylesheet: {
     'h2': `
       font-size: 25px;
-      color: white;
     `,
     
     'h2 span' : `

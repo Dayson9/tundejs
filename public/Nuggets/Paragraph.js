@@ -10,7 +10,6 @@ const Paragraph = new Nugget("Paragraph", {
   stylesheet: {
     'p' : `
       text-align: center;
-      color: white;
       font-size: 13px;
     `
   }

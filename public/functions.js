@@ -93,7 +93,7 @@
    TopBar.data.darkMode = !TopBar.data.darkMode;
     AppContent.data.darkMode = !AppContent.data.darkMode;
     Hero.data.darkMode = !Hero.data.darkMode;
-    
+    Stack.data.darkMode = !Stack.data.darkMode;
   }
 
   const openMenu = () => {
