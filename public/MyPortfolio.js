@@ -34,7 +34,7 @@ const MyPortfolio = new QComponent("#app", {
       width: 100%;
       height: auto;
       text-align: center;
-      margin-top: 5vh;
+      margin-block: 5vh;
       padding-inline: 0.7em;
       padding-block: 20px;
       box-sizing: border-box;

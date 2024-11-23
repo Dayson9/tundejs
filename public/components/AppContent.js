@@ -2,6 +2,8 @@ import { subComponent } from 'queflow';
 import TopBar from './TopBar.js';
 import Hero from './Hero.js';
 import Stack from './Stack.js';
+import MyProjects from './Projects.js';
+
 
 const AppContent = new subComponent("AppContent", {
   data: {
@@ -9,7 +11,7 @@ const AppContent = new subComponent("AppContent", {
   },
   template: () => {
     return `
-      <div class='container' background={{ this.data.darkMode ? 'rgb(5,11,17)' : 'white' }}>
+      <div class='container' background={{ this.data.darkMode ? 'rgb(5,11,18)' : 'white' }}>
         <TopBar/>
         <Hero/>
         
@@ -19,6 +21,7 @@ const AppContent = new subComponent("AppContent", {
         </div>
         
        <Stack/>
+       <MyProjects/>
       </div>
     `
   },

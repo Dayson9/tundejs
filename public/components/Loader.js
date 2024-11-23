@@ -48,7 +48,7 @@ const Loader = new subComponent("Loader", {
       position: fixed;
       top: 0;
       left: 0;
-      background: rgb(5,11,17);
+      background: rgb(5,11,18);
       display: flex;
       flex-direction: column;
       transition: .9s;

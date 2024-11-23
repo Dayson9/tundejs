@@ -7,7 +7,7 @@ const GradientText = new Nugget("GradientText", {
   stylesheet: {
     'span' : `
       animation-name: glow;
-      animation: glow 5s ease-in-out infinite alternate;
+      animation: glow 3s ease-in-out infinite alternate;
     `,
     
     "@keyframes glow" : {

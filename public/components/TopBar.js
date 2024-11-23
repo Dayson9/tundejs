@@ -11,10 +11,10 @@ const TopBar = new subComponent("TopBar", {
       <header>
         <h2 color='rgb(50, 120, 180)'>Sodiq Tunde</h2>
         <div class='right' background={{ this.data.darkMode ? 'rgba(50, 101, 170, .5)' : 'rgb(50, 120, 180, .2)'; }}>
-          <div class='round' background={{ this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,17)'; }} onclick={{ switchMode(); }}>
+          <div class='round' background={{ this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,18)'; }} onclick={{ switchMode(); }}>
             <span class={{ this.data.darkMode ? 'bx bxs-sun' : 'bx bxs-moon' }}></span>
           </div>
-          <div class='round' background={{ !this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,17)'; }} onclick={{ openMenu(); }}>
+          <div class='round' background={{ !this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,18)'; }} onclick={{ openMenu(); }}>
             <span class={{ this.data.menuX === 0 ? 'bx' : 'bx bx-menu-alt-right' }}>{{ this.data.menuX === 0 ? '×' : '' }}</span>
           </div>          
         </div>
@@ -39,7 +39,7 @@ const TopBar = new subComponent("TopBar", {
       left: 5%;
       background: transparent;
       backdrop-filter: blur(8px);
-      border: 1px solid #A1A1AA;
+      border: 2px solid #A1A1AA;
       border-radius: 20px;
       display: flex;
       flex-direction: row;
@@ -67,7 +67,7 @@ const TopBar = new subComponent("TopBar", {
     '.right > .round' : `
       width: 38px;
       height: 38px;
-      background: rgb(5,11,17);
+      background: rgb(5,11,18);
       border-radius: 50%;
       display: flex;
       justify-content: center;

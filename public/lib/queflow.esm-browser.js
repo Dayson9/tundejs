@@ -437,7 +437,7 @@
 
   function initiateSubComponents(markup, isNugget) {
     const subRegex = new RegExp("<[A-Z]\\w+\/[>]", "g"),
-      nuggetRegex = new RegExp("<([A-Z]\\w+)\\s*\\{[^/>]*\\}\\s*\/>", "g");
+      nuggetRegex = new RegExp("<([A-Z]\\w+)\\s*\\{[^>]*\\}\\s*\/>", "g");
 
     if (subRegex.test(markup) && !isNugget) {
       markup = markup.replace(subRegex, (match) => {
