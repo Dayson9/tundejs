@@ -12,19 +12,19 @@ const StackItem = new Nugget("StackItem", {
 
   stylesheet: {
    '.item' : `
-      width: 60px;
-      height: 70px;
+      width: 80%;
+      height: auto;
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: flex-start;
    `,
    'img' : `
       width: 30px;
       height: 30px;
    `,
    
-   'i' : "font-size: 30px;"
+   'i' : "font-size: 30px;",
   }
 });
 

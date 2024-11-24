@@ -38,14 +38,15 @@ const TopBar = new subComponent("TopBar", {
       top: 5vh;
       left: 5%;
       background: transparent;
-      backdrop-filter: blur(8px);
-      border: 2px solid #A1A1AA;
+      backdrop-filter: blur(11px);
+      border: 1px solid rgb(45, 59, 78);
       border-radius: 20px;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
       box-sizing: border-box;
+      z-index: 2;
     `,
     "header *" : `
       transition: .3s;

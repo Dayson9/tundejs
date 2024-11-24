@@ -7,11 +7,11 @@ const MyProjects = new subComponent("MyProjects", {
   },
   template: () => {
     return `
-      <div class='section' color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>
+      <div class='section' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
         <Heading { text: "My Works", colored: "Works" } />
-        <Paragraph { text: "What stuffs have I worked on?, here are workings 👇...", align: 'center' } />
+        <Paragraph { text: "What stuffs have I worked on?, here are some workings 👇...", align: 'center' } />
         
-        <ProjectCard { name: 'PixelPen' } />
+        <ProjectCard { name: 'PixelPen', description: 'PixelPen is a web app....', src: './assets/pp.jpg' } />
       </div>
     `
   },

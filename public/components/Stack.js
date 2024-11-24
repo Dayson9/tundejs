@@ -6,11 +6,11 @@ const Stack = new subComponent("Stack", {
   },
   template: () => {
     return `
-      <div class='section' color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>
+      <div class='section' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
         <Heading { text: 'My Stack',  colored: 'Stack'} />
         <Paragraph { text: "What's my stack?, what Technologies do I use?", align: 'center' } />
         
-        <div class='stack' background={{ this.data.darkMode ? 'rgb(15, 19, 28)' : 'transparent' }} color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>
+        <div class='stack' background={{ this.data.darkMode ? 'rgb(15, 19, 28)' : 'transparent' }} color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
           <div class='col'>
             <StackItem { icon: 'bxl-html5', label: 'HTML', color: 'yellow' }/>
             <StackItem { icon: 'bxl-css3', label: 'CSS', color: 'dodgerblue' }/>
@@ -30,13 +30,14 @@ const Stack = new subComponent("Stack", {
       width: 80%;
       height: 150px;
       padding-block: 10px;
-      border: 2px solid #A1A1AA;
+      padding-left: 7%;
+      border: 1px solid rgb(45, 59, 78);
       margin: 0 auto;
       border-radius: 15px;
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
     `,
     
     '.col' : `
@@ -45,7 +46,7 @@ const Stack = new subComponent("Stack", {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
     `
   }
 });
