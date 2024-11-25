@@ -2,7 +2,7 @@ import { Nugget } from 'queflow';
 
 const Heading = new Nugget("Heading", {
   template: (data) => {
-    return `<h2${ data.color ? ' color={{ color }}' : ''}>${ data.colored ? data.text.replace(data.colored, '<span>'+data.colored+'</span>') : '{{ text }}' }</h2>`
+    return `<h2${ data.color ? ' color={{ color }}' : ''} ${ data.size ? 'font-size={{ size }}px' : '' }>${ data.colored ? data.text.replace(data.colored, '<span>'+data.colored+'</span>') : '{{ text }}' }</h2>`
   },
 
   stylesheet: {

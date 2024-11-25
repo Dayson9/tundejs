@@ -12,6 +12,7 @@ const Button = new Nugget("Button", {
       border: none;
       border-radius: 15px;
       font-weight: 700;
+      margin: 0 auto;
     `
   }
 });

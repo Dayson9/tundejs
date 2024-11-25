@@ -2,41 +2,40 @@ import { Nugget } from 'queflow';
 
 const StackIcon = new Nugget("StackIcon", {
   template: (data) => {
-   let output = '<div class="wrap">';
-   const name = data.name;
-    switch (name) {
-      case 'JS':
-        output+=`
-          <span class='bx bxl-javascript' color='gold'></span> <h6>JavaScript</h6>
-        `
+    const icon = data.icon;
+    var color;
+    switch (icon) {
+      case 'javascript':
+        color = 'gold';
         break;
-      case 'QF':
-        output+= `
-          <img src='./assets/queflow.png' width='20px' height='20px'/> <h6>QueFlow.js</h6>
-        `
+      case 'vuejs':
+        color = 'teal';
         break;
+      
     }
     
-    return output+'</div>'
+   return `
+     <div class='stack'>
+       ${ data.icon ? '<i color="'+color+'" font-size="20px" class="bx bxl-{{ icon }}"></i>' : '<img src={{ img }} alt="{{ name }}\'s icon" />' }
+       <span>{{ name }}</span>
+     </div>
+   `
   },
 
   stylesheet: {
-    '.wrap': `
-      min-width: 80px;
-      height: 15px;
-      background: grey;
-      margin-inline: 12px;
-      border-radius: 15px;
+    '.stack' : `
+      display: block;
+      width: auto;
+      height: 30px;
     `,
-    'h6': `
+    
+    '.stack img' : `
+      width: 20px;
+      height: 20px;
+    `,
+    '.stack span' : `
       font-size: 12px;
-      margin: 2px;
-   `,
-   'span' : `
-     font-size: 20px;
-     transform: translateY(8px);
-     `,
-   'img' : "transform: translateY(5px);"
+    `
   }
 });
 

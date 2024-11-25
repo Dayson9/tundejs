@@ -8,7 +8,7 @@ const Stack = new subComponent("Stack", {
     return `
       <div class='section' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
         <Heading { text: 'My Stack',  colored: 'Stack'} />
-        <Paragraph { text: "What's my stack?, what Technologies do I use?", align: 'center' } />
+        <Text { text: "What's my stack?, what Technologies do I use?", align: 'center' } />
         
         <div class='stack' background={{ this.data.darkMode ? 'rgb(15, 19, 28)' : 'transparent' }} color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
           <div class='col'>
@@ -32,7 +32,7 @@ const Stack = new subComponent("Stack", {
       padding-block: 10px;
       padding-left: 7%;
       border: 1px solid rgb(45, 59, 78);
-      margin: 0 auto;
+      margin: 20px auto;
       border-radius: 15px;
       display: flex;
       flex-direction: row;
