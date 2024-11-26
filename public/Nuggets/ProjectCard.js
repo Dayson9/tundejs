@@ -6,7 +6,7 @@ const ProjectCard = new Nugget("ProjectCard", {
     return `
       <div class='project' background={{ this.data.darkMode ? 'rgb(15, 19, 28)' : 'white' }} min-height='${ window.innerHeight > 768 ? '38vh' : '95vh' }'>
         <img src={{ src }} alt='{{ name }} Logo'/>
-        <h2 text-align='left' padding-left='5%'>{{ name }} <a href='https://{{ url }}' class='bx bx-right-top-arrow-circle'></a></h2>
+        <h2 text-align='left' padding-left='5%'>{{ name }} <a href='https://{{ url }}' class='bx bx-right-top-arrow-circle' aria-label='Preview project'></a></h2>
         <div class='footer'>
           <div class='description'>
             <Paragraph { text: '{{ description }}', align: 'left' } />

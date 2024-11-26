@@ -9,7 +9,7 @@ const UpcomingProject = new Nugget('UpcomingProject', {
           <Text { text: '{{ name }}', size: 15, weight: 700, font: '"Nova Square"' } />
           <Paragraph { text: '{{ snippet }}', size: 11, weight: 300, align: 'left' } />
           <div class='row'>
-          ${ data.stack.map((item) => item.src ? `<img src='${item.src}'/>` : `<i class='bx bxl-${item.icon}' color='${item.color}'></i>`).join('\n')}
+          ${ data.stack.map((item) => item.src ? `<img src='${item.src}' alt='Queflow.js Logo'/>` : `<i class='bx bxl-${item.icon}' color='${item.color}'></i>`).join('\n')}
           </div>
         </div>
       </div>
@@ -18,7 +18,7 @@ const UpcomingProject = new Nugget('UpcomingProject', {
   stylesheet: {
     '.upcoming' : `
       width: 95%;
-      height: 120px;
+      min-height: 120px;
       border: 1px solid rgb(45, 59, 78);
       margin: 0 auto;
       border-radius: 20px;
