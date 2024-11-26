@@ -6,7 +6,7 @@ const Hero = new subComponent("Hero", {
   },
   template: () => {
     return `
-      <div id='container' background={{ this.data.darkMode ? 'url(./assets/hero-static-mobile.png)' : 'white' }}>
+      <div id='container' background={{ this.data.darkMode ? 'rgb(5,11,18)' : 'white' }}>
         <div id='hero'>
           <h1 font-size='2.2rem' color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>Building <GradientText { text: 'end-to-end', from: 'rgb(50, 120, 180)', to: 'rgb(50, 120, 180, .2)', deg: 35 } /> products, Fullstack Developer</h1>
           
