@@ -25,10 +25,6 @@ const Hero = new subComponent("Hero", {
       border: none;
       margin-top: 130px;
       position: static;
-      background-position: 0px 0px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      border-radius: 15px;
     `,
     "#container > #hero": `
       width: 80%;
