@@ -20,7 +20,7 @@ const MyProjects = new subComponent("MyProjects", {
         <div class='section'>
           <Heading { text: "Upcoming projects", colored: "Upcoming", size: 20 } />
           
-          <UpcomingProject { name: 'PureNovel', src: './assets/hero-static-mobile.png', snippet: 'A novel reading web app with tons of features.', stack: [{ src: './assets/queflow.png' }] } />
+          <UpcomingProject { name: 'PureNovel', src: './assets/hero-static-mobile.png', snippet: 'A novel reading web app with tons of features.', stack: [{ src: './assets/queflow.jpg' }] } />
           
           <UpcomingProject { name: 'Flow UI', src: './assets/hero-static-mobile.png', snippet: 'A QueFlow based CSS library that contains beautifully crafted UI components.', stack: [{ icon: 'css3', color: 'dodgerblue' }] } />
           
