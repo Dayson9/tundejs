@@ -26,7 +26,9 @@ const StackIcon = new Nugget("StackIcon", {
     '.stack' : `
       display: block;
       width: auto;
+      max-width: 30%;
       height: 30px;
+      margin-left: 0%;
     `,
     
     '.stack img' : `

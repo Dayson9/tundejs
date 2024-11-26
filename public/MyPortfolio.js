@@ -31,13 +31,14 @@ const MyPortfolio = new QComponent("#app", {
       font-family: 'Nova Square';
   `,
     ".section": `
-      width: 100%;
+      max-width: 100vw;
       height: auto;
       text-align: center;
       margin-block: 5vh;
       padding-inline: 0.7em;
       padding-block: 20px;
       box-sizing: border-box;
+      margin: 0 auto;
     `,
 
   }

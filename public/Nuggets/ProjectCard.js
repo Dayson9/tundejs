@@ -83,7 +83,7 @@ const ProjectCard = new Nugget("ProjectCard", {
       text-align: left;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-evenly;
     `,
     
     ".stack *" : `
