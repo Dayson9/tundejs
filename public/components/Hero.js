@@ -6,9 +6,9 @@ const Hero = new subComponent("Hero", {
   },
   template: () => {
     return `
-      <div id='container' background='url(starry.png)'>
+      <div id='container' background='url(./assets/hero-static-mobile.png)'>
         <div id='hero'>
-          <h1 font-size='2.2rem' color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>Building <GradientText { text: 'end-to-end', from: 'rgb(50, 120, 180)', to: 'rgb(50, 120, 180, .2)', deg: 135 } /> products, Fullstack Developer</h1>
+          <h1 font-size='2.2rem' color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>Building <GradientText { text: 'end-to-end', from: 'rgb(50, 120, 180)', to: 'rgb(50, 120, 180, .2)', deg: 35 } /> products, Fullstack Developer</h1>
           
           <Text { text: 'I Develop, I Build, I Deploy', color: "{{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}", size: 13 } />
           
@@ -25,6 +25,9 @@ const Hero = new subComponent("Hero", {
       border: none;
       margin-top: 130px;
       position: static;
+      background-position: 0px 0px;
+      background-size: fit;
+      background-repeat: no repeat;
     `,
     "#container > #hero": `
       width: 80%;
