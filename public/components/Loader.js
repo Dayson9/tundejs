@@ -24,7 +24,9 @@ const Loader = new subComponent("Loader", {
     return `
       <div id='container' transform={{ 'translateY('+this.data.containerY+'%)' }}>
         <div class='center' opacity={{ this.data.center.opacity }} transform={{ 'translateY('+this.data.center.y+'px) scale('+this.data.center.scale+')' }}>
-          <span color="white">Loading...</span>
+        
+          <Text { text: 'Loading', color: 'white', font: '"Nova Square"' } />
+          
           <div id='loader'>
             <div width={{ this.data.loadingBarWidth+'%' }}></div>
           </div>

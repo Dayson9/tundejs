@@ -90,9 +90,9 @@
   }
 
   const switchMode = () => {
+   Hero.data.darkMode = !Hero.data.darkMode;
    TopBar.data.darkMode = !TopBar.data.darkMode;
     AppContent.data.darkMode = !AppContent.data.darkMode;
-    Hero.data.darkMode = !Hero.data.darkMode;
     Stack.data.darkMode = !Stack.data.darkMode;
     MyProjects.data.darkMode = !MyProjects.data.darkMode;
   }
