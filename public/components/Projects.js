@@ -29,8 +29,6 @@ const MyProjects = new subComponent("MyProjects", {
           <UpcomingProject { name: 'Crank.js', src: './assets/hero-static-mobile.png', snippet: 'A powerful 2D JavaScript game engine for building web based games.', stack: [{ icon: 'javascript', color: 'gold' }] } />
         </div>
       </div>`
-  },
-  stylesheet: {
   }
 });
 

@@ -1,5 +1,8 @@
   const introText = ["Hello folk 👋, my name's Tunde", "I'm a Software Engineer", "Wanna know more about me?", "Let's dive in"];
 
+  const deviceWidth = window.innerWidth,
+    deviceHeight = window.innerHeight;
+
   var index = i = 0,
     anim,
     cursorAnim,
@@ -90,11 +93,12 @@
   }
 
   const switchMode = () => {
-   Hero.data.darkMode = !Hero.data.darkMode;
-   TopBar.data.darkMode = !TopBar.data.darkMode;
+    Hero.data.darkMode = !Hero.data.darkMode;
+    TopBar.data.darkMode = !TopBar.data.darkMode;
     AppContent.data.darkMode = !AppContent.data.darkMode;
     Stack.data.darkMode = !Stack.data.darkMode;
     MyProjects.data.darkMode = !MyProjects.data.darkMode;
+    OracleEye.data.darkMode = !OracleEye.data.darkMode;
   }
 
   const openMenu = () => {
@@ -111,4 +115,16 @@
         setTimeout(() => TopBar.data.sliders[2] = 30, 80);
       }
     }, 100);
+  }
+
+  const moveOracleEye = (e) => {
+    OracleEye.data.opacity = 1;
+
+    const touches = e.touches[0];
+    const x = touches.clientX,
+      y = touches.clientY;
+
+    const finalX = (80 * x) / deviceWidth;
+
+    OracleEye.data.x = finalX > 65 ? 65 : finalX < 15 ? 15 : finalX;
   }

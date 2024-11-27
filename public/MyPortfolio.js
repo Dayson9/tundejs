@@ -24,6 +24,7 @@ const MyPortfolio = new QComponent("#app", {
   },
   run: () => {
     //runLoaderAnimation();
+    OracleEye.data.x = 45
   },
 
   stylesheet: {

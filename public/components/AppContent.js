@@ -1,4 +1,5 @@
 import { subComponent } from 'queflow';
+import OracleEye from './OracleEye.js';
 import TopBar from './TopBar.js';
 import Hero from './Hero.js';
 import Stack from './Stack.js';
@@ -11,8 +12,15 @@ const AppContent = new subComponent("AppContent", {
   },
   template: () => {
     return `
-      <div class='container' background={{ this.data.darkMode ? 'rgb(5,11,18)' : 'white' }}>
+      <div class='container' background={{ this.data.darkMode ? 'rgb(5,11,18)' : 'white' }}  
+      
+      ${ window.innerWidth > 768 ? 'onmousemove={{ moveOracleEye(e); }} onmouseend={{ setTimeout(() => OracleEye.data.opacity = 0, 2000); }}' : ''}
+     
+      ontouchmove={{ moveOracleEye(e); }}
+      ontouchend={{ setTimeout(() => OracleEye.data.opacity = 0, 2000); }}>
+
         <TopBar/>
+        <OracleEye/>
         <Hero/>
         
         <div id='about' class='section' margin-top='15vh' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>

@@ -12,7 +12,7 @@ const Hero = new subComponent("Hero", {
           
           <Text { text: 'I Develop, I Build, I Deploy', color: "{{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}", size: 13 } />
           
-          <Button { label: "About me", w: '150px', h: '60px', color: 'white', bg: "rgb(50, 120, 180)", icon: "r bxs-right-arrow", click: "window.location.href = '#about'" } />
+          <Button { label: "About me", w: '150px', h: '60px', color: 'white', bg: "rgba(50, 101, 170)", icon: "r bxs-right-arrow", click: "window.location.href = '#about'" } />
         </div>
       </div>
     `
