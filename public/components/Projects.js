@@ -22,11 +22,11 @@ const MyProjects = new subComponent("MyProjects", {
           
           <Text { text: "Projects I'm currently working on / planning to work on.", bottom: 20, align: 'center' } />
           
-          <UpcomingProject { name: 'PureNovel', src: './assets/hero_static_mobile.jpg', snippet: 'A novel reading web app with tons of features.', stack: [{ src: './assets/queflow.png' }] } />
+          <UpcomingProject { name: 'PureNovel', src: './assets/purenovel.png', snippet: 'A novel reading web app with tons of features.', stack: [{ src: './assets/queflow.png' }] } />
           
           <UpcomingProject { name: 'Flow UI', src: './assets/hero_static_mobile.jpg', snippet: 'A QueFlow based CSS library that contains beautifully crafted UI components.', stack: [{ icon: 'css3', color: 'dodgerblue' }, { icon: 'javascript', color: 'gold' }] } />
           
-          <UpcomingProject { name: 'Crank.js', src: './assets/hero_static_mobile.jpg', snippet: 'A powerful 2D JavaScript game engine for building web based games.', stack: [{ icon: 'javascript', color: 'gold' }] } />
+          <UpcomingProject { name: 'Crank.js', src: './assets/crankjs.png', snippet: 'A powerful 2D JavaScript game engine for building web based games.', stack: [{ icon: 'javascript', color: 'gold' }] } />
         </div>
       </div>`
   }
