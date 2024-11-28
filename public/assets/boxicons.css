@@ -63,3 +63,23 @@
 .bxs-moon:before {
   content: "\ee4e"
 }
+
+.bxl-github:before {
+  content: "\e93a"
+}
+
+.bxl-telegram:before {
+  content: "\e97b"
+}
+
+.bxl-facebook-circle:before {
+  content: "\e930"
+}
+
+.bxl-twitter:before {
+  content: "\e982"
+}
+
+.bxl-linkedin-square:before {
+  content: "\e94e"
+}

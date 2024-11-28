@@ -4,8 +4,10 @@ const StackItem = new Nugget("StackItem", {
   template: (data) => {
     return `
       <div class='item'>
-       ${ data.icon ? "<i class='bx {{ icon }}' color={{ color }}></i>" : "<img src={{ src }} alt={{ alt }} />" }
-        <Text { text: '{{ label }}' } />
+       ${ data.icon ? 
+       "<i class='bx {{ icon }}' color={{ color }}></i>"  :  `<img src={{ src }} alt={{ alt }}/>` }
+       
+        <Text { text: '{{ label }}', size: ${ data.size ? data.size : 15 } } />
       </div>
     `
   },
