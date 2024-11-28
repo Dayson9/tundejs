@@ -4,7 +4,7 @@ import TopBar from './TopBar.js';
 import Hero from './Hero.js';
 import Stack from './Stack.js';
 import MyProjects from './Projects.js';
-
+import Contact from './Contact.js';
 
 const AppContent = new subComponent("AppContent", {
   data: {
@@ -14,10 +14,16 @@ const AppContent = new subComponent("AppContent", {
     return `
       <div class='container' background={{ this.data.darkMode ? 'rgb(5,11,18)' : 'white' }}  
       
-      ${ window.innerWidth > 768 ? 'onmousemove={{ moveOracleEye(e); }} onmouseend={{ setTimeout(() => OracleEye.data.opacity = 0, 2000); }}' : ''}
+      ${ window.innerWidth > 768 ? `onmousemove={{ moveOracleEye(e); }} onmouseend={{ clearTimeout(OracleEye.data.animation);
+        OracleEye.data.animation = setTimeout(() => OracleEye.data.opacity = 0, 2000);
+        
+      }}` : ''}
      
       ontouchmove={{ moveOracleEye(e); }}
-      ontouchend={{ setTimeout(() => OracleEye.data.opacity = 0, 2000); }}>
+      ontouchend={{ 
+        clearTimeout(OracleEye.data.animation);
+        OracleEye.data.animation = setTimeout(() => OracleEye.data.opacity = 0, 2000); 
+      }}>
 
         <TopBar/>
         <OracleEye/>
@@ -30,11 +36,12 @@ const AppContent = new subComponent("AppContent", {
         
        <Stack/>
        <MyProjects/>
+       <Contact/>
       </div>
     `
   },
   stylesheet: {
-    ".container" : `
+    ".container": `
       width: 100vw;
       height: 100vh;
       position: fixed;
@@ -43,13 +50,35 @@ const AppContent = new subComponent("AppContent", {
       transition: .3s;
       overflow-y: scroll;
     `,
-    
-    ".container > *" : `
+
+    ".container > *": `
       transition: .3s;
     `,
- 
+
+    '.bg': `
+       width: 80%;
+       height: 150px;
+       padding-block: 10px;
+       padding-left: 7%;
+       border: 1px solid rgb(45, 59, 78);
+       margin: 20px auto;
+       border-radius: 15px;
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-around;
+     `,
+
+    '.col': `
+       width: 45%;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-around;
+     `,
     "@media (min-width: 768px)": {
-      '#about' : `
+      '#about': `
         padding-inline: 1.2em;
       `
     }

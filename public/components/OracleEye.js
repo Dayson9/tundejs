@@ -3,9 +3,10 @@ import { subComponent } from 'queflow';
 const OracleEye = new subComponent('OracleEye', {
   data: {
     x: 40,
-    y: 22.5,
+    y: 25.5,
     darkMode: true,
-    opacity: 0
+    opacity: 0,
+    animation: () => null
   },
   template: () => {
     return `

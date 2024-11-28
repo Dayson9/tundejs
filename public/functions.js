@@ -99,6 +99,7 @@
     Stack.data.darkMode = !Stack.data.darkMode;
     MyProjects.data.darkMode = !MyProjects.data.darkMode;
     OracleEye.data.darkMode = !OracleEye.data.darkMode;
+    Contact.data.darkMode = !Contact.data.darkMode;
   }
 
   const openMenu = () => {
@@ -124,7 +125,11 @@
     const x = touches.clientX,
       y = touches.clientY;
 
-    const finalX = (80 * x) / deviceWidth;
+    const finalX = (80 * x) / deviceWidth,
+      angle = Math.atan2(y, x),
+      finalY = (12.75 * Math.sin(angle)) + 11;
+
 
     OracleEye.data.x = finalX > 65 ? 65 : finalX < 15 ? 15 : finalX;
+    OracleEye.data.y = finalY > 50 ? 50 : finalY < 15.75 ? 15.75 : finalY;
   }

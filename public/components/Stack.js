@@ -10,7 +10,7 @@ const Stack = new subComponent("Stack", {
         <Heading { text: 'My Stack',  colored: 'Stack'} />
         <Text { text: "What's my stack?, what Technologies do I use?", align: 'center' } />
         
-        <div class='stack' background={{ this.data.darkMode ? 'rgb(15, 19, 28)' : 'transparent' }} color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
+        <div class='bg' background={{ this.data.darkMode ? 'rgb(15, 19, 28)' : 'transparent' }} color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
           <div class='col'>
             <StackItem { icon: 'bxl-html5', label: 'HTML', color: 'yellow' }/>
             <StackItem { icon: 'bxl-css3', label: 'CSS', color: 'dodgerblue' }/>
@@ -26,28 +26,6 @@ const Stack = new subComponent("Stack", {
     `
   },
   stylesheet: {
-    '.stack' : `
-      width: 80%;
-      height: 150px;
-      padding-block: 10px;
-      padding-left: 7%;
-      border: 1px solid rgb(45, 59, 78);
-      margin: 20px auto;
-      border-radius: 15px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-around;
-    `,
-    
-    '.col' : `
-      width: 45%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-    `
   }
 });
 
