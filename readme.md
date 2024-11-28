@@ -1,1 +1,1 @@
-A shiny new portfolio site built with QueFlowJS. 🌊
+A new portfolio powered by QueFlowJS. 🌊
