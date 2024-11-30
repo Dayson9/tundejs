@@ -5,6 +5,7 @@ import Hero from './Hero.js';
 import Stack from './Stack.js';
 import MyProjects from './Projects.js';
 import Contact from './Contact.js';
+import Footer from './Footer.js'
 
 const AppContent = new subComponent("AppContent", {
   data: {
@@ -25,6 +26,7 @@ const AppContent = new subComponent("AppContent", {
        <Stack/>
        <MyProjects/>
        <Contact/>
+       <Footer/>
       </div>
     `
   },
@@ -44,8 +46,8 @@ const AppContent = new subComponent("AppContent", {
     `,
 
     '.bg': `
-       width: 80%;
-       height: 150px;
+       width: ${ window.innerHeight < 768 ? '80%' : '40%' };
+       height: ${ window.innerHeight < 768 ? '150%' : '260px' };
        padding-block: 10px;
        padding-left: 7%;
        border: 1px solid rgb(45, 59, 78);

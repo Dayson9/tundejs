@@ -15,9 +15,9 @@ const StackItem = new Nugget("StackItem", {
       return `
       <div class='item'>
        ${ data.icon ? 
-       "<i class='bx {{ icon }}' color={{ color }}></i>"  :  `<img src={{ src }} alt={{ alt }}/>` }
+       "<i class='bx {{ icon }}' color={{ color }}></i>"  :  `<img src={{ src }} alt={{ alt }} ${ data.size ? 'width="{{ size }}px" height="{{ size }}px"' : '' }/>` }
        
-        <Text { text: '{{ label }}', size: ${ data.size ? data.size : 15 } } />
+        <Text { text: '{{ label }}', size: ${ data.size ? data.size-10 : 15 } } />
       </div>
     `
     }

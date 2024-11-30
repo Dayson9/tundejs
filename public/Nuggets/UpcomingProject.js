@@ -17,8 +17,8 @@ const UpcomingProject = new Nugget('UpcomingProject', {
   },
   stylesheet: {
     '.upcoming' : `
-      width: 95%;
-      min-height: 120px;
+      width: ${ window.innerHeight < 768 ? '95%' : '55%' };
+      min-height: ${ window.innerHeight < 768 ? '120px' : '150px' };
       border: 1px solid rgb(45, 59, 78);
       margin: 0 auto;
       border-radius: 20px;
@@ -60,7 +60,8 @@ const UpcomingProject = new Nugget('UpcomingProject', {
       height: 20px;
     `,
     
-    '.row i' : "font-size: 20px"
+    '.row i' : "font-size: 20px",
+
   }
 });
 

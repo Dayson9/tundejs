@@ -48,7 +48,7 @@ const ProjectCard = new Nugget("ProjectCard", {
 
     '.project > img': `
       width: 90%;
-      height: ${ window.innerHeight > 768 ? '23vh' : '55vh' };
+      height: ${ window.innerHeight > 768 ? '23vh' : '50vh' };
       border: inherit;
       border-radius: inherit;
       

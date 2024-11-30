@@ -43,7 +43,9 @@ const StackIcon = new Nugget("StackIcon", {
     '.stack img' : `
       width: 20px;
       height: 20px;
-    `
+    `,
+    
+    '.stack i' : "font-size: 20px;"
   }
 });
 

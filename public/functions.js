@@ -92,13 +92,14 @@
   }
 
   const switchMode = () => {
-    Hero.data.darkMode = !Hero.data.darkMode;
-    TopBar.data.darkMode = !TopBar.data.darkMode;
-    AppContent.data.darkMode = !AppContent.data.darkMode;
-    Stack.data.darkMode = !Stack.data.darkMode;
-    MyProjects.data.darkMode = !MyProjects.data.darkMode;
-    OracleEye.data.darkMode = !OracleEye.data.darkMode;
-    Contact.data.darkMode = !Contact.data.darkMode;
+    const components = [AppContent, TopBar, OracleEye, Hero, Stack, MyProjects, Contact, Footer];
+
+    const _switchMode = (component) => component.data.darkMode = !component.data.darkMode;
+
+    for (const component of components) {
+      _switchMode(component);
+    }
+
   }
 
   const openMenu = () => {

@@ -26,6 +26,7 @@ const Stack = new subComponent("Stack", {
     `
   },
   stylesheet: {
+
   }
 });
 
