@@ -2,7 +2,17 @@ import { Nugget } from 'queflow';
 
 const StackItem = new Nugget("StackItem", {
   template: (data) => {
+    if(data.link) {
     return `
+      <div class='item' aria-label='{{ label }} profile' onclick='window.open("https://{{ link }}", "_blank")'>
+        ${ data.icon ? 
+          "<i class='bx {{ icon }}' color={{ color }}></i>"  :  `<img src={{ src }} alt={{ alt }}/>` }
+       
+        <Text { text: '{{ label }}', size: ${ data.size ? data.size : 15 } } />
+      </div>
+    `
+    } else {
+      return `
       <div class='item'>
        ${ data.icon ? 
        "<i class='bx {{ icon }}' color={{ color }}></i>"  :  `<img src={{ src }} alt={{ alt }}/>` }
@@ -10,6 +20,7 @@ const StackItem = new Nugget("StackItem", {
         <Text { text: '{{ label }}', size: ${ data.size ? data.size : 15 } } />
       </div>
     `
+    }
   },
 
   stylesheet: {
