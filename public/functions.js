@@ -1,7 +1,6 @@
   const introText = ["Hello folk 👋, my name's Tunde", "I'm a Software Engineer", "Wanna know more about me?", "Let's dive in"];
 
-  const deviceWidth = window.innerWidth,
-    deviceHeight = window.innerHeight;
+  const deviceWidth = window.innerWidth;
 
   var index = i = 0,
     anim,

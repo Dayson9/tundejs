@@ -24,7 +24,16 @@ const MyPortfolio = new QComponent("#app", {
   },
   run: () => {
     //runLoaderAnimation();
-    OracleEye.data.x = 45
+
+    const mainElement = document.getElementById('main');
+
+    mainElement.addEventListener(`${ deviceWidth < 768 ? 'touchmove' : 'mousemove' }`, (e) => moveOracleEye(e), { passive: true });
+
+    mainElement.addEventListener(`${ deviceWidth < 768 ? 'touchend' : 'mouseend' }`, () => {
+      clearTimeout(OracleEye.data.animation);
+      OracleEye.data.animation = setTimeout(() => OracleEye.data.opacity = 0, 2000);
+    }, { passive: true });
+    
   },
 
   stylesheet: {

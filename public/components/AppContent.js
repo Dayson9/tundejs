@@ -12,19 +12,7 @@ const AppContent = new subComponent("AppContent", {
   },
   template: () => {
     return `
-      <div class='container' background={{ this.data.darkMode ? 'rgb(5,11,18)' : 'white' }}  
-      
-      ${ window.innerWidth > 768 ? `onmousemove={{ moveOracleEye(e); }} onmouseend={{ clearTimeout(OracleEye.data.animation);
-        OracleEye.data.animation = setTimeout(() => OracleEye.data.opacity = 0, 2000);
-        
-      }}` : ''}
-     
-      ontouchmove={{ moveOracleEye(e); }}
-      ontouchend={{ 
-        clearTimeout(OracleEye.data.animation);
-        OracleEye.data.animation = setTimeout(() => OracleEye.data.opacity = 0, 2000); 
-      }}>
-
+      <div class='container' id='main' background={{ this.data.darkMode ? 'rgb(5,11,18)' : 'white' }}>
         <TopBar/>
         <OracleEye/>
         <Hero/>
