@@ -47,7 +47,7 @@ const AppContent = new subComponent("AppContent", {
 
     '.bg': `
        width: ${ window.innerHeight < 768 ? '80%' : '40%' };
-       height: ${ window.innerHeight < 768 ? '150%' : '260px' };
+       height: ${ window.innerHeight < 768 ? '150px' : '260px' };
        padding-block: 10px;
        padding-left: 7%;
        border: 1px solid rgb(45, 59, 78);
