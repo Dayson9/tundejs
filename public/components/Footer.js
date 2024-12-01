@@ -43,13 +43,13 @@ const Footer = new subComponent('Footer', {
       height: 60%;
       border-radius: 0px 0px 20px 20px;
     `,
-    '#bottom > div' : "transform: translateX(-20%);",
+    '#bottom > div' : "transform: translateX(-15%);",
     'footer div' : `
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      padding-left: 20px;
-      padding-right: 15%;
+      padding-left: 15px;
+      padding-right: 10%;
       box-sizing: border-box;
     `
   }
