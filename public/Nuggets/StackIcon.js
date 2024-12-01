@@ -37,7 +37,7 @@ const StackIcon = new Nugget("StackIcon", {
     `,
     
     '.stack span' : `
-      font-size: 13px;
+      font-size: 12px;
     `,
     
     '.stack img' : `
