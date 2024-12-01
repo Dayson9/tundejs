@@ -13,7 +13,7 @@ const Footer = new subComponent('Footer', {
         </div>
         
         <div id='bottom'>
-          <Text { text: 'Built with: ', size: 13, align: 'left' } />
+          <Text { text: 'Built with: ', size: 13, align: 'center' } />
           <div>
             <StackItem { src: './assets/queflow.webp', label: 'QueFlowJS', size: 22, alt: 'QueFlowJS Icon' }/>
           </div>
@@ -43,7 +43,7 @@ const Footer = new subComponent('Footer', {
       height: 60%;
       border-radius: 0px 0px 20px 20px;
     `,
-    
+    '#bottom > div' : "transform: translateX(-20%);",
     'footer div' : `
       display: flex;
       align-items: center;
