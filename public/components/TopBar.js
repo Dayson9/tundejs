@@ -52,7 +52,7 @@ const TopBar = new subComponent("TopBar", {
       transition: .3s;
     `,
     'h2' : `
-      font-family: "Pacifico";
+      font-family: "Pacifico"!important;
       font-size: 28px;
     `,
     '.right' : `

@@ -13,9 +13,9 @@ const Footer = new subComponent('Footer', {
         </div>
         
         <div id='bottom'>
-          <Text { text: 'Built with: ', size: 13, align: 'center' } />
+          <Text { text: 'Built with: ', size: 14, align: 'center' }/>
           <div>
-            <StackItem { src: './assets/queflow.webp', label: 'QueFlowJS', size: 22, alt: 'QueFlowJS Icon' }/>
+            <StackItem { src: './assets/queflow.webp', label: 'QueFlowJS', size: 22, alt: 'QueFlowJS Icon', nova: true }/>
           </div>
         </div>
       </footer>

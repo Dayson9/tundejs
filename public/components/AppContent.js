@@ -31,6 +31,7 @@ const AppContent = new subComponent("AppContent", {
     `
   },
   stylesheet: {
+    'h2' : 'font-family: "Nova Square"',
     ".container": `
       width: 100vw;
       height: 100vh;

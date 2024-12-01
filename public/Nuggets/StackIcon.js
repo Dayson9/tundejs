@@ -38,6 +38,7 @@ const StackIcon = new Nugget("StackIcon", {
     
     '.stack span' : `
       font-size: 12px;
+      font-family: "DM Mono";
     `,
     
     '.stack img' : `

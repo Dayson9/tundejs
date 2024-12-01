@@ -5,8 +5,12 @@ const ProjectCard = new Nugget("ProjectCard", {
   template: (data) => {
     return `
       <div class='project' background={{ this.data.darkMode ? 'rgb(15, 19, 28)' : 'white' }}>
+      
         <img src={{ src }} alt='{{ name }} Logo'/>
-        <h2 text-align='left' padding-left='5%'>{{ name }} <a href='https://{{ url }}' target='_blank' class='bx bx-right-top-arrow-circle' aria-label='Preview project' color='rgba(50, 101, 170)'></a></h2>
+        
+        <h2 text-align='left' padding-left='5%'>{{ name }} <a href='https://{{ url }}' target='_blank' class='bx bx-right-top-arrow-circle' aria-label='Preview project' color='rgba(50, 101, 170)'></a>
+        </h2>
+        
         <div class='footer'>
           <div class='description'>
             <Paragraph { text: '{{ description }}', align: 'left' } />

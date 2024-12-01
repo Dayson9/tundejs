@@ -37,9 +37,6 @@ const MyPortfolio = new QComponent("#app", {
   },
 
   stylesheet: {
-    "*": `
-      font-family: 'Nova Square';
-  `,
     ".section": `
       max-width: 100vw;
       height: auto;
