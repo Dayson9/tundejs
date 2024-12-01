@@ -13,7 +13,7 @@ const AppContent = new subComponent("AppContent", {
   },
   template: () => {
     return `
-      <div class='container' id='main' background={{ this.data.darkMode ? 'rgb(5,11,18)' : 'white' }}>
+      <div class='container' id='main' background={{ this.data.darkMode ? 'linear-gradient(125deg, rgb(15, 21, 38), rgb(5,11,18))' : 'white' }}>
         <TopBar/>
         <OracleEye/>
         <Hero/>

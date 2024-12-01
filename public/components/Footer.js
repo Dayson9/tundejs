@@ -6,7 +6,7 @@ const Footer = new subComponent('Footer', {
   },
   template: () => {
     return `
-      <footer background={{ this.data.darkMode ? 'rgb(15, 19, 28)' : 'transparent' }} color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
+      <footer background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'transparent' }} color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
       
         <div id='top'>
           <Text { text: '© 2024', size: 12, align: 'left' } />

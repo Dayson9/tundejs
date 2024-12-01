@@ -3,7 +3,7 @@ import { subComponent } from 'queflow';
 const Loader = new subComponent("Loader", {
   data: {
     loadingBarWidth: 0,
-    containerY: 100,
+    containerY: 0,
     btnOpacity: 0,
     intro: {
       text: "",
@@ -32,7 +32,7 @@ const Loader = new subComponent("Loader", {
           </div>
         </div>
         <div class='intro' opacity={{ this.data.intro.opacity }} transform={{ 'translateY('+this.data.intro.y+'px) scale('+this.data.intro.scale+')' }}>
-          <h3>
+          <h3 font-family='"Nova Square"'>
             <span>{{ this.data.intro.text }}</span>
             <span class='cursor' color={{ this.data.intro.cursorColor }}>_</span>
           </h3>
@@ -50,7 +50,7 @@ const Loader = new subComponent("Loader", {
       position: fixed;
       top: 0;
       left: 0;
-      background: rgb(5,11,18);
+      background: linear-gradient(135deg, rgb(5,11,18), rgb(15, 21, 38));
       display: flex;
       flex-direction: column;
       transition: .9s;

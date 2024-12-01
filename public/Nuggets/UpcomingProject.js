@@ -3,7 +3,7 @@ import { Nugget } from 'queflow';
 const UpcomingProject = new Nugget('UpcomingProject', {
   template: (data) => {
     return `
-      <div class='upcoming' background={{ this.data.darkMode ? 'rgb(15, 19, 28)' : 'white' }}>
+      <div class='upcoming' background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'white' }}>
         <img src={{ src }} alt="{{ name }}'s Image"/>
         <div class='right'>
           <Text { text: '{{ name }}', size: 15, weight: 700, font: '"Nova Square"' } />

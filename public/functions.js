@@ -83,12 +83,15 @@
     clearInterval(handAnim);
     clearInterval(cursorAnim);
 
-    Loader.data.containerY = 100;
+    Loader.data.intro.y = 0;
+    Loader.data.intro.opacity = 0;
+    Loader.data.intro.scale = .7;
+    setTimeout(() => Loader.data.containerY = 100, 500);
 
     setTimeout(() => {
       Loader.destroy();
       Loader = null;
-    }, 1000);
+    }, 1500);
   }
 
   const switchMode = () => {

@@ -8,7 +8,7 @@ const Contact = new subComponent("Contact", {
     return `
       <div class='section' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
         <Heading { text: 'Get in Touch', colored: 'Touch' } />
-        <div class='bg' background={{ this.data.darkMode ? 'rgb(15, 19, 28)' : 'transparent' }}>
+        <div class='bg' background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'transparent' }}>
         
           <div class='col'>
             <StackItem { icon: 'bxl-github', label: 'Github', color: ' ', size: 11, link: 'www.github.com/dayson9' }/>
