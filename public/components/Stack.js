@@ -18,7 +18,7 @@ const Stack = new subComponent("Stack", {
           </div>
           <div class='col'>
             <StackItem { icon: 'bxl-vuejs', label: 'VueJS', color: 'teal', size: 12 }/>
-            <StackItem { src: '././assets/queflow.webp', label: 'QueFlowJS', alt: 'QueFlowJS Icon', size: 12 }/>
+            <StackItem { src: '././assets/queflow.webp', label: 'QueFlowJS', alt: 'QueFlowJS Icon' }/>
             <StackItem { icon: 'bxl-nodejs', label: 'NodeJS', color: 'dodgerblue', size: 12 }/>
           </div>
         </div>
