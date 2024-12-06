@@ -3,7 +3,7 @@ import { subComponent } from 'queflow';
 const Loader = new subComponent("Loader", {
   data: {
     loadingBarWidth: 0,
-    containerY: 0,
+    containerY: 100,
     btnOpacity: 0,
     intro: {
       text: "",
@@ -36,8 +36,8 @@ const Loader = new subComponent("Loader", {
             <span>{{ this.data.intro.text }}</span>
             <span class='cursor' color={{ this.data.intro.cursorColor }}>_</span>
           </h3>
-          <h2 transform={{ 'translateY('+this.data.intro.handY+'px)' }} transition=".25s" opacity={{ this.data.intro.handOpacity }}>👇</h2>
-          <PillButton { delay0: 21.5, delay1: 23.5, delay2: 24, click: 'closeLoader()', opacity: '{{ this.data.btnOpacity }}' } />
+          <h2 transform={{ 'translateY('+this.data.intro.handY+'px)' }} transition=".5s" opacity={{ this.data.intro.handOpacity }}>👇</h2>
+          <PillButton { click: 'closeLoader()', opacity: '{{ this.data.btnOpacity }}' } />
         </div>
      </div>
     `

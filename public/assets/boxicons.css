@@ -83,3 +83,11 @@
 .bxl-linkedin-square:before {
   content: "\e94e"
 }
+
+.bx-math:before {
+  content: "\e99b"
+}
+
+.bx-laptop:before {
+  content: "\eb2b"
+}

@@ -23,7 +23,7 @@ const MyPortfolio = new QComponent("#app", {
        `
   },
   run: () => {
-    runLoaderAnimation();
+    //runLoaderAnimation();
 
     const mainElement = document.getElementById('main');
 
