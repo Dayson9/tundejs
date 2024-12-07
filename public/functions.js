@@ -130,4 +130,4 @@
     const finalX = (80 * x) / deviceWidth;
 
     OracleEye.data.x = finalX > 65 ? 65 : finalX < 15 ? 15 : finalX;
-  }
+  } 
