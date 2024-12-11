@@ -4,6 +4,7 @@ const TopBar = new subComponent("TopBar", {
   data: {
     darkMode: true,
     menuX: window.innerWidth > 768 ? 130: 110,
+    lineH: 20,
     sliders: [30, 30, 30]
   },
   template: () => {
@@ -20,11 +21,14 @@ const TopBar = new subComponent("TopBar", {
         </div>
         
         <div class='menu' transform={{ 'translateX('+ this.data.menuX +'%)' }} onclick={{ openMenu(); }}>
-          <SlidingText { text: "About", x: "{{ 'translateX('+this.data.sliders[0]+'px)' }}", click: 'alert()' } />
+          <div id='line' height={{ this.data.lineH+'%' }}></div>
+          <div class='col'>
+            <SlidingText { text: "About", x: "{{ 'translateX('+this.data.sliders[0]+'px)' }}", click: 'alert()' } />
           
-          <SlidingText { text: "Stack", x: "{{ 'translateX('+this.data.sliders[1]+'px)' }}", click: 'alert()' } />
+            <SlidingText { text: "Stack", x: "{{ 'translateX('+this.data.sliders[1]+'px)' }}", click: 'alert()' } />
           
-          <SlidingText { text: "Works", x: "{{ 'translateX('+this.data.sliders[2]+'px)' }}", click: 'alert()' } />
+            <SlidingText { text: "Works", x: "{{ 'translateX('+this.data.sliders[2]+'px)' }}", click: 'alert()' } />
+          </div>
         </div>
       </header>
     `
@@ -91,11 +95,24 @@ const TopBar = new subComponent("TopBar", {
       right: 0;
       top: 85%;
       display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    `,
+    '.menu #line' : `
+      width: 4px;
+      background: white;
+      border-radius: 5px;
+      transition: .2s!important;
+    `,
+    '.menu .col' : `
+      width: 60%;
+      height: 100%;
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
     `,
-    
     "@media (min-width: 768px)" : {
       'header' : `
         height: 100px;

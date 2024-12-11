@@ -13,6 +13,7 @@ const Button = new Nugget("Button", {
       border-radius: 15px;
       font-weight: 700;
       margin: 0 auto;
+      box-shadow: 12px 12px 0px rgb(50, 120, 180, .4);
     `
   }
 });

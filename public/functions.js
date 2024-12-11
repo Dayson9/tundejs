@@ -80,18 +80,23 @@
   }
 
   const closeLoader = () => {
-    clearInterval(handAnim);
-    clearInterval(cursorAnim);
+    if (Loader.data.btnOpacity === 1) {
+      clearInterval(handAnim);
+      clearInterval(cursorAnim);
 
-    Loader.data.intro.y = 0;
-    Loader.data.intro.opacity = 0;
-    Loader.data.intro.scale = .7;
-    setTimeout(() => Loader.data.containerY = 100, 500);
+      setTimeout(() => {
+        Loader.data.intro.y = 0;
+        Loader.data.intro.opacity = 0;
+        Loader.data.intro.scale = .7;
+      }, 500);
 
-    setTimeout(() => {
-      Loader.destroy();
-      Loader = null;
-    }, 1500);
+      setTimeout(() => Loader.data.containerY = 100, 1000);
+
+      setTimeout(() => {
+        Loader.destroy();
+        Loader = null;
+      }, 2000);
+    }
   }
 
   const switchMode = () => {
@@ -105,18 +110,28 @@
 
   }
 
+  var menuIsOpened = false;
+  
   const openMenu = () => {
-    TopBar.data.menuX = TopBar.data.menuX === 0 ? window.innerWidth > 768 ? 130 : 110 : 0;
+    menuIsOpened = !menuIsOpened;
+    
+    if (!menuIsOpened) {
+      TopBar.data.menuX = 0;
+    }
 
     setTimeout(() => {
-      if (TopBar.data.menuX === 0) {
+      if (!menuIsOpened) {
         TopBar.data.sliders[0] = 0;
         setTimeout(() => TopBar.data.sliders[1] = 0, 40);
         setTimeout(() => TopBar.data.sliders[2] = 0, 80);
+        setTimeout(() => TopBar.data.lineH = 80, 180);
       } else {
-        TopBar.data.sliders[0] = 30;
-        setTimeout(() => TopBar.data.sliders[1] = 30, 40);
-        setTimeout(() => TopBar.data.sliders[2] = 30, 80);
+        TopBar.data.lineH = 20;
+        setTimeout(() => TopBar.data.sliders[0] = 60, 60);
+        setTimeout(() => TopBar.data.sliders[1] = 60, 100);
+        setTimeout(() => TopBar.data.sliders[2] = 60, 140);
+        setTimeout(() => TopBar.data.menuX = window.innerWidth > 768 ? 130 : 110, 220);
+
       }
     }, 100);
   }
@@ -130,4 +145,4 @@
     const finalX = (80 * x) / deviceWidth;
 
     OracleEye.data.x = finalX > 65 ? 65 : finalX < 15 ? 15 : finalX;
-  } 
+  }

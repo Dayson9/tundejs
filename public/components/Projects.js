@@ -28,7 +28,7 @@ const MyProjects = new subComponent("MyProjects", {
           
           <UpcomingProject { name: 'Flow UI', src: './assets/hero_static_mobile.webp', snippet: 'A QueFlow based CSS library that contains beautifully crafted UI components.', stack: [{ icon: 'css3', color: 'dodgerblue' }, { icon: 'javascript', color: 'gold' }] } />
           
-          <UpcomingProject { name: 'Crank.js', src: './assets/crankjs.webp', snippet: 'A powerful 2D JavaScript game engine for building web based games.', stack: [{ icon: 'javascript', color: 'gold' }] } />
+          <UpcomingProject { name: 'Crank.js', src: './assets/crankjs.webp', snippet: 'A powerful 2D physics engine for building web based games.', stack: [{ icon: 'javascript', color: 'gold' }] } />
           </div>
         </div>
       </div>`

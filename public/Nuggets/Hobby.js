@@ -3,7 +3,7 @@ import { Nugget } from 'queflow';
 const Hobby = new Nugget("Hobby", {
   template: () => {
     return `
-      <div class='hobby' border-color="{{ this.data.darkMode ? 'rgba(45, 59, 78, .7)' : 'rgba(45, 59, 78, .4)' }}">
+      <div class='hobby' border-color="{{ this.data.darkMode ? 'rgb(50, 120, 180, .4)' : 'rgba(45, 59, 78, .4)' }}">
         <i class='bx {{ icon }}'></i>
         <Text { text: '{{ name }}' } />
       </div>
@@ -14,7 +14,7 @@ const Hobby = new Nugget("Hobby", {
     '.hobby' : `
       border-radius: 40px;
       background: transparent;
-      border: 4px solid rgba(45, 59, 78, .7);
+      border: 4px solid rgb(50, 120, 180, .4);
       display: flex;
       flex-direction: row;
       align-items: center;

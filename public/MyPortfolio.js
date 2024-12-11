@@ -13,13 +13,10 @@ import Text from './Nuggets/Text.js';
 import StackItem from './Nuggets/StackItem.js';
 
 const MyPortfolio = new QComponent("#app", {
-  data: {
-
-  },
   template: () => {
     return `
-         <Loader/>
-         <AppContent/>
+      <Loader/>
+      <AppContent/>
        `
   },
   run: () => {
@@ -33,7 +30,6 @@ const MyPortfolio = new QComponent("#app", {
       clearTimeout(OracleEye.data.animation);
       OracleEye.data.animation = setTimeout(() => OracleEye.data.opacity = 0, 2000);
     }, { passive: true });
-    
   },
 
   stylesheet: {
