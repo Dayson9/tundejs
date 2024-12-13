@@ -12,6 +12,8 @@ import SlidingText from './Nuggets/SlidingText.js';
 import Text from './Nuggets/Text.js';
 import StackItem from './Nuggets/StackItem.js';
 
+
+
 const MyPortfolio = new QComponent("#app", {
   template: () => {
     return `
