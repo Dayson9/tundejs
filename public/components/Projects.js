@@ -11,6 +11,7 @@ const MyProjects = new subComponent("MyProjects", {
       <div class='section' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
       
         <Heading { text: "My Works", colored: "Works" } />
+        
         <Text { text: "What stuffs have I built?, here are some workings 👇...", align: 'center', bottom: 20 } />
         
         <div class='rowcol1'>

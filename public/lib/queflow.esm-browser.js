@@ -107,7 +107,7 @@
   }
 
 
-  // Evaluates a template string by replacing placeholders with their values.
+  // Evaluates a template string `{{...}}` by replacing placeholders with their values.
   function evaluateTemplate(reff, instance) {
     let out = "";
 
@@ -121,7 +121,7 @@
         const falsy = ["undefined", "NaN", "null"];
         let rendered = "";
 
-        if (falsy.includes(parsed) && parsed != "0") {
+        if (falsy.includes(parsed)) {
           rendered = match;
         } else {
           rendered = parsed;
@@ -220,7 +220,7 @@
       result = false;
 
     // If their lengths isn't the same, the objects are different
-    if (key1.length != key1.length) {
+    if (key1.length != key2.length) {
       result = false;
     } else {
       // Else, iterate over the key-value pairs and compare
@@ -775,30 +775,30 @@
   }
 
   const renderNugget = (instance, data) => {
-      if (!instance.stylesheetInitiated) {
-        nuggetCounter++;
-        instance.counter = nuggetCounter;
-      }
-    
-      const counter = instance.counter;
-      // Create a variable that holds the template 
-      const template = instance.template instanceof Function ? instance.template(data) : instance.template,
-        // Parse and initiate Nested Nuggets
-        initiated = initiateSubComponents(template, true),
-        // Render parsed html
-        rendered = renderTemplate(initiated, data);
-    
-      const html = g(rendered, counter);
-    
-      if (!instance.stylesheetInitiated) {
-        // Initiate stylesheet for instance 
-        initiateStyleSheet(`.${"nugget"+counter}`, instance, true);
-        instance.stylesheetInitiated = true;
-      }
-      // Return processed html
-      return html;
+    if (!instance.stylesheetInitiated) {
+      nuggetCounter++;
+      instance.counter = nuggetCounter;
+    }
+
+    const counter = instance.counter;
+    // Create a variable that holds the template 
+    const template = instance.template instanceof Function ? instance.template(data) : instance.template,
+      // Parse and initiate Nested Nuggets
+      initiated = initiateSubComponents(template, true),
+      // Render parsed html
+      rendered = renderTemplate(initiated, data);
+
+    const html = g(rendered, counter);
+
+    if (!instance.stylesheetInitiated) {
+      // Initiate stylesheet for instance 
+      initiateStyleSheet(`.${"nugget"+counter}`, instance, true);
+      instance.stylesheetInitiated = true;
+    }
+    // Return processed html
+    return html;
   }
-  
+
   class Nugget {
     /**
      * A class for creating reusable UI components

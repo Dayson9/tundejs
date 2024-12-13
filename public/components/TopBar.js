@@ -2,8 +2,8 @@ import { subComponent } from 'queflow';
 
 const TopBar = new subComponent("TopBar", {
   data: {
-    darkMode: true,
-    menuX: window.innerWidth > 768 ? 130: 110,
+      darkMode: true,
+    menuX: window.innerWidth > 768 ? 130 : 110,
     lineH: 20,
     sliders: [30, 30, 30]
   },
@@ -34,7 +34,7 @@ const TopBar = new subComponent("TopBar", {
     `
   },
   stylesheet: {
-    'header' : `
+    'header': `
       width: 90%;
       height: 70px;
       margin: 0 auto;
@@ -52,14 +52,14 @@ const TopBar = new subComponent("TopBar", {
       box-sizing: border-box;
       z-index: 2;
     `,
-    "header *" : `
+    "header *": `
       transition: .3s;
     `,
-    'h2' : `
+    'h2': `
       font-family: "Pacifico"!important;
       font-size: 28px;
     `,
-    '.right' : `
+    '.right': `
       width: 35%;
       height: 65%;
       border: none;
@@ -69,7 +69,7 @@ const TopBar = new subComponent("TopBar", {
       align-items: center;
       border-radius: inherit;
     `,
-    '.right > .round' : `
+    '.right > .round': `
       width: 38px;
       height: 38px;
       background: rgb(5,11,18);
@@ -78,15 +78,15 @@ const TopBar = new subComponent("TopBar", {
       justify-content: center;
       align-items: inherit;
     `,
-    
+
     ".round span": `
       display: block;
       font-size: 26px;
       color: white;
       transform: translate(0,0);
     `,
-    
-    ".menu" : `
+
+    ".menu": `
       width: 100px;
       height: 30vh;
       background: rgba(50, 101, 170);
@@ -99,13 +99,13 @@ const TopBar = new subComponent("TopBar", {
       align-items: center;
       justify-content: space-evenly;
     `,
-    '.menu #line' : `
+    '.menu #line': `
       width: 4px;
       background: white;
       border-radius: 5px;
       transition: .2s!important;
     `,
-    '.menu .col' : `
+    '.menu .col': `
       width: 60%;
       height: 100%;
       display: flex;
@@ -113,16 +113,16 @@ const TopBar = new subComponent("TopBar", {
       align-items: center;
       justify-content: space-evenly;
     `,
-    "@media (min-width: 768px)" : {
-      'header' : `
+    "@media (min-width: 768px)": {
+      'header': `
         height: 100px;
         justify-content: space-between;
         padding-inline: 5%;
     `,
-      '.right' : `
+      '.right': `
         width: 25%;
       `,
-      '.menu' : `
+      '.menu': `
         height: 15vh;
       `
     }
