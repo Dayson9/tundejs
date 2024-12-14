@@ -82,6 +82,7 @@ const ProjectCard = new Nugget("ProjectCard", {
       border-radius: 15px 15px 0px 0px;
       border-bottom: 1.3px solid rgb(45, 59, 78);
       box-sizing: border-box;
+      padding-left: 5%;
     `,
     '.footer .stack': `
       border-radius: 0px 0px 15px 15px;
