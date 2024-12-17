@@ -31,8 +31,9 @@ const UpcomingProject = new Nugget('UpcomingProject', {
     
     '.upcoming img' : `
       width: 30%;
-      height: 90px;
+      height: 90%;
       border-radius: 10px;
+      border: inherit;
     `,
     
     '.right' : `

@@ -111,10 +111,8 @@
   }
 
   var menuIsOpened = false;
-  
+
   const openMenu = () => {
-    menuIsOpened = !menuIsOpened;
-    
     if (!menuIsOpened) {
       TopBar.data.menuX = 0;
     }
@@ -133,6 +131,7 @@
         setTimeout(() => TopBar.data.menuX = window.innerWidth > 768 ? 130 : 110, 220);
 
       }
+      menuIsOpened = !menuIsOpened;
     }, 100);
   }
 

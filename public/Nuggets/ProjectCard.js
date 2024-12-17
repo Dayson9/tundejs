@@ -17,21 +17,23 @@ const ProjectCard = new Nugget("ProjectCard", {
           </div>
           <div class='stack'>
             <Text { text: 'Built with:', align: 'left', size: 12 } />
+            <div class='stackin'>
             ${data.stack.map((item) => {
               switch (item) {
                 case 'js':
-                  return "<StackIcon { name: 'JavaScript', icon: 'javascript' } />";
+                  return "<StackIcon { name: ' ', icon: 'javascript' } />";
                   break;
                 case 'qf':
-                  return "<StackIcon { name: 'QueFlow.js', img: './assets/queflow.webp' } />";
+                  return "<StackIcon { name: ' ', img: './assets/queflow.webp' } />";
                   break;
                 case 'vue':
-                  return "<StackIcon { name: 'Vue.js', icon: 'vuejs' } />";
+                  return "<StackIcon { name: ' ', icon: 'vuejs' } />";
                   break;
                 
                 
               }
             }).join('\n') }
+            </div>
           </div>
         </div>
       </div>
@@ -89,14 +91,24 @@ const ProjectCard = new Nugget("ProjectCard", {
       text-align: left;
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: around;
     `,
+
+    '.stackin': `
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-evenly;
+       width: auto;
+       max-width: 30%;
+       height: 100%;
+     `,
 
     ".stack *": `
       display: inline;
     `,
     "@media (min-width: 768px)": {
-      '.project' : `
+      '.project': `
         height: 33vh;
       `
     }
