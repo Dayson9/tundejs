@@ -25,7 +25,7 @@ const StackItem = new Nugget("StackItem", {
 
   stylesheet: {
    '.item' : `
-      width: 80%;
+      width: 90%;
       height: auto;
       display: flex;
       flex-direction: row;
@@ -36,7 +36,7 @@ const StackItem = new Nugget("StackItem", {
       width: 30px;
       height: 30px;
    `,
-   'i' : "font-size: 30px;",
+   'i' : "font-size: 35px; transform: translateX(-5px)",
   }
 });
 

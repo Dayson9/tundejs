@@ -1,6 +1,8 @@
   const introText = ["Hello folk 👋, my name's Tunde", "I'm a Software Engineer", "Wanna know more about me?", "Let's dive in"];
 
-  const deviceWidth = window.innerWidth;
+  const deviceWidth = window.innerWidth,
+    day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
   var index = i = 0,
     anim,
@@ -100,7 +102,7 @@
   }
 
   const switchMode = () => {
-    const components = [AppContent, TopBar, OracleEye, Hero, Stack, MyProjects, Contact, Footer];
+    const components = [AppContent, TopBar, OracleEye, Hero, AboutMe, Stack, MyProjects, Contact, Footer];
 
     const _switchMode = (component) => component.data.darkMode = !component.data.darkMode;
 

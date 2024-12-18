@@ -16,15 +16,14 @@ const Hobby = new Nugget("Hobby", {
       background: transparent;
       border: 4px solid rgb(50, 120, 180, .4);
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-evenly;
       box-sizing: border-box;
-      padding-inline: 22%;
     `,
     
     '.hobby i' : `
-      font-size: 28px;
+      font-size: 30px;
       color: rgb(50, 120, 180);
     `
   }
