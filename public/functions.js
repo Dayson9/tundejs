@@ -127,9 +127,9 @@
         setTimeout(() => TopBar.data.lineH = 80, 180);
       } else {
         TopBar.data.lineH = 20;
-        setTimeout(() => TopBar.data.sliders[0] = 60, 60);
+        setTimeout(() => TopBar.data.sliders[2] = 60, 60);
         setTimeout(() => TopBar.data.sliders[1] = 60, 100);
-        setTimeout(() => TopBar.data.sliders[2] = 60, 140);
+        setTimeout(() => TopBar.data.sliders[0] = 60, 140);
         setTimeout(() => TopBar.data.menuX = window.innerWidth > 768 ? 130 : 110, 140);
 
       }
