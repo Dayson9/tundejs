@@ -130,7 +130,7 @@
         setTimeout(() => TopBar.data.sliders[0] = 60, 60);
         setTimeout(() => TopBar.data.sliders[1] = 60, 100);
         setTimeout(() => TopBar.data.sliders[2] = 60, 140);
-        setTimeout(() => TopBar.data.menuX = window.innerWidth > 768 ? 130 : 110, 220);
+        setTimeout(() => TopBar.data.menuX = window.innerWidth > 768 ? 130 : 110, 140);
 
       }
       menuIsOpened = !menuIsOpened;
