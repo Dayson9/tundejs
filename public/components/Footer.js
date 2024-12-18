@@ -28,8 +28,8 @@ const Footer = new subComponent('Footer', {
   },
   stylesheet: {
     'footer': `
-      width: 95%;
-      height: 110px;
+      width: 90%;
+      height: 100px;
       border: 1px solid rgb(45, 59, 78);
       margin: 0 auto;
       border-radius: 20px;
