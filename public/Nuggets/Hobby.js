@@ -19,7 +19,8 @@ const Hobby = new Nugget("Hobby", {
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-      box-sizing: border-box;
+      padding-inline: 15px;
+      box-sizing: content-box;
     `,
     
     '.hobby i' : `
