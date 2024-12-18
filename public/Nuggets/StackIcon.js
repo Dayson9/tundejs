@@ -16,29 +16,21 @@ const StackIcon = new Nugget("StackIcon", {
     
    return `
        ${ data.icon ? `
-        <i color="${color}" class="bx bxl-{{ icon }}"></i>
+        <Icon { color: "${color}", class: "bx bxl-{{ icon }}", size: 20 }/>
         ` : `
         <img src={{ img }} alt="{{ name }}'s Icon"/>
         ` }
-        <span>{{ name }}</span>
+        <Text { text: '{{ name }}', size: 12, font: '"DM Mono"' } />
    `
   },
 
   stylesheet: {
-
-    '.stack span' : `
-      font-size: 12px;
-      font-family: "DM Mono";
-    `,
-    
     '.stack img' : `
       width: 20px;
       height: 20px;
       display: inline;
       transform: translateY(2px);
-    `,
-    
-    '.stack i' : "font-size: 20px;"
+    `
   }
 });
 

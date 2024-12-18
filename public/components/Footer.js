@@ -10,7 +10,7 @@ const Footer = new subComponent('Footer', {
       
         <div id='top'>
           <div>
-            <span class='bx bx-copyright'></span>
+            <Icon { class: 'bx bx-copyright' } />
             <Text { text: '2024', size: 12, align: 'left', font: '"Nova Square"' } />
           </div>
           

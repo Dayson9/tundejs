@@ -11,7 +11,7 @@ import PillButton from './Nuggets/PillButton.js';
 import SlidingText from './Nuggets/SlidingText.js';
 import Text from './Nuggets/Text.js';
 import StackItem from './Nuggets/StackItem.js';
-
+import Icon from './Nuggets/Icon.js';
 
 
 const MyPortfolio = new QComponent("#app", {
