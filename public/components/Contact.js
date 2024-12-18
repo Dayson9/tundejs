@@ -12,7 +12,7 @@ const Contact = new subComponent("Contact", {
         
           <div class='col'>
             <StackItem { icon: 'bxl-github', label: 'Github', color: ' ', size: 11, link: 'www.github.com/dayson9' }/>
-            <StackItem { icon: 'bxl-twitter', label: 'X', color: ' ', size: 11, link: 'x.com/Dayson848122028?s=09' }/>
+            <StackItem { icon: 'bxl-twitter', label: 'X', color: ' ', size: 11, link: 'x.com/JsTunde6245' }/>
             <StackItem { icon: 'bxl-telegram', label: 'Telegram', color: 'rgb(10, 120, 220)', size: 11, link: 't.me/Dayson5' }/>
           </div>
           
