@@ -15,6 +15,9 @@ import Icon from './Nuggets/Icon.js';
 
 
 const MyPortfolio = new QComponent("#app", {
+  data: {
+    color: 'red'
+  },
   template: () => {
     return `
       <Loader/>

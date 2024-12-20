@@ -140,10 +140,9 @@
   const moveOracleEye = (e) => {
     OracleEye.data.opacity = 1;
 
-    const touches = e.touches[0];
-    const x = touches.clientX;
-
-    const finalX = (80 * x) / deviceWidth;
+    const touches = e.touches[0],
+      x = touches.clientX,
+      finalX = (80 * x) / deviceWidth;
 
     OracleEye.data.x = finalX > 65 ? 65 : finalX < 15 ? 15 : finalX;
   }

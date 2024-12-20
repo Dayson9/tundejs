@@ -14,10 +14,11 @@ const Button = new Nugget("Button", {
   stylesheet: {
     "button" : `
       border: none;
-      border-radius: 15px;
+      border-radius: 22px;
       font-weight: 700;
       margin: 0 auto;
       box-shadow: 12px 12px 0px rgb(50, 120, 180, .4);
+      font-size: 15px;
     `
   }
 });
