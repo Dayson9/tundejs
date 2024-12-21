@@ -14,7 +14,7 @@ import StackItem from './Nuggets/StackItem.js';
 import Icon from './Nuggets/Icon.js';
 
 
-const MyPortfolio = new QComponent("#app", {
+const App = new QComponent("#app", {
   data: {
     color: 'red'
   },
@@ -25,8 +25,7 @@ const MyPortfolio = new QComponent("#app", {
        `
   },
   run: () => {
-    //runLoaderAnimation();
-
+    runLoaderAnimation();
     const mainElement = document.getElementById('main');
 
     mainElement.addEventListener(`${ deviceWidth < 768 ? 'touchmove' : 'mousemove' }`, (e) => moveOracleEye(e), { passive: true });
@@ -52,4 +51,4 @@ const MyPortfolio = new QComponent("#app", {
   }
 });
 
-MyPortfolio.render();
+App.render();
