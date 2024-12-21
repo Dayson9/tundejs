@@ -25,7 +25,7 @@ const App = new QComponent("#app", {
        `
   },
   run: () => {
-    runLoaderAnimation();
+    //runLoaderAnimation();
     const mainElement = document.getElementById('main');
 
     mainElement.addEventListener(`${ deviceWidth < 768 ? 'touchmove' : 'mousemove' }`, (e) => moveOracleEye(e), { passive: true });

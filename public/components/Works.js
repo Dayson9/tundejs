@@ -23,7 +23,7 @@ const MyWorks = new subComponent("MyWorks", {
         <div class='section'>
           <Heading { text: "Upcoming projects", colored: "Upcoming", size: 20 } />
           
-          <Text { text: "Projects I'm currently working on / planning to work on.", bottom: 20, align: 'center' } />
+          <Text { text: "Projects I'm currently / planning to work on.", bottom: 20, align: 'center' } />
           <div class='rowcol2'>
           <UpcomingProject { name: 'PureNovel', src: './assets/hero_static_mobile.webp', snippet: 'A web app for reading any genre of novels.', stack: [{ src: './assets/queflow.webp' }] } />
           

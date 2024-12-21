@@ -14,7 +14,7 @@ const Footer = new subComponent('Footer', {
             <Text { text: '2024', size: 12, align: 'left', font: '"Nova Square"' } />
           </div>
           
-          <Text { text: '{{ day[new Date().getDay()]; }},  {{ month[new Date().getMonth()]; }} {{ new Date().getFullYear(); }} | {{ new Date().toTimeString().slice(0,8); }}', size: 12, align: 'center', font: '"Nova Square"' } />
+          <Text { text: '[{{ day[new Date().getDay()]; }}, {{ addSuffix(new Date().getDate()); }}  {{ month[new Date().getMonth()]; }} {{ new Date().getFullYear(); }}]', size: 12, align: 'center', font: '"Nova Square"' } />
         </div>
         
         <div id='bottom'>
