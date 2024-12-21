@@ -8,7 +8,7 @@ const StackItem = new Nugget("StackItem", {
         ${ data.icon ? 
           "<Icon { class: 'bx {{ icon }}', color: '{{ color }}', size: 35 } />"  :  `<img src={{ src }} alt={{ alt }}/>` }
        
-        <Text { text: '{{ label }}', size: ${ data.size ? data.size : 15 } } />
+        <Text { txt: '{{ label }}', size: ${ data.size ? data.size : 15 } } />
       </div>
     `
     } else {
@@ -17,7 +17,7 @@ const StackItem = new Nugget("StackItem", {
        ${ data.icon ? 
        "<Icon { class: 'bx {{ icon }}', color: '{{ color }}', size: 35 } />"  :  `<img src={{ src }} alt={{ alt }} ${ data.size ? 'width="{{ size }}px" height="{{ size }}px"' : '' }/>` }
        
-        <Text { text: '{{ label }}', size: ${ data.src ? data.size-10 : 12 }, font: '${ data.nova ? '"Nova Square"' : '"DM Mono"' }' } />
+        <Text { txt: '{{ label }}', size: ${ data.src ? data.size-10 : 12 }, font: '${ data.nova ? '"Nova Square"' : '"DM Mono"' }' } />
       </div>
     `
     }

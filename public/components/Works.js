@@ -12,18 +12,19 @@ const MyWorks = new subComponent("MyWorks", {
       
         <Heading { text: "My Works", colored: "Works" } />
         
-        <Text { text: "What stuffs have I built?, here are some workings 👇...", align: 'center', bottom: 20 } />
+        <Text { txt: "What stuffs have I built?, here are some workings", align: 'center', bottom: 20 } />
         
         <div class='rowcol1'>
-          <ProjectCard { name: 'PixelPen', description: "PixelPen is an intuitive web application that empowers users to effortlessly design HTML elements. Simply edit HTML elements, and let PixelPen generate the clean, optimized HTML/CSS code.", src: './assets/pixelpen.webp', stack: ['js', 'qf'], url: 'pixelpen-eight.vercel.app/' } />
+          <ProjectCard { name: 'PixelPen', description: "PixelPen is an intuitive web application that empowers users to effortlessly design HTML elements. Simply design HTML elements, and let PixelPen generate the clean, optimized HTML/CSS code.", src: './assets/pixelpen.webp', stack: ['js', 'qf'], url: 'pixelpen-eight.vercel.app/' } />
         
           <ProjectCard { name: 'QueFlow.js', description: "A JavaScript library for declaratively building scalable and highly performant Web Apps. Offers some straightforward APIs that simplifies the processes involved in building Web Apps.", src: './assets/qf.webp', stack: ['js'], url: 'github.com/dayson9/queflowjs' } />
+          
         </div>
         
         <div class='section'>
           <Heading { text: "Upcoming projects", colored: "Upcoming", size: 20 } />
           
-          <Text { text: "Projects I'm currently / planning to work on.", bottom: 20, align: 'center' } />
+          <Text { txt: "Projects I'm currently / planning to work on.", bottom: 20, align: 'center' } />
           <div class='rowcol2'>
           <UpcomingProject { name: 'PureNovel', src: './assets/hero_static_mobile.webp', snippet: 'A web app for reading any genre of novels.', stack: [{ src: './assets/queflow.webp' }] } />
           

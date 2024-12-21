@@ -11,14 +11,14 @@ const Footer = new subComponent('Footer', {
         <div id='top'>
           <div>
             <Icon { class: 'bx bx-copyright' } />
-            <Text { text: '2024', size: 12, align: 'left', font: '"Nova Square"' } />
+            <Text { txt: '2024', size: 12, align: 'left', font: '"Nova Square"' } />
           </div>
           
-          <Text { text: '[{{ day[new Date().getDay()]; }}, {{ addSuffix(new Date().getDate()); }}  {{ month[new Date().getMonth()]; }} {{ new Date().getFullYear(); }}]', size: 12, align: 'center', font: '"Nova Square"' } />
+          <Text { txt: '[{{ day[new Date().getDay()]; }}, {{ addSuffix(new Date().getDate()); }}  {{ month[new Date().getMonth()]; }} {{ new Date().getFullYear(); }}]', size: 12, align: 'center', font: '"Nova Square"' } />
         </div>
         
         <div id='bottom'>
-          <Text { text: 'Built with: ', size: 14, align: 'center', font: '"Nova Square"' }/>
+          <Text { txt: 'Built with: ', size: 14, align: 'center', font: '"Nova Square"' }/>
           <div margin-left='15px'>
             <StackItem { src: './assets/queflow.webp', label: 'QueFlowJS', size: 22, alt: 'QueFlowJS Icon', nova: true }/>
           </div>

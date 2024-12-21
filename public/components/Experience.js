@@ -1,4 +1,5 @@
 import { subComponent } from 'queflow';
+import ExperienceCard from '../Nuggets/ExperienceCard.js';
 
 const Experience = new subComponent('Experience', {
   data: {
@@ -7,7 +8,9 @@ const Experience = new subComponent('Experience', {
   template: () => {
     return `
       <div class='section' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
-        <Heading { text: 'My Experience', colored: 'Experiences' } />
+        <Heading { text: 'My Experience', colored: 'Experience' } />
+        
+        <ExperienceCard { name: 'Silicon Valley' } />
         
       </div>
     `
