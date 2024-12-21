@@ -16,7 +16,7 @@ const ProjectCard = new Nugget("ProjectCard", {
             <Paragraph { text: '{{ description }}', align: 'left' } />
           </div>
           <div class='stack'>
-            <Text { text: 'Built with:', align: 'left', size: 12 } />
+            <Text { text: 'Stack used:', align: 'left', size: 12 } />
             <div class='stackin'>
             ${data.stack.map((item) => {
               switch (item) {
@@ -102,6 +102,7 @@ const ProjectCard = new Nugget("ProjectCard", {
        width: auto;
        max-width: 30%;
        height: 100%;
+       margin-left: 5px;
      `,
 
     ".stack *": `

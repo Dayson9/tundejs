@@ -33,8 +33,8 @@ const StackItem = new Nugget("StackItem", {
       justify-content: flex-start;
    `,
    'img' : `
-      width: 30px;
-      height: 30px;
+      width: 38px;
+      height: 38px;
    `,
    'i' : "transform: translateX(-5px)",
   }

@@ -28,6 +28,7 @@ const AboutMe = new subComponent('AboutMe', {
     '#my-hobbies' : `
       width: ${ window.innerHeight < 768 ? '80%' : '50%' };
       height: ${ window.innerHeight < 768 ? '150px' : '260px' };
+      background: transparent;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
