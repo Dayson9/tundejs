@@ -103,3 +103,30 @@
 .bx-copyright:before {
   content: "\ea86"
 }
+
+.bx-current-location:before {
+  content: "\ea90"
+}
+
+.bxs-calendar:before {
+  content: "\ed00"
+}
+
+
+
+
+.bx-code:before {
+  content: "\ea68"
+}
+
+.bx-code-alt:before {
+  content: "\ea69"
+}
+
+.bx-code-block:before {
+  content: "\ea6a"
+}
+
+.bx-code-curly:before {
+  content: "\ea6b"
+}

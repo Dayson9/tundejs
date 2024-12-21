@@ -16,7 +16,7 @@ const StackIcon = new Nugget("StackIcon", {
     
    return `
        ${ data.icon ? `
-        <Icon { color: "${color}", class: "bx bxl-{{ icon }}", size: 20 }/>
+        <Icon { color: "${color}", class: "bxl-{{ icon }}", size: 20 }/>
         ` : `
         <img src={{ img }} alt="{{ name }}'s Icon"/>
         ` }

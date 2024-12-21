@@ -6,7 +6,7 @@ const StackItem = new Nugget("StackItem", {
     return `
       <div class='item' aria-label='My {{ label }} profile' onclick='window.open("https://{{ link }}", "_blank")'>
         ${ data.icon ? 
-          "<Icon { class: 'bx {{ icon }}', color: '{{ color }}', size: 35 } />"  :  `<img src={{ src }} alt={{ alt }}/>` }
+          "<Icon { class: '{{ icon }}', color: '{{ color }}', size: 35 } />"  :  `<img src={{ src }} alt={{ alt }}/>` }
        
         <Text { txt: '{{ label }}', size: ${ data.size ? data.size : 15 } } />
       </div>
@@ -15,7 +15,7 @@ const StackItem = new Nugget("StackItem", {
       return `
       <div class='item'>
        ${ data.icon ? 
-       "<Icon { class: 'bx {{ icon }}', color: '{{ color }}', size: 35 } />"  :  `<img src={{ src }} alt={{ alt }} ${ data.size ? 'width="{{ size }}px" height="{{ size }}px"' : '' }/>` }
+       "<Icon { class: '{{ icon }}', color: '{{ color }}', size: 35 } />"  :  `<img src={{ src }} alt={{ alt }} ${ data.size ? 'width="{{ size }}px" height="{{ size }}px"' : '' }/>` }
        
         <Text { txt: '{{ label }}', size: ${ data.src ? data.size-10 : 12 }, font: '${ data.nova ? '"Nova Square"' : '"DM Mono"' }' } />
       </div>

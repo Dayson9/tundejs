@@ -4,7 +4,7 @@ const Hobby = new Nugget("Hobby", {
   template: () => {
     return `
       <div class='hobby' border-color="{{ this.data.darkMode ? 'rgb(50, 120, 180, .4)' : 'rgba(45, 59, 78, .4)' }}">
-        <Icon { class: 'bx {{ icon }}', color: 'rgb(50, 120, 180)', size: 30 } />
+        <Icon { class: '{{ icon }}', color: 'rgb(50, 120, 180)', size: 30 } />
         <Text { txt: '{{ name }}' } />
       </div>
     `

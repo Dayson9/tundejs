@@ -9,7 +9,7 @@ const UpcomingProject = new Nugget('UpcomingProject', {
           <Text { txt: '{{ name }}', size: 15, weight: 700, font: '"Nova Square"' } />
           <Paragraph { text: '{{ snippet }}', size: 11, weight: 300, align: 'left' } />
           <div class='row' justify-content="${ data.stack.length > 1 ? 'start' : 'space-between' }">
-          ${ data.stack.map((item) => item.src ? `<img src='${item.src}' alt='Queflow.js Logo'/>` : `<Icon { class: 'bx bxl-${item.icon}', color: '${item.color}', size: 20 } />`).join('\n')}
+          ${ data.stack.map((item) => item.src ? `<img src='${item.src}' alt='Queflow.js Logo'/>` : `<Icon { class: 'bxl-${item.icon}', color: '${item.color}', size: 20 } />`).join('\n')}
           </div>
         </div>
       </div>
