@@ -12,7 +12,7 @@ const Hero = new subComponent("Hero", {
           
           <Text { text: 'I Develop, I Build, I Deploy', color: "{{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}", size: 13 } />
           
-          <Button { label: "About me", w: '150px', h: '60px', color: 'white', bg: "rgba(50, 101, 170)", icon: "r bxs-right-arrow", click: "window.location.href = '#about'" } />
+          <Button { label: "About me", w: '150px', h: '60px', color: 'white', bg: "rgba(50, 101, 170)", icon: "r bxs-right-arrow", click: "scrollTo('about')" } />
         </div>
       </div>
     `
@@ -20,7 +20,7 @@ const Hero = new subComponent("Hero", {
   stylesheet: {
     "#container": `
       width: 100%;
-      height: 310px;
+      height: 320px;
       box-sizing: border-box;
       border: none;
       margin-top: 140px;

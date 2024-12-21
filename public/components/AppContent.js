@@ -4,7 +4,7 @@ import TopBar from './TopBar.js';
 import Hero from './Hero.js';
 import AboutMe from './AboutMe.js';
 import Stack from './Stack.js';
-import MyProjects from './Projects.js';
+import MyWorks from './Works.js';
 import Experience from './Experience.js'
 import Contact from './Contact.js';
 import Footer from './Footer.js'
@@ -23,7 +23,7 @@ const AppContent = new subComponent("AppContent", {
         <Hero/>
         <AboutMe/>
         <Stack/>
-        <MyProjects/>
+        <MyWorks/>
         <Experience/>
         <Contact/>
         <Footer/>

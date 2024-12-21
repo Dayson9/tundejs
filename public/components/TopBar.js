@@ -24,11 +24,11 @@
           <div class='menu' transform={{ 'translateX('+ this.data.menuX +'%)' }} onclick={{ openMenu(); }}>
             <div id='line' height={{ this.data.lineH+'%' }}></div>
             <div class='col'>
-              <SlidingText { text: "About", x: "{{ 'translateX('+this.data.sliders[0]+'px)' }}", click: 'alert()' } />
+              <SlidingText { text: "About", x: "{{ 'translateX('+this.data.sliders[0]+'px)' }}", click: "scrollTo('about')" } />
       
-              <SlidingText { text: "Stack", x: "{{ 'translateX('+this.data.sliders[1]+'px)' }}", click: 'alert()' } />
+              <SlidingText { text: "Works", x: "{{ 'translateX('+this.data.sliders[1]+'px)' }}", click: "scrollTo('works')" } />
             
-              <SlidingText { text: "Works", x: "{{ 'translateX('+this.data.sliders[2]+'px)' }}", click: 'alert()' } />
+              <SlidingText { text: "Contact", x: "{{ 'translateX('+this.data.sliders[2]+'px)' }}", click: "scrollTo('contact')" } />
             </div>
           </div>
         </header>

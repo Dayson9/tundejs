@@ -102,7 +102,7 @@
   }
 
   const switchMode = () => {
-    const components = [AppContent, TopBar, OracleEye, Hero, AboutMe, Stack, MyProjects, Contact, Footer];
+    const components = [AppContent, TopBar, OracleEye, Hero, AboutMe, Stack, MyWorks, Contact, Footer];
 
     const _switchMode = (component) => component.data.darkMode = !component.data.darkMode;
 
@@ -145,4 +145,12 @@
       finalX = (80 * x) / deviceWidth;
 
     OracleEye.data.x = finalX > 65 ? 65 : finalX < 15 ? 15 : finalX;
+  }
+
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   }

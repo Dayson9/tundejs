@@ -6,7 +6,7 @@ const Contact = new subComponent("Contact", {
   },
   template: () => {
     return `
-      <div class='section' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
+      <div class='section' id='contact' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
         <Heading { text: 'Get in Touch', colored: 'Touch' } />
         <div class='bg' background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'transparent' }}>
         

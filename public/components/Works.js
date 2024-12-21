@@ -2,13 +2,13 @@ import { subComponent } from 'queflow';
 import ProjectCard from '../Nuggets/ProjectCard.js';
 import UpcomingProject from '../Nuggets/UpcomingProject.js';
 
-const MyProjects = new subComponent("MyProjects", {
+const MyWorks = new subComponent("MyWorks", {
   data: {
     darkMode: true
   },
   template: () => {
     return `
-      <div class='section' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
+      <div class='section' id='works' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
       
         <Heading { text: "My Works", colored: "Works" } />
         
@@ -55,4 +55,4 @@ const MyProjects = new subComponent("MyProjects", {
   }
 });
 
-export default MyProjects;
+export default MyWorks;
