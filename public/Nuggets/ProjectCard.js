@@ -24,7 +24,7 @@ const ProjectCard = new Nugget("ProjectCard", {
                   return "<StackIcon { name: ' ', icon: 'javascript' } />";
                   break;
                 case 'qf':
-                  return "<StackIcon { name: ' ', img: './assets/queflow.webp' } />";
+                  return "<StackIcon { name: ' ', img: './assets/images/queflow.webp' } />";
                   break;
                 case 'vue':
                   return "<StackIcon { name: ' ', icon: 'vuejs' } />";

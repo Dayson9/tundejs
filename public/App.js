@@ -26,7 +26,10 @@ const App = new QComponent("#app", {
   },
   run: () => {
     //runLoaderAnimation();
-    const mainElement = document.getElementById('main');
+    const mainElement = document.getElementById('main'),
+      audio = new Audio('./assets/audios/eerie.mp3');
+
+    audio.loop = true;
 
     mainElement.addEventListener(`${ deviceWidth < 768 ? 'touchmove' : 'mousemove' }`, (e) => moveOracleEye(e), { passive: true });
 
@@ -34,6 +37,8 @@ const App = new QComponent("#app", {
       clearTimeout(OracleEye.data.animation);
       OracleEye.data.animation = setTimeout(() => OracleEye.data.opacity = 0, 2000);
     }, { passive: true });
+
+    document.body.onclick = () => audio.play();
   },
 
   stylesheet: {

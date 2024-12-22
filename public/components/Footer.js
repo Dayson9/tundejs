@@ -20,7 +20,7 @@ const Footer = new subComponent('Footer', {
         <div id='bottom'>
           <Text { txt: 'Built with: ', size: 14, align: 'center', font: '"Nova Square"' }/>
           <div margin-left='15px'>
-            <StackItem { src: './assets/queflow.webp', label: 'QueFlowJS', size: 22, alt: 'QueFlowJS Icon', nova: true }/>
+            <StackItem { src: './assets/images/queflow.webp', label: 'QueFlowJS', size: 22, alt: 'QueFlowJS Icon', nova: true }/>
           </div>
         </div>
       </footer>
