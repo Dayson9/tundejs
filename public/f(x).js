@@ -117,6 +117,7 @@
       setTimeout(() => {
         Loader.destroy();
         Loader = null;
+        audio.play();
       }, 2000);
     }
   }

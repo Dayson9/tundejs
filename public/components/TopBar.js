@@ -21,7 +21,7 @@
             </div>          
           </div>
           
-          <div class='menu' transform={{ 'translateX('+ this.data.menuX +'%)' }} onclick={{ openMenu(); }}>
+          <div class='menu' transform={{ 'translateX('+ this.data.menuX +'%)' }} onclick={{ openMenu(); }} background={{ this.data.darkMode ? 'rgb(50, 101, 170)' : 'rgba(80, 131, 200)' }}>
             <div id='line' height={{ this.data.lineH+'%' }}></div>
             <div class='col'>
               <SlidingText { text: "About", x: "{{ 'translateX('+this.data.sliders[0]+'px)' }}", click: "scrollTo('about')" } />
@@ -90,7 +90,6 @@
       ".menu": `
         width: 100px;
         height: 30vh;
-        background: rgba(50, 101, 170);
         border-radius: 10px;
         position: absolute;
         right: 0;

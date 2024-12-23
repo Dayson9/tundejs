@@ -11,7 +11,7 @@ const Experience = new subComponent('Experience', {
         <Heading { text: 'My Experience', colored: 'Experience' } />
         
         <ExperienceCard { name: 'Silicon Valley', state: 'Lagos', duration: '2024-Present', role: 'Frontend Developer',
-          points: ['Built the frontend of a real estate agency platform.', 'Collaborated with backend devs in building the booking and customer care system', 'Led a team of frontend devs in building micro apps for the agency.']
+          points: ['Built the frontend of a real estate agency platform.', 'Collaborated with backend devs in building the booking and customer care system.', 'Led a team of frontend devs in building micro apps for the agency.']
           
         } />
         

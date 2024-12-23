@@ -4,7 +4,7 @@ const ExperienceCard = new Nugget("ExperienceCard", {
   template: (data) => {
     return `
       <div class='card' background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'white' }}>
-        <div class='header' background={{ this.data.darkMode ? 'rgba(50, 101, 170, 1)' : 'white' }}  color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>
+        <div class='header' background={{ this.data.darkMode ? 'rgba(50, 101, 170)' : 'rgba(50, 101, 170, .3)' }}  color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>
         
           <Text { txt: '{{ name }}', font: '"Nova Square"', size: 20 }/>
           <span>
@@ -35,7 +35,7 @@ const ExperienceCard = new Nugget("ExperienceCard", {
       padding-block: 15px;
       border-radius: 25px;
       box-sizing: border-box;
-      border: 1px solid rgb(45, 59, 78);
+      border: 2px solid rgb(45, 59, 78);
       margin: 0 auto;
     `,
 
