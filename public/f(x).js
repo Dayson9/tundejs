@@ -112,7 +112,10 @@
         Loader.data.intro.scale = .7;
       }, 500);
 
-      setTimeout(() => Loader.data.containerY = 100, 1000);
+      setTimeout(() => {
+        Loader.data.containerY = 100;
+        waveHand();
+      }, 1000);
 
       setTimeout(() => {
         Loader.destroy();
@@ -174,4 +177,46 @@
       behavior: 'smooth',
       block: 'start'
     });
+  }
+
+  const waveHand = () => {
+    setTimeout(() => Hero.data.handRotate = 35, 500);
+    setTimeout(() => Hero.data.handRotate = -35, 800);
+    setTimeout(() => Hero.data.handRotate = 35, 1100);
+    setTimeout(() => Hero.data.handRotate = -35, 1400);
+    setTimeout(() => Hero.data.handRotate = 0, 1700);
+  }
+
+  const isElementInViewport = (el) => {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  const IDs = [{
+    id: 'h-heading',
+    func: waveHand,
+    isAnimated: false
+    }];
+
+  const startAnimation = () => {
+    let isTrue = false;
+    for (const i in IDs) {
+      const { id, func, isAnimated } = IDs[i];
+
+      const el = document.getElementById(id);
+      if (isElementInViewport(el) && !isAnimated) {
+        func();
+        IDs[i].isAnimated = true;
+      }
+      isTrue = IDs[i].isAnimated;
+
+      if (isTrue && i === IDs.length - 1) {
+        document.getElementById('main').removeEventListener('scroll', startAnimation);
+      }
+    }
   }

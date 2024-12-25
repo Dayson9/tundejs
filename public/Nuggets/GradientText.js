@@ -2,10 +2,10 @@ import { Nugget } from 'queflow';
 
 const GradientText = new Nugget("GradientText", {
   template: (data) => {
-    return `<span style='background: linear-gradient({{ deg }}deg, {{ from }}, {{ to }}); -webkit-text-fill-color: transparent; -webkit-background-clip: text;'>{{ text }}</span>`
+    return `<span style='background: linear-gradient({{ deg }}deg, {{ from }}, {{ to }}); -webkit-text-fill-color: transparent; -webkit-background-clip: text;' class='grad'>{{ text }}</span>`
   },
   stylesheet: {
-    'span' : `
+    '.grad' : `
       animation-name: glow;
       animation: glow 3s ease-in-out infinite alternate;
     `,

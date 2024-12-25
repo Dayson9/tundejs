@@ -25,7 +25,7 @@ const App = new QComponent("#app", {
        `
   },
   run: () => {
-    runLoaderAnimation();
+    //runLoaderAnimation();
     const mainElement = document.getElementById('main'),
       audio = new Audio('./assets/audios/eerie.mp3');
 
@@ -39,6 +39,7 @@ const App = new QComponent("#app", {
     }, { passive: true });
 
     document.body.onclick = () => audio.play();
+    waveHand();
   },
 
   stylesheet: {

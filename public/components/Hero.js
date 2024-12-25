@@ -3,14 +3,15 @@ import { subComponent } from 'queflow';
 const Hero = new subComponent("Hero", {
   data: {
     darkMode: true,
+    handRotate: 0
   },
   template: () => {
     return `
-      <div id='container'>
+      <div id='container' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
         <div id='hero'>
-          <h1 font-size='2.1rem' font-family='"Nova Square"' color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>Building <GradientText { text: 'end-to-end', from: 'rgb(50, 120, 180)', to: 'rgb(50, 120, 180, .2)', deg: 35 } /> products, Fullstack Developer</h1>
+          <h1 font-size='37px' font-family='"Nova Square"' id='h-heading'>Hi <span transform={{ 'rotate('+this.data.handRotate+'deg)' }} class='rotate'>👋</span>, I'm <GradientText { text: 'Tunde', from: 'rgb(50, 120, 180)', to: 'rgb(50, 120, 180, .2)', deg: 35 } /></h1>
           
-          <Text { txt: 'I Develop, I Build, I Deploy', color: "{{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}", size: 13 } />
+          <Text { txt: 'I\\'m a software engineer with a high knack for building web based innovative apps, With a touch of uniqueness, I craft intuitive and performant websites.', size: 12 } />
           
           <Button { label: "About me", w: '150px', h: '60px', color: 'white', bg: "rgba(50, 101, 170)", icon: "r bxs-right-arrow", click: "scrollTo('about')" } />
         </div>
@@ -37,6 +38,15 @@ const Hero = new subComponent("Hero", {
       align-items: left;
       justify-content: space-around;
       box-sizing: border-box;
+    `,
+
+    '.grad': `
+      -webkit-text-stroke: 1.5px pink; 
+      color: white;
+      `,
+    'h1 .rotate' : `
+      display: inline-block;
+      transition: .3s;
     `,
     "@media (min-width: 768px)": {
       '#container': `
