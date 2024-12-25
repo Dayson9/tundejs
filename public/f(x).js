@@ -187,6 +187,12 @@
     setTimeout(() => Hero.data.handRotate = 0, 1700);
   }
 
+  const animateHobbies = () => {
+    setTimeout(() => AboutMe.data.outline = '4px solid rgb(50, 120, 180)', 400);
+
+    setTimeout(() => AboutMe.data.outline = '0px solid transparent', 1500);
+  }
+
   const isElementInViewport = (el) => {
     const rect = el.getBoundingClientRect();
     return (
@@ -197,26 +203,35 @@
     );
   }
 
-  const IDs = [{
-    id: 'h-heading',
-    func: waveHand,
-    isAnimated: false
-    }];
+  const IDs = [
+    {
+      id: 'h-heading',
+      func: waveHand,
+      isAnimated: false
+  },
+    {
+      id: 'my-hobbies',
+      func: animateHobbies,
+      isAnimated: false
+  }];
 
   const startAnimation = () => {
-    let isTrue = false;
-    for (const i in IDs) {
-      const { id, func, isAnimated } = IDs[i];
+    setTimeout(() => {
+      let t = false;
+      for (const i in IDs) {
+        const { id, func, isAnimated } = IDs[i];
+        const el = document.getElementById(id);
+        if (isElementInViewport(el) && !isAnimated) {
+          func();
+          IDs[i].isAnimated = true;
+        }
 
-      const el = document.getElementById(id);
-      if (isElementInViewport(el) && !isAnimated) {
-        func();
-        IDs[i].isAnimated = true;
-      }
-      isTrue = IDs[i].isAnimated;
+        t = IDs[i].isAnimated;
 
-      if (isTrue && i === IDs.length - 1) {
-        document.getElementById('main').removeEventListener('scroll', startAnimation);
+        if (i === IDs.length - 1 && t) {
+          t = false;
+          document.getElementById('main').removeEventListener('scroll', startAnimation);
+        }
       }
-    }
+    }, 600);
   }

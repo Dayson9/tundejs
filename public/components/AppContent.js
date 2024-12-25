@@ -17,7 +17,7 @@ const AppContent = new subComponent("AppContent", {
   },
   template: () => {
     return `
-      <div onscroll={{ startAnimation() }} class='container' id='main' background={{ this.data.darkMode ? 'linear-gradient(35deg, rgb(15, 21, 43), rgb(5,11,18))' : 'white' }}>
+      <div class='container' id='main' background={{ this.data.darkMode ? 'linear-gradient(35deg, rgb(15, 21, 43), rgb(5,11,18))' : 'white' }}>
         <TopBar/>
         <OracleEye/>
         <Hero/>
