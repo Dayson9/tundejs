@@ -72,7 +72,7 @@ const ExperienceCard = new Nugget("ExperienceCard", {
    `,
 
     '.role': `
-      width: 80%;
+      width: ${ width < 768 ? '80' : '55' }%;
       height: auto;
       display: flex;
       flex-direction: row;
@@ -80,6 +80,9 @@ const ExperienceCard = new Nugget("ExperienceCard", {
       justify-content: space-evenly;
       margin: 0 auto;
       margin-top: 35px;
+      padding-inline: ${ width < 768 ? '0' : '0%' };
+      margin-left: ${ width < 768 ? 'auto' : '0%' };
+      box-sizing: border-box;
    `,
     'ul': `
       width: 95%;

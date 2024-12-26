@@ -12,7 +12,7 @@ const MyWorks = new subComponent("MyWorks", {
       
         <Heading { text: "My Works", colored: "Works" } />
         
-        <Text { txt: "What stuffs have I built?, here are some workings", align: 'center', bottom: 20 } />
+        <Text { txt: "What stuffs have I built?, here are some workings", align: 'center', bottom: 20, size: 12 } />
         
         <div class='rowcol1'>
           <ProjectCard { name: 'PixelPen', description: "PixelPen is an intuitive web application that empowers users to effortlessly design HTML elements. Simply design HTML elements, and let PixelPen generate the clean, optimized HTML/CSS code.", src: './assets/images/pixelpen.webp', stack: ['js', 'qf'], url: 'pixelpen-eight.vercel.app/' } />
@@ -24,7 +24,7 @@ const MyWorks = new subComponent("MyWorks", {
         <div class='section'>
           <Heading { text: "Upcoming projects", colored: "Upcoming", size: 20 } />
           
-          <Text { txt: "Projects I'm currently / planning to work on.", bottom: 20, align: 'center' } />
+          <Text { txt: "Projects I'm currently / planning to work on.", bottom: 20, align: 'center', size: 12 } />
           <div class='rowcol2'>
           <UpcomingProject { name: 'PureNovel', src: './assets/images/hero_static_mobile.webp', snippet: 'A web app for reading any genre of novels.', stack: [{ src: './assets/images/queflow.webp' }] } />
           

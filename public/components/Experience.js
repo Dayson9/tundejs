@@ -17,9 +17,6 @@ const Experience = new subComponent('Experience', {
         
       </div>
     `
-  },
-  stylesheet: {
-
   }
 });
 

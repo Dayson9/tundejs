@@ -227,9 +227,9 @@ const startAnimation = () => {
 
       t = IDs[i].isAnimated;
 
-      if (i === IDs.length - 1 && t) {
-        t = false;
-        document.getElementById('main').removeEventListener('scroll', startAnimation);
+      if (i == IDs.length - 1 && t) {
+        const main = document.getElementById('main');
+        main.removeEventListener('scroll', startAnimation);
       }
     }
   }, 600);
