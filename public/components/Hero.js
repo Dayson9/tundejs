@@ -9,9 +9,11 @@ const Hero = new subComponent("Hero", {
     return `
       <div id='container' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
         <div id='hero'>
-          <h1 font-size='37px' font-family='"Nova Square"' id='h-heading'>Hi <span transform={{ 'rotate('+this.data.handRotate+'deg)' }} class='rotate'>👋</span>, I'm <GradientText { text: 'Tunde', from: 'rgb(50, 120, 180)', to: 'rgb(50, 120, 180, .2)', deg: 35 } /></h1>
+          <h1 font-size='42px' font-family='"Nova Square"' id='h-heading'>Hi <span transform={{ 'rotate('+this.data.handRotate+'deg)' }} class='rotate'>👋</span>, I'm <GradientText { text: 'Tunde', deg: 135 }/>
+
+          </h1>
           
-          <Text { txt: 'I\\'m a software engineer with a high knack for building web based innovative apps, With a touch of uniqueness, I craft intuitive and performant websites.', size: 12 } />
+          <Text { txt: 'I\\'m a software engineer with a high knack for building web based innovative apps, with a touch of uniqueness, I craft intuitive and performant websites.', size: 12 } />
           
           <Button { label: "About me", w: '150px', h: '60px', color: 'white', bg: "rgba(50, 101, 170)", icon: "r bxs-right-arrow", click: "scrollTo('about')" } />
         </div>

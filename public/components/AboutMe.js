@@ -3,7 +3,6 @@ import { subComponent } from 'queflow';
 const AboutMe = new subComponent('AboutMe', {
   data: {
     darkMode: true,
-    hobbyShadow: '',
     outline: ''
   },
   template: () => {

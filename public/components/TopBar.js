@@ -1,9 +1,11 @@
   import { subComponent } from 'queflow';
   
+  const width = window.innerWidth;
+  
   const TopBar = new subComponent("TopBar", {
     data: {
       darkMode: true,
-      menuX: window.innerWidth > 768 ? 130 : 110,
+      menuX: width > 768 ? 130 : 110,
       lineH: 20,
       sliders: [30, 30, 30]
     },
@@ -53,7 +55,7 @@
         box-sizing: border-box;
         z-index: 2;
       `,
-      "header *": `
+      "header, header *": `
         transition: .3s;
       `,
       'h2': `
