@@ -17,7 +17,7 @@ const UpcomingProject = new Nugget('UpcomingProject', {
   },
   stylesheet: {
     '.upcoming' : `
-      width: ${ window.innerHeight < 768 ? '95%' : '55%' };
+      width: ${ window.innerHeight < 768 ? '95%' : '75%' };
       min-height: ${ window.innerHeight < 768 ? '120px' : '150px' };
       border: 1px solid rgb(45, 59, 78);
       margin: 0 auto;

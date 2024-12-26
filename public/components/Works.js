@@ -37,9 +37,9 @@ const MyWorks = new subComponent("MyWorks", {
         </div>
       </div>`
   },
-  
+
   stylesheet: {
-    '.rowcol1' : `
+    '.rowcol1': `
        width: 100%;
        height: auto;
        display: flex;
@@ -49,8 +49,22 @@ const MyWorks = new subComponent("MyWorks", {
        box-sizing: border-box;
     `,
     "@media (min-width: 768px)": {
-      '.rowcol1' : `
+      '.rowcol1': `
         flex-direction: row;
+      `,
+      '.rowcol2': `
+        width: 100%;
+        height: 35vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: auto;
+        box-sizing: border-box;
+        padding-inline: 15vw;
+      `,
+      '.upcoming' : `
+        height: 130px;
+        width: 60%;
       `
     }
   }

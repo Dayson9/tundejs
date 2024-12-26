@@ -23,7 +23,7 @@ const Hero = new subComponent("Hero", {
   stylesheet: {
     "#container": `
       width: 100%;
-      height: 320px;
+      height: 380px;
       box-sizing: border-box;
       border: none;
       margin-top: 140px;
@@ -43,7 +43,7 @@ const Hero = new subComponent("Hero", {
     `,
 
     '.grad': `
-      -webkit-text-stroke: 1.5px pink; 
+      -webkit-text-stroke: 1.5px dodgerblue; 
       color: white;
       `,
     'h1 .rotate' : `

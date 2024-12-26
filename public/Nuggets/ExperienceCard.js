@@ -1,5 +1,7 @@
 import { Nugget } from 'queflow';
 
+const width = window.innerWidth;
+
 const ExperienceCard = new Nugget("ExperienceCard", {
   template: (data) => {
     return `
@@ -30,7 +32,7 @@ const ExperienceCard = new Nugget("ExperienceCard", {
 
   stylesheet: {
     '.card': `
-      width: 90%;
+      width: ${ width < 768 ? '90%' : '50%' };
       height: auto;
       padding-block: 15px;
       border-radius: 25px;
