@@ -209,23 +209,34 @@ const IDs = [{ id: 'h-heading', func: waveHand, isAnimated: false },
 
 const startAnimation = () => {
   setTimeout(() => {
-    let t = false;
-    for (const i in IDs) {
+    const len = IDs.length;
+    for (var i = 0; i < len; i++) {
       const { id, func, isAnimated } = IDs[i];
       const el = document.getElementById(id);
+
       if (isElementInViewport(el) && !isAnimated) {
         func();
         IDs[i].isAnimated = true;
       }
 
-      t = IDs[i].isAnimated;
+      let t = false;
 
-      if (i == IDs.length - 1 && t) {
+      for (var j = 0; j < len; j++) {
+        const isAnimated = IDs[j].isAnimated;
+        if (!isAnimated) {
+          t = false;
+          break;
+        } else {
+          t = true;
+        }
+      }
+
+      if (t) {
         const main = document.getElementById('main');
         main.removeEventListener('scroll', startAnimation);
       }
     }
-  }, 600);
+  }, 500);
 }
 
 const tokens = 'qp1al2zmw6os8k3xne9idj04cbru57fhvtyg';
