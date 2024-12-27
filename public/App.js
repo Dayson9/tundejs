@@ -27,7 +27,7 @@ const App = new QComponent("#app", {
   run: () => {
     //runLoaderAnimation();
     const mainElement = document.getElementById('main'),
-      audio = new Audio('./assets/audios/eerie.mp3');
+      audio = new Audio('./assets/audios/bg_music.mp3');
 
     audio.loop = true;
 
