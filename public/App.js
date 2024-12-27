@@ -37,8 +37,9 @@ const App = new QComponent("#app", {
       clearTimeout(OracleEye.data.animation);
       OracleEye.data.animation = setTimeout(() => OracleEye.data.opacity = 0, 2000);
     }, { passive: true });
-    
-  mainElement.addEventListener('scroll', startAnimation, { passive: true });
+
+    mainElement.addEventListener('scroll', startAnimation, { passive: true });
+
     document.body.onclick = () => audio.play();
     waveHand();
   },

@@ -6,7 +6,8 @@ const deviceWidth = window.innerWidth,
 var index = i = 0,
   anim,
   cursorAnim,
-  handAnim;
+  handAnim,
+  textAnim;
 
 const addSuffix = (num) => {
   const str = new String(num),
@@ -179,15 +180,15 @@ const scrollTo = (id) => {
 }
 
 const waveHand = () => {
-  setTimeout(() => Hero.data.handRotate = 35, 500);
-  setTimeout(() => Hero.data.handRotate = -35, 800);
-  setTimeout(() => Hero.data.handRotate = 35, 1100);
-  setTimeout(() => Hero.data.handRotate = -35, 1400);
-  setTimeout(() => Hero.data.handRotate = 0, 1700);
+  setTimeout(() => Hero.data.handRotation = 35, 500);
+  setTimeout(() => Hero.data.handRotation = -35, 800);
+  setTimeout(() => Hero.data.handRotation = 35, 1100);
+  setTimeout(() => Hero.data.handRotation = -35, 1400);
+  setTimeout(() => Hero.data.handRotation = 0, 1700);
 }
 
 const animateHobbies = () => {
-  setTimeout(() => AboutMe.data.outline = '4px solid rgb(50, 120, 180)', 400);
+  setTimeout(() => AboutMe.data.outline = '4px solid rgb(50, 120, 180, .7)', 400);
 
   setTimeout(() => AboutMe.data.outline = '0px solid transparent', 1500);
 }
@@ -202,17 +203,9 @@ const isElementInViewport = (el) => {
   );
 }
 
-const IDs = [
-  {
-    id: 'h-heading',
-    func: waveHand,
-    isAnimated: false
-  },
-  {
-    id: 'my-hobbies',
-    func: animateHobbies,
-    isAnimated: false
-  }];
+
+const IDs = [{ id: 'h-heading', func: waveHand, isAnimated: false },
+  { id: 'my-hobbies', func: animateHobbies, isAnimated: false }];
 
 const startAnimation = () => {
   setTimeout(() => {
@@ -233,4 +226,20 @@ const startAnimation = () => {
       }
     }
   }, 600);
+}
+
+const tokens = 'qp1al2zmw6os8k3xne9idj04cbru57fhvtyg';
+
+const fillWithGibberish = () => {
+  let txt = '';
+
+  for (const char of AboutSummary) {
+    if (char !== ' ') {
+      const index = Math.floor(Math.random() * 35);
+      txt += tokens[index];
+    } else {
+      txt += char;
+    }
+  }
+  return txt;
 }

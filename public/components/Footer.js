@@ -2,11 +2,12 @@ import { subComponent } from 'queflow';
 
 const Footer = new subComponent('Footer', {
   data: {
-    darkMode: true
+    darkMode: true,
+    shadow: '0px 0px 0px solid rgba(15, 19, 28, .3)'
   },
   template: () => {
     return `
-      <footer background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'transparent' }} color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
+      <footer background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'transparent' }} color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }} boxShadow={{ this.data.shadow }} id='footer'>
       
         <div id='top'>
           <div>
@@ -14,7 +15,7 @@ const Footer = new subComponent('Footer', {
             <Text { txt: '2024', size: 12, align: 'left', font: '"Nova Square"' } />
           </div>
           
-          <Text { txt: '[{{ day[new Date().getDay()]; }}, {{ addSuffix(new Date().getDate()); }}  {{ month[new Date().getMonth()]; }} {{ new Date().getFullYear(); }}]', size: 12, align: 'center', font: '"Nova Square"' } />
+          <Text { txt: '[{{ day[new Date().getDay()] }}, {{ addSuffix(new Date().getDate()) }}  {{ month[new Date().getMonth()] }}, {{ new Date().getFullYear() }}]', size: 12, align: 'center', font: '"Nova Square"' } />
         </div>
         
         <div id='bottom'>
@@ -35,8 +36,8 @@ const Footer = new subComponent('Footer', {
       border-radius: 20px;
       margin-bottom: 20px;
     `,
-    
-    'footer #top' : `
+
+    'footer #top': `
       width: 100%;
       height: 40%;
       border-bottom: inherit;
@@ -44,17 +45,17 @@ const Footer = new subComponent('Footer', {
       justify-content: space-between;
       padding-inline: 10px;
     `,
-    
-    'footer #bottom' : `
+
+    'footer #bottom': `
       width: 100%;
       height: 60%;
       border-radius: 0px 0px 20px 20px;
       padding-left: 15px;
       padding-right: 10%;
     `,
-    
-    '#bottom > div' : "transform: translateX(-15%);",
-    'footer div' : `
+
+    '#bottom > div': "transform: translateX(-15%);",
+    'footer div': `
       display: flex;
       align-items: center;
       justify-content: flex-start;

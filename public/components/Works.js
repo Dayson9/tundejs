@@ -30,7 +30,7 @@ const MyWorks = new subComponent("MyWorks", {
           
           <UpcomingProject { name: 'Flow UI', src: './assets/images/hero_static_mobile.webp', snippet: 'A QueFlow based CSS library that contains beautifully crafted UI components.', stack: [{ icon: 'css3', color: 'dodgerblue' }, { src: './assets/images/queflow.webp' }] } />
           
-          <UpcomingProject { name: 'Crank.js', src: './assets/images/crankjs.webp', snippet: 'A powerful 2D physics engine for building web based games.', stack: [{ icon: 'javascript', color: 'gold' }] } />
+          <UpcomingProject { name: 'Cranq.js', src: './assets/images/cranqjs.webp', snippet: 'A powerful 2D physics engine for building web based games.', stack: [{ icon: 'javascript', color: 'gold' }] } />
           
           <UpcomingProject { name: 'CodeSnap', src: './assets/images/hero_static_mobile.webp', snippet: 'Generate beautiful snapshots of code snippets.', stack: [{ src: './assets/images/queflow.webp' }] } />        
           </div>

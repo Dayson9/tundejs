@@ -3,13 +3,13 @@ import { subComponent } from 'queflow';
 const Hero = new subComponent("Hero", {
   data: {
     darkMode: true,
-    handRotate: 0
+    handRotation: 0
   },
   template: () => {
     return `
       <div id='container' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
         <div id='hero'>
-          <h1 font-size='42px' font-family='"Nova Square"' id='h-heading'>Hi <span transform={{ 'rotate('+this.data.handRotate+'deg)' }} class='rotate'>👋</span>, I'm <GradientText { text: 'Tunde', deg: 135 }/>
+          <h1 font-size='42px' font-family='"Nova Square"' id='h-heading'>Hi <span transform={{ 'rotate('+this.data.handRotation+'deg)' }} class='rotate'>👋</span>, I'm <GradientText { text: 'Tunde', deg: 135 }/>
 
           </h1>
           
