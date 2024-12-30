@@ -83,8 +83,8 @@ const writeLoaderText = () => {
 }
 
 function runLoaderAnimation() {
-  setTimeout(() => Loader.data.loadingBarWidth = 30, 700);
-  setTimeout(() => Loader.data.loadingBarWidth = 70, 1700);
+  setTimeout(() => Loader.data.loadingBarWidth = 30, 500);
+  setTimeout(() => Loader.data.loadingBarWidth = 70, 1900);
   setTimeout(() => {
     Loader.data.loadingBarWidth = 100;
 

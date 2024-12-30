@@ -3,7 +3,7 @@ import { subComponent } from 'queflow';
 const Loader = new subComponent("Loader", {
   data: {
     loadingBarWidth: 0,
-    containerY: 100,
+    containerY: 0,
     btnOpacity: 0,
     intro: {
       text: "",
