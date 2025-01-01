@@ -17,7 +17,7 @@ const AboutMe = new subComponent('AboutMe', {
             <Hobby { name: 'Maths', icon: 'bx-math' } />
             <Hobby { name: 'Building', icon: 'bx-laptop' } />
             <Hobby { name: 'Brainstorming', icon: 'bx-brain' } />
-            <Hobby { name: 'Music', icon: 'bxs-sun' } />
+            <Hobby { name: 'Music', icon: 'bxs-music' } />
           </div>
           
           <Paragraph { text: 'I am Sodiq Tunde, a web developer dedicated to crafting innovative and user-centric digital experiences. With a focus on clean, efficient code, I transform ideas into reality.', align: 'center', size: 12 } />

@@ -4,12 +4,13 @@ import TopBar from './TopBar.js';
 import Hero from './Hero.js';
 import AboutMe from './AboutMe.js';
 import Stack from './Stack.js';
+import ServiceCard from '../Nuggets/ServiceCard.js';
 import MyWorks from './Works.js';
 import Experience from './Experience.js'
 import Contact from './Contact.js';
 import Footer from './Footer.js'
 import Hobby from '../Nuggets/Hobby.js';
-
+import Services from './Services.js';
 
 const AppContent = new subComponent("AppContent", {
   data: {
@@ -23,6 +24,7 @@ const AppContent = new subComponent("AppContent", {
         <Hero/>
         <AboutMe/>
         <Stack/>
+        <Services/>
         <MyWorks/>
         <Experience/>
         <Contact/>

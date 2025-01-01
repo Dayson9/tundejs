@@ -126,7 +126,7 @@ const closeLoader = () => {
 }
 
 const switchMode = () => {
-  const components = [AppContent, TopBar, OracleEye, Hero, AboutMe, Stack, MyWorks, Contact, Footer, Experience];
+  const components = [AppContent, TopBar, OracleEye, Hero, AboutMe, Services, Stack, MyWorks, Contact, Footer, Experience];
 
   const _switchMode = (component) => component.data.darkMode = !component.data.darkMode;
 

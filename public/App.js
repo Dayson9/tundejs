@@ -25,7 +25,7 @@ const App = new QComponent("#app", {
        `
   },
   run: () => {
-    runLoaderAnimation();
+    //runLoaderAnimation();
     const mainElement = document.getElementById('main'),
       audio = new Audio('./assets/audios/bg_music.mp3');
 

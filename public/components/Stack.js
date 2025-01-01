@@ -24,9 +24,6 @@ const Stack = new subComponent("Stack", {
         </div>
       </div>
     `
-  },
-  stylesheet: {
-
   }
 });
 
