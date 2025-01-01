@@ -53,14 +53,15 @@ const MyWorks = new subComponent("MyWorks", {
         flex-direction: row;
       `,
       '.rowcol2': `
-        width: 100%;
+        width: 100vw;
         height: 35vh;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: auto;
+        grid-gap: auto;
         box-sizing: border-box;
-        padding-inline: 15vw;
+        margin: 0 auto;
+        padding-block: 5vh;
       `,
       '.upcoming' : `
         height: 130px;

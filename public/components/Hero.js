@@ -43,8 +43,7 @@ const Hero = new subComponent("Hero", {
     `,
 
     '.grad': `
-      -webkit-text-stroke: 1.5px dodgerblue; 
-      color: white;
+      -webkit-text-stroke: 1.5px dodgerblue;
       `,
     'h1 .rotate' : `
       display: inline-block;
