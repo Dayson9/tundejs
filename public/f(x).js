@@ -44,7 +44,7 @@ const reverseText = () => {
       clearInterval(anim);
       if (i !== introText.length) setTimeout(() => writeLoaderText(), 500);
     }
-  }, 50)
+  }, 30)
 }
 
 const blinkCursor = () => {
@@ -79,7 +79,7 @@ const writeLoaderText = () => {
       index++;
     }
 
-  }, 50);
+  }, 30);
 }
 
 function runLoaderAnimation() {
