@@ -138,3 +138,31 @@
 .bx-code-alt:before {
   content: "\ea69"
 }
+
+.bx-accessibility:before {
+  content: "\e99e"
+}
+
+.bxs-rocket:before {
+  content: "\ee95"
+}
+
+.bx-laptop:before {
+  content: "\eb2b"
+}
+
+.bx-intersect:before {
+  content: "\eb23"
+}
+
+.bx-time:before {
+  content: "\ec45"
+}
+
+.bxl-git:before {
+  content: "\e939"
+}
+
+.bx-support:before {
+  content: "\ec35"
+}

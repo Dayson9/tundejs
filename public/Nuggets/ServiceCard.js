@@ -6,7 +6,7 @@ const ServiceCard = new Nugget("ServiceCard", {
   template: (data) => {
     return `
       <div class='section card' background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'white' }} margin-bottom="30px">
-        <Icon { class: '{{ icon }}', size: 35 } />
+        <Icon { class: '{{ icon }}', size: 40 } />
         <Heading { text: '{{ title }}' } />
         <Paragraph { text: '{{ summary }}' } />
       </div>
