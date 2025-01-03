@@ -26,10 +26,10 @@ const App = new QComponent("#app", {
   },
   run: () => {
     runLoaderAnimation();
-    const mainElement = document.getElementById('main'),
-      audio = new Audio('./assets/audios/bg_music.mp3');
+    const mainElement = document.getElementById('main');
+    //  audio = new Audio('./assets/audios/bg_music.mp3');
 
-    audio.loop = true;
+   // audio.loop = true;
 
     mainElement.addEventListener(`${ deviceWidth < 768 ? 'touchmove' : 'mousemove' }`, (e) => moveOracleEye(e), { passive: true });
 
@@ -40,7 +40,7 @@ const App = new QComponent("#app", {
 
     mainElement.addEventListener('scroll', startAnimation, { passive: true });
 
-    document.body.onclick = () => audio.play();
+  //document.body.onclick = () => audio.play();
     waveHand();
   },
 

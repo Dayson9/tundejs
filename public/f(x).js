@@ -120,7 +120,7 @@ const closeLoader = () => {
     setTimeout(() => {
       Loader.destroy();
       Loader = null;
-      audio.play();
+      //audio.play();
     }, 2000);
   }
 }
