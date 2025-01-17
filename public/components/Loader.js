@@ -1,5 +1,7 @@
 import { Component } from 'queflow';
 
+const width = window.innerWidth
+
 const Loader = new Component("Loader", {
   data: {
     loadingBarWidth: 0,
@@ -85,8 +87,10 @@ const Loader = new Component("Loader", {
     `,
     ".intro": `
       width: 90%;
-      height: 57%;
-      margin-left: 5%;
+      height: ${ width < 768 ? 57 : 37 }%;
+      position: fixed;
+      left: 5%;
+      top: ${ width < 768 ? 47 : 25 }%;
       display: flex;
       flex-direction: column;
       align-items: center;
