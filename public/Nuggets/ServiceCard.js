@@ -29,7 +29,7 @@ const ServiceCard = new Nugget("ServiceCard", {
       background: linear-gradient(125deg, rgb(50, 120, 180), rgb(50, 120, 180, .2));
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
-      font-weight: 900!
+      font-weight: 900;
     `
   }
 });
