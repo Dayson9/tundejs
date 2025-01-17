@@ -1,8 +1,8 @@
-import { subComponent } from 'queflow';
+import { Component } from 'queflow';
 import ProjectCard from '../Nuggets/ProjectCard.js';
 import UpcomingProject from '../Nuggets/UpcomingProject.js';
 
-const MyWorks = new subComponent("MyWorks", {
+const MyWorks = new Component("MyWorks", {
   data: {
     darkMode: true
   },

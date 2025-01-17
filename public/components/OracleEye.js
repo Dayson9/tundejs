@@ -1,6 +1,6 @@
-import { subComponent } from 'queflow';
+import { Component } from 'queflow';
 
-const OracleEye = new subComponent('OracleEye', {
+const OracleEye = new Component('OracleEye', {
   data: {
     x: 40,
     y: 25.5,

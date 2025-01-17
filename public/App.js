@@ -1,4 +1,4 @@
-import { QComponent } from "queflow";
+import { App } from "queflow";
 import Loader from './components/Loader.js';
 import AppContent from './components/AppContent.js';
 
@@ -14,10 +14,7 @@ import StackItem from './Nuggets/StackItem.js';
 import Icon from './Nuggets/Icon.js';
 
 
-const App = new QComponent("#app", {
-  data: {
-    color: 'red'
-  },
+const App_ = new App("#app", {
   template: () => {
     return `
       <Loader/>
@@ -59,4 +56,4 @@ const App = new QComponent("#app", {
   }
 });
 
-App.render();
+App_.render();

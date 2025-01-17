@@ -1,6 +1,6 @@
-import { subComponent } from 'queflow';
+import { Component } from 'queflow';
 
-const Loader = new subComponent("Loader", {
+const Loader = new Component("Loader", {
   data: {
     loadingBarWidth: 0,
     containerY: 0,

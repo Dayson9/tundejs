@@ -1,6 +1,6 @@
-import { subComponent } from 'queflow';
+import { Component } from 'queflow';
 
-const Hero = new subComponent("Hero", {
+const Hero = new Component("Hero", {
   data: {
     darkMode: true,
     handRotation: 0

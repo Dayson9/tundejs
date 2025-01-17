@@ -1,6 +1,6 @@
-import { subComponent } from 'queflow';
+import { Component } from 'queflow';
 
-const Footer = new subComponent('Footer', {
+const Footer = new Component('Footer', {
   data: {
     darkMode: true,
     shadow: '0px 0px 0px solid rgba(15, 19, 28, .3)'

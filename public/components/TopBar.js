@@ -1,8 +1,8 @@
-  import { subComponent } from 'queflow';
+  import { Component } from 'queflow';
   
   const width = window.innerWidth;
   
-  const TopBar = new subComponent("TopBar", {
+  const TopBar = new Component("TopBar", {
     data: {
       darkMode: true,
       menuX: width > 768 ? 130 : 110,

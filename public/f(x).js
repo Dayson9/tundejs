@@ -1,4 +1,4 @@
-const introText = ["Hello folk 👋, my name's Tunde", "I'm a Software Engineer", "Wanna know more about me?", "Let's dive in"];
+const introText = ["Hello folk 👋, my name's Tunde", "I'm a Frontend Engineer", "Wanna know more about me?", "Let's dive in"];
 const deviceWidth = window.innerWidth,
   day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
   month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

@@ -1,6 +1,6 @@
-import { subComponent } from 'queflow';
+import { Component } from 'queflow';
 
-const Stack = new subComponent("Stack", {
+const Stack = new Component("Stack", {
   data: {
     darkMode: true
   },

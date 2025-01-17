@@ -1,6 +1,6 @@
-import { subComponent } from 'queflow';
+import { Component } from 'queflow';
 
-const AboutMe = new subComponent('AboutMe', {
+const AboutMe = new Component('AboutMe', {
   data: {
     darkMode: true,
     outline: ''

@@ -1,4 +1,4 @@
-import { subComponent } from 'queflow';
+import { Component } from 'queflow';
 import OracleEye from './OracleEye.js';
 import TopBar from './TopBar.js';
 import Hero from './Hero.js';
@@ -12,7 +12,7 @@ import Footer from './Footer.js'
 import Hobby from '../Nuggets/Hobby.js';
 import Services from './Services.js';
 
-const AppContent = new subComponent("AppContent", {
+const AppContent = new Component("AppContent", {
   data: {
     darkMode: true
   },

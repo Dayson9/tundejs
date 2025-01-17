@@ -1,6 +1,6 @@
-import { subComponent } from 'queflow';
+import { Component } from 'queflow';
 
-const Contact = new subComponent("Contact", {
+const Contact = new Component("Contact", {
   data: {
     darkMode: true
   },

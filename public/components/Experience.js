@@ -1,7 +1,7 @@
-import { subComponent } from 'queflow';
+import { Component } from 'queflow';
 import ExperienceCard from '../Nuggets/ExperienceCard.js';
 
-const Experience = new subComponent('Experience', {
+const Experience = new Component('Experience', {
   data: {
     darkMode: true
   },
