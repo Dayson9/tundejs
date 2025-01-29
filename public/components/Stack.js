@@ -6,11 +6,11 @@ const Stack = new Component("Stack", {
   },
   template: () => {
     return `
-      <div class='section' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
+      <div class='section' color={{ darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
         <Heading { text: 'My Stack',  colored: 'Stack'} />
         <Text { txt: "What's my stack?, what Technologies do I use?", align: 'center', size: 12 } />
         
-        <div class='bg' background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'transparent' }} color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
+        <div class='bg' background={{ darkMode ? 'rgba(15, 19, 28, .7)' : 'transparent' }} color={{ darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
           <div class='col'>
             <StackItem { icon: 'bxl-html5', label: 'HTML', color: 'yellow', size: 12 }/>
             <StackItem { icon: 'bxl-css3', label: 'CSS', color: 'dodgerblue', size: 12 }/>

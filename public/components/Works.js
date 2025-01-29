@@ -8,7 +8,7 @@ const MyWorks = new Component("MyWorks", {
   },
   template: () => {
     return `
-      <div class='section' id='works' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
+      <div class='section' id='works' color={{ darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
       
         <Heading { text: "My Works", colored: "Works" } />
         

@@ -7,7 +7,7 @@ const Experience = new Component('Experience', {
   },
   template: () => {
     return `
-      <div class='section' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
+      <div class='section' color={{ darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
         <Heading { text: 'My Experience', colored: 'Experience' } />
         
         <ExperienceCard { name: 'Silicon Valley', state: 'Lagos', duration: '2024-Present', role: 'Frontend Developer',

@@ -4,7 +4,7 @@ import StackIcon from './StackIcon.js'
 const ProjectCard = new Nugget("ProjectCard", {
   template: (data) => {
     return `
-      <div class='project' background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'white' }}>
+      <div class='project' background={{ darkMode ? 'rgba(15, 19, 28, .7)' : 'white' }}>
       
         <img src={{ src }} alt='{{ name }} Logo'/>
         

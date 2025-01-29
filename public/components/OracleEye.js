@@ -10,10 +10,10 @@ const OracleEye = new Component('OracleEye', {
   },
   template: () => {
     return `
-      <div id='oracle' opacity={{ this.data.opacity }}>
+      <div id='oracle' opacity={{ opacity }}>
         <svg width="80" height="45" viewBox='0 0 80 45'>
-          <path d='M5,17.5 C 5,17.5 38,-5 75,17.5 C 75,17.5 42,50 5,17.5' fill={{ this.data.darkMode ? 'rgb(5,11,18)' : 'white' }} stroke-width='5' stroke='rgba(50, 101, 170)'></path>
-          <circle cx={{ this.data.x }} cy={{ this.data.y }} r='8' fill='teal' />
+          <path d='M5,17.5 C 5,17.5 38,-5 75,17.5 C 75,17.5 42,50 5,17.5' fill={{ darkMode ? 'rgb(5,11,18)' : 'white' }} stroke-width='5' stroke='rgba(50, 101, 170)'></path>
+          <circle cx={{ x }} cy={{ y }} r='8' fill='teal' />
         </svg>
       </div>
     `

@@ -13,24 +13,24 @@
       return `
         <header>
           <h2 color='rgb(50, 120, 180)'>Sodiq Tunde</h2>
-          <div class='right' background={{ this.data.darkMode ? 'rgba(50, 101, 170, .5)' : 'rgb(50, 120, 180, .2)'; }}>
-            <div class='round' background={{ this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,18)'; }} onclick={{ switchMode(); }}>
-              <span class={{ this.data.darkMode ? 'bx bxs-sun' : 'bx bxs-moon' }}></span>
+          <div class='right' background={{ darkMode ? 'rgba(50, 101, 170, .5)' : 'rgb(50, 120, 180, .2)'; }}>
+            <div class='round' background={{ darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,18)'; }} onclick={{ switchMode(); }}>
+              <span class={{ darkMode ? 'bx bxs-sun' : 'bx bxs-moon' }}></span>
             </div>
-            <div class='round' background={{ !this.data.darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,18)'; }} onclick={{ openMenu(); }}>
-              <span class={{ this.data.menuX === 0 ? '' : 'bx bx-menu-alt-right' }}></span>
-              <svg display={{ this.data.menuX === 0 ? 'block' : 'none' }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z" fill='white'/></svg>
+            <div class='round' background={{ !darkMode ? 'rgb(50, 120, 180)' : 'rgb(5,11,18)'; }} onclick={{ openMenu(); }}>
+              <span class={{ menuX === 0 ? '' : 'bx bx-menu-alt-right' }}></span>
+              <svg display={{ menuX === 0 ? 'block' : 'none' }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z" fill='white'/></svg>
             </div>          
           </div>
           
-          <div class='menu' transform={{ 'translateX('+ this.data.menuX +'%)' }} onclick={{ openMenu(); }} background={{ this.data.darkMode ? 'rgb(50, 101, 170)' : 'rgba(80, 131, 200)' }}>
-            <div id='line' height={{ this.data.lineH+'%' }}></div>
+          <div class='menu' transform="translateX({{ menuX }}%)" onclick={{ openMenu(); }} background={{ darkMode ? 'rgb(50, 101, 170)' : 'rgba(80, 131, 200)' }}>
+            <div id='line' height={{ lineH+'%' }}></div>
             <div class='col'>
-              <SlidingText { text: "About", x: "{{ 'translateX('+this.data.sliders[0]+'px)' }}", click: "scrollTo('about')" } />
+              <SlidingText { text: "About", x: "translateX({{ sliders[0] }}px)", click: "scrollTo('about')" } />
       
-              <SlidingText { text: "Works", x: "{{ 'translateX('+this.data.sliders[1]+'px)' }}", click: "scrollTo('works')" } />
+              <SlidingText { text: "Works", x: "translateX({{ sliders[1] }}px)", click: "scrollTo('works')" } />
             
-              <SlidingText { text: "Contact", x: "{{ 'translateX('+this.data.sliders[2]+'px)' }}", click: "scrollTo('contact')" } />
+              <SlidingText { text: "Contact", x: "translateX({{ sliders[2] }}px)", click: "scrollTo('contact')" } />
             </div>
           </div>
         </header>

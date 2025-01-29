@@ -5,15 +5,15 @@ const width = window.innerWidth;
 const ExperienceCard = new Nugget("ExperienceCard", {
   template: (data) => {
     return `
-      <div class='card' background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'white' }}>
-        <div class='header' background={{ this.data.darkMode ? 'rgba(50, 101, 170)' : 'rgba(50, 101, 170, .3)' }}  color={{ this.data.darkMode ? 'white' : 'rgb(5,11,57)' }}>
+      <div class='card' background={{ darkMode ? 'rgba(15, 19, 28, .7)' : 'white' }}>
+        <div class='header' background={{ darkMode ? 'rgba(50, 101, 170)' : 'rgba(50, 101, 170, .3)' }}  color={{ darkMode ? 'white' : 'rgb(5,11,57)' }}>
         
           <Text { txt: '{{ name }}', font: '"Nova Square"', size: 20 }/>
           <span>
             <Icon { class: 'bx-current-location', size: 20, top: 5 } /> {{ state }}, Nigeria
           </span>
         </div>
-        <div class='duration' background={{ this.data.darkMode ? 'rgb(5,11,18)' : 'white' }}>
+        <div class='duration' background={{ darkMode ? 'rgb(5,11,18)' : 'white' }}>
           <Icon { class: 'bxs-calendar', size: 20 } />
           <Text { txt: '{{ duration }}', size: 18 } />
         </div>

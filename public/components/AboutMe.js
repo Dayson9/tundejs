@@ -7,13 +7,13 @@ const AboutMe = new Component('AboutMe', {
   },
   template: () => {
     return `
-      <div id='about' class='section' margin-top='5vh' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
+      <div id='about' class='section' margin-top='5vh' color={{ darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
         
           <Heading { text: 'About Me', colored: 'Me', bottom: 40 } />
           
           <Text { txt: 'I love', size: 22, align: 'center', font: '"Nova Square"', weight: 900, bottom: 30 } />
           
-          <div id='my-hobbies' background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'transparent' }}>
+          <div id='my-hobbies' background={{ darkMode ? 'rgba(15, 19, 28, .7)' : 'transparent' }}>
             <Hobby { name: 'Maths', icon: 'bx-math' } />
             <Hobby { name: 'Building', icon: 'bx-laptop' } />
             <Hobby { name: 'Brainstorming', icon: 'bx-brain' } />

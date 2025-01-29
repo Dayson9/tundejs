@@ -1,5 +1,9 @@
 import { Component } from 'queflow';
 
+const toDate = () => {
+  return `${day[new Date().getDay()] }, ${ addSuffix(new Date().getDate()) }  ${ month[new Date().getMonth()] }, ${ new Date().getFullYear() }`
+}
+
 const Footer = new Component('Footer', {
   data: {
     darkMode: true,
@@ -7,7 +11,7 @@ const Footer = new Component('Footer', {
   },
   template: () => {
     return `
-      <footer background={{ this.data.darkMode ? 'rgba(15, 19, 28, .7)' : 'transparent' }} color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }} boxShadow={{ this.data.shadow }} id='footer'>
+      <footer background={{ darkMode ? 'rgba(15, 19, 28, .7)' : 'transparent' }} color={{ darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }} boxShadow={{ shadow }} id='footer'>
       
         <div id='top'>
           <div>
@@ -15,7 +19,7 @@ const Footer = new Component('Footer', {
             <Text { txt: '2024', size: 12, align: 'left', font: '"Nova Square"' } />
           </div>
           
-          <Text { txt: '[{{ day[new Date().getDay()] }}, {{ addSuffix(new Date().getDate()) }}  {{ month[new Date().getMonth()] }}, {{ new Date().getFullYear() }}]', size: 12, align: 'center', font: '"Nova Square"' } />
+          <Text { txt: '[${toDate()}]', size: 12, align: 'center', font: '"Nova Square"' } />
         </div>
         
         <div id='bottom'>

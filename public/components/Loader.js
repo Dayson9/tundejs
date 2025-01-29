@@ -24,22 +24,22 @@ const Loader = new Component("Loader", {
   },
   template: () => {
     return `
-      <div id='container' transform={{ 'translateY('+this.data.containerY+'%)' }}>
-        <div class='center' opacity={{ this.data.center.opacity }} transform={{ 'translateY('+this.data.center.y+'px) scale('+this.data.center.scale+')' }}>
+      <div id='container' transform="translateY({{ containerY }}%)">
+        <div class='center' opacity={{ center.opacity }} transform="translateY({{ center.y }}px) scale({{ center.scale }})">
         
           <Text { txt: 'Loading', color: 'white', font: '"Nova Square"' } />
           
           <div id='loader'>
-            <div width={{ this.data.loadingBarWidth+'%' }}></div>
+            <div width={{ loadingBarWidth+'%' }}></div>
           </div>
         </div>
-        <div class='intro' opacity={{ this.data.intro.opacity }} transform={{ 'translateY('+this.data.intro.y+'px) scale('+this.data.intro.scale+')' }}>
+        <div class='intro' opacity={{ intro.opacity }} transform="translateY({{ intro.y }}px) scale({{ intro.scale }})">
           <h3 font-family='"Nova Square"'>
-            <span>{{ this.data.intro.text }}</span>
-            <span class='cursor' color={{ this.data.intro.cursorColor }}>_</span>
+            <span>{{ intro.text }}</span>
+            <span class='cursor' color={{ intro.cursorColor }}>_</span>
           </h3>
-          <h2 transform={{ 'translateY('+this.data.intro.handY+'px)' }} transition=".5s" opacity={{ this.data.intro.handOpacity }}>👇</h2>
-          <PillButton { click: 'closeLoader()', opacity: '{{ this.data.btnOpacity }}' } />
+          <h2 transform="translateY({{ intro.handY }}px)" transition=".5s" opacity={{ intro.handOpacity }}>👇</h2>
+          <PillButton { click: 'closeLoader()', opacity: '{{ btnOpacity }}' } />
         </div>
      </div>
     `

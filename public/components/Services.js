@@ -6,7 +6,7 @@ const Services = new Component('Services', {
   },
   template: () => {
     return `
-      <div id='main' color={{ this.data.darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
+      <div id='main' color={{ darkMode ? 'rgb(155, 169, 188)' : 'rgb(5,11,57)' }}>
         <Heading { text: 'My Services', colored: 'Services' } />
         <Text { txt: 'What Services do I render?', bottom: 30 } />
         <div id='grid'>
