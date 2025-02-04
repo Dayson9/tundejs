@@ -11,7 +11,7 @@ const AboutMe = new Component('AboutMe', {
         
           <Heading { text: 'About Me', colored: 'Me', bottom: 40 } />
           
-          <Text { txt: 'I love', size: 22, align: 'center', font: '"Nova Square"', weight: 900, bottom: 30 } />
+          <Text { txt: 'I love', size: 22, align: 'center', font: 'Nova Square', weight: 900, bottom: 30 } />
           
           <div id='my-hobbies' background={{ darkMode ? 'rgba(15, 19, 28, .7)' : 'transparent' }}>
             <Hobby { name: 'Maths', icon: 'bx-math' } />

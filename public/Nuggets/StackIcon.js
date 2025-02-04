@@ -20,7 +20,7 @@ const StackIcon = new Nugget("StackIcon", {
         ` : `
         <img src={{ img }} alt="{{ name }}'s Icon"/>
         ` }
-        <Text { txt: '{{ name }}', size: 12, font: '"DM Mono"' } />
+        <Text { txt: '{{ name }}', size: 12, font: "DM Mono" } />
    `
   },
 

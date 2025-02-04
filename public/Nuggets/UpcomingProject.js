@@ -6,7 +6,7 @@ const UpcomingProject = new Nugget('UpcomingProject', {
       <div class='upcoming' background={{ darkMode ? 'rgba(15, 19, 28, .7)' : 'white' }}>
         <img src={{ src }} alt="{{ name }}'s Image"/>
         <div class='right'>
-          <Text { txt: '{{ name }}', size: 15, weight: 700, font: '"Nova Square"' } />
+          <Text { txt: '{{ name }}', size: 15, weight: 700, font: 'Nova Square' } />
           <Paragraph { text: '{{ snippet }}', size: 11, weight: 300, align: 'left' } />
           <div class='row' justify-content="${ data.stack.length > 1 ? 'start' : 'space-between' }">
           ${ data.stack.map((item) => item.src ? `<img src='${item.src}' alt='Queflow.js Logo'/>` : `<Icon { class: 'bxl-${item.icon}', color: '${item.color}', size: 20 } />`).join('\n')}

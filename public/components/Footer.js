@@ -16,14 +16,14 @@ const Footer = new Component('Footer', {
         <div id='top'>
           <div>
             <Icon { class: 'bx-copyright' } />
-            <Text { txt: '2024', size: 12, align: 'left', font: '"Nova Square"' } />
+            <Text { txt: '2024', size: 12, align: 'left', font: 'Nova Square' } />
           </div>
           
-          <Text { txt: '[${toDate()}]', size: 12, align: 'center', font: '"Nova Square"' } />
+          <Text { txt: '[${toDate()}]', size: 12, align: 'center', font: 'Nova Square' } />
         </div>
         
         <div id='bottom'>
-          <Text { txt: 'Built with: ', size: 14, align: 'center', font: '"Nova Square"' }/>
+          <Text { txt: 'Built with: ', size: 14, align: 'center', font: 'Nova Square' }/>
           <div margin-left='15px'>
             <StackItem { src: './assets/images/queflow.webp', label: 'QueFlowJS', size: 22, alt: 'QueFlowJS Icon', nova: true }/>
           </div>

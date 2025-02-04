@@ -8,7 +8,7 @@ const ExperienceCard = new Nugget("ExperienceCard", {
       <div class='card' background={{ darkMode ? 'rgba(15, 19, 28, .7)' : 'white' }}>
         <div class='header' background={{ darkMode ? 'rgba(50, 101, 170)' : 'rgba(50, 101, 170, .3)' }}  color={{ darkMode ? 'white' : 'rgb(5,11,57)' }}>
         
-          <Text { txt: '{{ name }}', font: '"Nova Square"', size: 20 }/>
+          <Text { txt: '{{ name }}', font: 'Nova Square', size: 20 }/>
           <span>
             <Icon { class: 'bx-current-location', size: 20, top: 5 } /> {{ state }}, Nigeria
           </span>
@@ -20,7 +20,7 @@ const ExperienceCard = new Nugget("ExperienceCard", {
         
         <div class='role'>
           <Icon { class: 'bx-code-curly', size: 26 } />
-          <Text { txt: '{{ role }}', size: 22, font: '"Nova Square"' } />
+          <Text { txt: '{{ role }}', size: 22, font: 'Nova Square' } />
         </div>
         
         <ul class='list'>
