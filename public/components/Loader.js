@@ -39,7 +39,7 @@ const Loader = new Component("Loader", {
             <span class='cursor' color={{ intro.cursorColor }}>_</span>
           </h3>
           <h2 transform="translateY({{ intro.handY }}px)" transition=".5s" opacity={{ intro.handOpacity }}>👇</h2>
-          <PillButton { click: 'closeLoader()', opacity: '{{ btnOpacity }}' } />
+          <PillButton { opacity: '{{ btnOpacity }}' } />
         </div>
      </div>
     `
