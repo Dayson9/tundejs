@@ -15,7 +15,7 @@ const Hero = new Component("Hero", {
           
           <Text { txt: 'I\\'m a software engineer with a high knack for building web based innovative apps, with a touch of uniqueness, I craft intuitive and performant websites.', size: 12 } />
           
-          <Button { label: "About me", w: '150px', h: '60px', color: 'white', bg: "rgba(50, 101, 170)", icon: "r bxs-right-arrow", click: "scrollTo('about')" } />
+          <Button { label: "About me", w: '150px', h: '60px', color: 'white', bg: "rgba(50, 101, 170)", icon: "r bxs-right-arrow", id: "about" } />
         </div>
       </div>
     `

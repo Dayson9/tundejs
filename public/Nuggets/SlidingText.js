@@ -3,7 +3,7 @@ import { Nugget } from 'queflow';
 const SlidingText = new Nugget("SlidingText", {
   template: () => {
     return `
-      <span transform={{ x }} onclick={{ click }}>
+      <span transform={{ x }} onclick="scrollTo('{{ id }}')">
         {{ text }}
       </span>`
   },

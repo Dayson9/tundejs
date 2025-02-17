@@ -5,7 +5,7 @@ const width = window.innerWidth
 const Loader = new Component("Loader", {
   data: {
     loadingBarWidth: 0,
-    containerY: 0,
+    containerY: 100,
     btnOpacity: 0,
     intro: {
       text: "",

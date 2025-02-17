@@ -26,11 +26,11 @@
           <div class='menu' transform="translateX({{ menuX }}%)" onclick={{ openMenu(); }} background={{ darkMode ? 'rgb(50, 101, 170)' : 'rgba(80, 131, 200)' }}>
             <div id='line' height={{ lineH+'%' }}></div>
             <div class='col'>
-              <SlidingText { text: "About", x: "translateX({{ sliders[0] }}px)", click: "scrollTo('about')" } />
+              <SlidingText { text: "About", x: "translateX({{ sliders[0] }}px)", id: "about" } />
       
-              <SlidingText { text: "Works", x: "translateX({{ sliders[1] }}px)", click: "scrollTo('works')" } />
+              <SlidingText { text: "Works", x: "translateX({{ sliders[1] }}px)", id: "works" } />
             
-              <SlidingText { text: "Contact", x: "translateX({{ sliders[2] }}px)", click: "scrollTo('contact')" } />
+              <SlidingText { text: "Contact", x: "translateX({{ sliders[2] }}px)", id: "contact" } />
             </div>
           </div>
         </header>
